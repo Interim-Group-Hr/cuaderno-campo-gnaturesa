@@ -57,7 +57,7 @@
                                 DeviceInfo = Device.Value
 
 
-                                Response.Redirect("medicion.aspx", True)
+                                Response.Redirect("medicion_muestreo.aspx", True)
 
                             Case 1 'ROL: GESTION                                        
                                 IP = Request.ServerVariables("REMOTE_ADDR")
@@ -112,7 +112,7 @@
 
     End Sub
 
-    Function comprueba_inyeccion(ByVal txtuser As String) As Boolean
+    Function Comprueba_inyeccion(ByVal txtuser As String) As Boolean
 
         'función para detectar caracteres no permitidos
         Dim retorna As Boolean = False

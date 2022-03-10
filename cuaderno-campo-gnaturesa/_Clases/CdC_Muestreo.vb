@@ -8,6 +8,7 @@
     Dim miGrupo As Grupo = ""
     Dim dtPlagas As New DataTable
     Dim dtArboles As New DataTable
+    Dim BD As New GNaturesaDB
 
     Public Enum Grupo
         Par
@@ -76,7 +77,7 @@
     Private Sub Recupera()
         Dim sql As String = "select * from cdc_muestreos where idfila =" & miIdMuestreo
         Dim dt As New DataTable
-        RellenaDataTable_GNaturesa(dt, sql, False)
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
 
         If dt.Rows.Count > 0 Then
             miEmpresa = dt.Rows(0)("idempresa")

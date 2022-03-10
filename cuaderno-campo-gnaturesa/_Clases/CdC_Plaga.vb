@@ -2,6 +2,7 @@
 
     Dim miIdPlaga As Long = 0
     Dim miNombre As String = ""
+    Dim BD As New GNaturesaDB
 
     Dim miOrgano As DataTable = Nothing
 
@@ -44,7 +45,7 @@
         'recuperamos organos de plaga
         sql = "select idplaga, nombre from cdc_plagas"
 
-        RellenaDataTable_GNaturesa(dt, sql, False)
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
 
         Lista = dt
     End Function
@@ -66,7 +67,7 @@
         Dim dt As New DataTable
         Dim sql As String = "select idplaga,nombre from cdc_plagas where idplaga = " & miIdPlaga
 
-        RellenaDataTable_GNaturesa(dt, sql, False)
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
 
         If dt.Rows.Count > 0 Then
             miIdPlaga = dt.Rows(0)("idplaga")

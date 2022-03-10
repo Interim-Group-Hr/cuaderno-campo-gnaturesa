@@ -2,6 +2,7 @@
 
     Dim miId As Long
     Dim miValor As String
+    Dim BD As New GNaturesaDB
 
     Public Sub New()
 
@@ -14,7 +15,7 @@
 
         sql = "select idPlagaOrganoOrientacionValor,v.Nombre from CdC_PLAGA_ORGANO_ORIENTACION_VALOR POOV inner join CdC_VALORES V on poov.idValor=v.idValor where idPlagaOrganoOrientacion = " & idplagaorganoorientacion
 
-        RellenaDataTable_GNaturesa(dt, sql, False)
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
 
         Lista = dt
     End Function

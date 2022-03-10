@@ -14,11 +14,11 @@ Option Explicit On
 Partial Public Class medicion_muestreo
 
     '''<summary>
-    '''Control form1.
+    '''Control DropDownList3.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents DropDownList3 As Global.System.Web.UI.WebControls.DropDownList
 End Class

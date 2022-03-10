@@ -3,6 +3,7 @@
     Dim miIdOrgano As Long = 0
     Dim miOrgano As String = ""
     Dim miIdPlaga As Long = 0
+    Dim Bd As New GNaturesaDB
     'Dim miOrientacion As DataTable = Nothing
 
     'Public ReadOnly Property Orientaciones As DataTable
@@ -19,7 +20,7 @@
         'recuperamos organos de plaga
         sql = "select CdC_PLAGA_ORGANO.idplagaOrgano,cdc_organos.nombre from CdC_PLAGA_ORGANO inner join CdC_ORGANOS on CdC_PLAGA_ORGANO.idOrgano = CdC_ORGANOS.idOrgano where idPlaga = " & idplaga
 
-        RellenaDataTable_GNaturesa(dt, sql, False)
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
 
         Lista = dt
     End Function
@@ -61,7 +62,7 @@
         Dim dt As New DataTable
         Dim sql As String = "select idorgano,nombre from cdc_organos where idorgano = " & miIdOrgano
 
-        RellenaDataTable_GNaturesa(dt, sql, False)
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
 
         If dt.Rows.Count > 0 Then
             miIdOrgano = dt.Rows(0)("idorgano")

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="login.aspx.vb" Inherits="cuaderno_campo_gnaturesa.login" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="login.aspx.vb" Inherits="cuaderno_campo_gnaturesa.login" %>
 
 <!DOCTYPE html>
 

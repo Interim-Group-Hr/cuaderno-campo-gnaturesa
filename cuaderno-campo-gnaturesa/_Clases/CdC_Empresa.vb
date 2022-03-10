@@ -2,6 +2,7 @@
 
     Dim miIdEmpresa As Long
     Dim miNombreEmpresa As String
+    Dim BD As New GNaturesaDB
 
 #Region "Metodos/Funciones Publicos"
     Public Sub New()
@@ -37,7 +38,7 @@
     Private Sub Recupera()
         Dim sql As String = "select idempresa,nombreempresa from EMPRESAS where idempresa = " & miIdEmpresa
         Dim dt As New DataTable
-        RellenaDataTable_GNaturesa(dt, sql, False)
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
 
         If dt.Rows.Count > 0 Then
 

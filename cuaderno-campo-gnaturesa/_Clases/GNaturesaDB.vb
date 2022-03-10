@@ -207,8 +207,6 @@ Public Class GNaturesaDB
             'Se devuelve el resultado
             Rol = RolStatus
 
-
-
             cmd.Dispose()
             dtrResultado.Dispose()
             cmd = Nothing
@@ -231,4 +229,32 @@ Public Class GNaturesaDB
 
     End Function
 
+    Public Sub RellenaDataTable_GNaturesa(ByRef pDt As DataTable, ByVal pStrSQL As String, ByVal pBolSP As Boolean)
+
+        Try
+
+            pDt.Clear()
+
+            Dim cmd As SqlClient.SqlCommand = New SqlClient.SqlCommand(pStrSQL, ConexionAbrirBD(txtconexion))
+            If pBolSP Then cmd.CommandType = CommandType.StoredProcedure
+            Dim adapaux As New SqlClient.SqlDataAdapter
+            adapaux.SelectCommand = cmd
+            adapaux.Fill(pDt)
+
+            cmd.Dispose()
+            adapaux.Dispose()
+            cmd = Nothing
+            adapaux = Nothing
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message, vbCritical, "Obtener Datos")
+
+        Finally
+
+            ConexionCerrarBD()
+
+        End Try
+
+    End Sub
 End Class
