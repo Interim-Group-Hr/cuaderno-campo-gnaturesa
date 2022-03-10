@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class muestreo
 
     '''<summary>
-    '''Control DropDown_delegacion.
+    '''Control DropDown_empresa.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDown_delegacion As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropDown_empresa As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control DropDownList1.

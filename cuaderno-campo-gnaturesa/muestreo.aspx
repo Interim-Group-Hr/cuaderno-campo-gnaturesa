@@ -19,10 +19,8 @@
                 <div id="collapse_generales" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion_hoja">
                     <div class="accordion-body">
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropDown_delegacion" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
-                                <asp:ListItem Value=""></asp:ListItem>
-                                 <asp:ListItem Value="1">Citricos Los Alcores</asp:ListItem>
-                                 <asp:ListItem Value="2">Agricola T. Franco</asp:ListItem>
+                            <asp:DropDownList ID="DropDown_empresa" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:ListItem Value="">Selecciona Empresa</asp:ListItem> 
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Empresa</strong></label>
                         </div>
