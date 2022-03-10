@@ -1,5 +1,7 @@
-﻿Public Class Finca
+﻿Imports System.Data.SqlClient
 
+Public Class Finca
+    Private txtconexion As String = ConfigurationManager.ConnectionStrings("GNaturesa").ConnectionString
     Dim miIdFinca As Long = 0
     Dim miNombreFinca As String = ""
     Dim miEmpresa As Long = 0
@@ -35,15 +37,15 @@
         Recupera()
     End Sub
 
-    Public Function Lista() As DataTable
-        Dim sql As String = "select finca,idempresa from FINCAS where idfinca = " & miIdFinca
+    Public Function Lista(ByVal IdFinca As Integer) As DataTable
+        Dim sql As String = "select finca,idempresa from FINCAS where idEmpresa = " & IdFinca
         Dim dt As New DataTable
-        RellenaDataTable_GNaturesa(dt, sql, False)
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
         Lista = dt
     End Function
 
     Public Sub Guardar(ByRef idFinca As Long)
-        Dim conexion As New SqlClient.SqlConnection(mStrConexionGNaturesa)
+        Dim conexion As New SqlClient.SqlConnection(txtconexion)
 
         Dim sql As String = ""
 

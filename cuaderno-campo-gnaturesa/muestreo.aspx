@@ -20,19 +20,13 @@
                     <div class="accordion-body">
                         <div class="form-floating">
                             <asp:DropDownList ID="DropDown_empresa" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
-                                <asp:ListItem Value="">Selecciona Empresa</asp:ListItem> 
+                                <asp:ListItem Value="0">Selecciona Empresa</asp:ListItem> 
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Empresa</strong></label>
                         </div>
                         <br />
                      <div class="form-floating">
-                            <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
-                                <asp:ListItem Value=""></asp:ListItem>
-                                 <asp:ListItem Value="1">La Cansina</asp:ListItem>
-                                 <asp:ListItem Value="2">Clavinque</asp:ListItem>
-                                <asp:ListItem Value="3">Corralito</asp:ListItem>
-                                <asp:ListItem Value="4">Otra</asp:ListItem>
-
+                            <asp:DropDownList ID="DropDown_lista" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Finca</strong></label>
                         </div>

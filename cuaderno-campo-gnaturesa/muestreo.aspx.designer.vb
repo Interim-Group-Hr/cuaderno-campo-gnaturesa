@@ -23,13 +23,13 @@ Partial Public Class muestreo
     Protected WithEvents DropDown_empresa As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropDownList1.
+    '''Control DropDown_lista.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropDown_lista As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control DropDownList2.

@@ -24,9 +24,9 @@
     End Sub
 
     Public Function Lista() As DataTable
-        Dim sql As String = "select idempresa,nombreempresa from EMPRESAS where idempresa = " & miIdEmpresa
+        Dim sql As String = "select idempresa,nombreempresa from EMPRESAS"
         Dim dt As New DataTable
-        RellenaDataTable_GNaturesa(dt, sql, False)
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
         Lista = dt
     End Function
 
