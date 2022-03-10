@@ -4,6 +4,7 @@
     Dim miNombreFinca As String = ""
     Dim miEmpresa As Long = 0
     Dim BD As New GNaturesaDB
+
 #Region "Propiedades Publicas"
     Public Property NombreFinca As String
         Get

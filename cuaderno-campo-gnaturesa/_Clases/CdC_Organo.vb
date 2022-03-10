@@ -3,7 +3,7 @@
     Dim miIdOrgano As Long = 0
     Dim miOrgano As String = ""
     Dim miIdPlaga As Long = 0
-    Dim Bd As New GNaturesaDB
+    Dim BD As New GNaturesaDB
     'Dim miOrientacion As DataTable = Nothing
 
     'Public ReadOnly Property Orientaciones As DataTable

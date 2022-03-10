@@ -37,13 +37,14 @@
         'miOrgano = miListaOrganos()
     End Sub
 
-    Public Function Lista() As DataTable
+    Public Function Lista(fenologia As Boolean) As DataTable
         Dim dt As New DataTable
 
         Dim sql As String
 
         'recuperamos organos de plaga
-        sql = "select idplaga, nombre from cdc_plagas"
+        sql = "select idplaga, nombre from cdc_plagas "
+        If Not fenologia Then sql = sql & "where idPlaga>0"
 
         BD.RellenaDataTable_GNaturesa(dt, sql, False)
 

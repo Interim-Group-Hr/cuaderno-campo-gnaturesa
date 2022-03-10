@@ -1,5 +1,4 @@
 ﻿Public Class Orientacion
-
     Dim BD As New GNaturesaDB
 
     Public Sub New()

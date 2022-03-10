@@ -5,12 +5,12 @@
     Dim miFinca As Long = 0
     Dim miSector As Long = 0
     Dim miFecha As String = ""
-    Dim miGrupo As Grupo = ""
+    Dim miGrupo As GrupoMuestreo = ""
     Dim dtPlagas As New DataTable
     Dim dtArboles As New DataTable
     Dim BD As New GNaturesaDB
 
-    Public Enum Grupo
+    Public Enum GrupoMuestreo
         Par
         Impar
         Todos
@@ -21,12 +21,15 @@
     Public Sub New()
         CreadtPlagas()
         CreadtArboles()
+        'Por definicion todos los muestreos han de incluir la fenología. Ya que esta codificada como plaga, añadimos siempre esta 'plaga' al crear un muestreo
+        AddPlaga(0)
     End Sub
 
     Private Sub CreadtPlagas()
         'damos forma al dt de plagas (tendra que tener el mismo diseño que los datos que recuperemos de la BD para que sea compatible cuando recuperemos un muestreo)
         'si cambiamos la recuperacion (recuperamos mas campos de la BD, tendremos que modificar la creacion del datatable)
-        dtPlagas.Columns.Add("idPlaga")
+        dtPlagas.Columns.Add("idPlaga", System.Type.GetType("System.Int32"))
+        dtPlagas.Columns.Add("NombrePlaga", System.Type.GetType("System.String"))
     End Sub
 
     Private Sub CreadtArboles()
@@ -43,11 +46,13 @@
     Public Sub AddPlaga(idPlaga As Long)
         'añadimos un registro al datatable de plagas
 
+        Dim row As DataRow = dtPlagas.NewRow()
 
-        'Dim dt As New DataTable()
-        'dt.Columns.Add("Archivo")
-        'dt.Columns.Add("URL")
-        'dt.Columns.Add("Destino")
+        Dim miPlaga As New Plaga(idPlaga)
+
+        row("idplaga") = miPlaga.idPlaga
+        row("nombrePlaga") = miPlaga.Nombre
+
         'Dim row As DataRow = dt.NewRow()
         'row("Archivo") = Archivo_
         'row("URL") = URL_
@@ -58,6 +63,11 @@
 
     Public Sub AddArbol(idArbol As Long)
         'anadimos un registro al datatable de arboles
+
+        Dim row As DataRow = dtArboles.NewRow()
+
+        row("idarbol") = idArbol
+
     End Sub
 
 
@@ -89,6 +99,9 @@
 
         dt.Clear()
 
+        'RecuperaFenología
+        'ver si lo integramos al recuperar plagas
+
         'Recupera Plagas
         'Cargamos el dt correspondiente
 
@@ -100,6 +113,15 @@
 #End Region
 
 #Region "Propiedades Públicas"
+
+    Public Property Empresa As Long
+        Get
+            Empresa = miEmpresa
+        End Get
+        Set(value As Long)
+            miEmpresa = value
+        End Set
+    End Property
 
     Public Property Finca As Long
         Get
@@ -116,6 +138,24 @@
         End Get
         Set(value As Long)
             miSector = value
+        End Set
+    End Property
+
+    Public Property Fecha As String
+        Get
+            Fecha = miFecha
+        End Get
+        Set(value As String)
+            miFecha = value
+        End Set
+    End Property
+
+    Public Property Grupo As GrupoMuestreo
+        Get
+            Grupo = miGrupo
+        End Get
+        Set(value As GrupoMuestreo)
+            miGrupo = value
         End Set
     End Property
 
