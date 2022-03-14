@@ -57,7 +57,7 @@
                                 DeviceInfo = Device.Value
 
 
-                                Response.Redirect("medicion_muestreo.aspx", True)
+                                Response.Redirect("crear_muestreo.aspx", True)
 
                             Case 1 'ROL: GESTION                                        
                                 IP = Request.ServerVariables("REMOTE_ADDR")
@@ -65,7 +65,7 @@
                                 DeviceInfo = Device.Value
 
 
-                                Response.Redirect("muestreo.aspx", True)
+                                Response.Redirect("crear_muestreo.aspx", True)
 
                         End Select
 
