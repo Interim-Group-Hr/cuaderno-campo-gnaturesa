@@ -8,7 +8,7 @@ Public Class muestreo
     Private mstrMsgError As String = String.Empty
     Dim dtLineas As New DataTable
     Dim Obj As New GNaturesaDB
-    Private txtconexion As String = ConfigurationManager.ConnectionStrings("Interim").ConnectionString
+    Dim txtconexion As String = "server=172.16.1.17;database=GNaturesa;uid=UsuarioGenerico;pwd=InterimGr0$;" 'ConfigurationManager.ConnectionStrings("GNaturesa").ConnectionString
     Private cnBD As New SqlConnection
 
 
@@ -129,9 +129,6 @@ Public Class muestreo
 
 
                 End If
-
-
-
 
 
 

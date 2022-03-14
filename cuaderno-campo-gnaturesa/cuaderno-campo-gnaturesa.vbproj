@@ -17,7 +17,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort>44385</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -106,7 +106,7 @@
     <Content Include="js\moment-with-locales.js" />
     <Content Include="login.aspx" />
     <Content Include="medicion_muestreo.aspx" />
-    <Content Include="muestreo.aspx" />
+    <Content Include="crear_muestreo.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -124,11 +124,11 @@
       <DependentUpon>medicion_muestreo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="muestreo.aspx.designer.vb">
-      <DependentUpon>muestreo.aspx</DependentUpon>
+    <Compile Include="crear_muestreo.aspx.designer.vb">
+      <DependentUpon>crear_muestreo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="muestreo.aspx.vb">
-      <DependentUpon>muestreo.aspx</DependentUpon>
+    <Compile Include="crear_muestreo.aspx.vb">
+      <DependentUpon>crear_muestreo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -160,9 +160,7 @@
     <Compile Include="_Clases\CdC_Arbol.vb" />
     <Compile Include="_Clases\CdC_Empresa.vb" />
     <Compile Include="_Clases\CdC_Finca.vb" />
-    <Compile Include="_Clases\CdC_Muestreo.vb">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="_Clases\CdC_Muestreo.vb" />
     <Compile Include="_Clases\CdC_Organo.vb" />
     <Compile Include="_Clases\CdC_Orientacion.vb" />
     <Compile Include="_Clases\CdC_Plaga.vb" />

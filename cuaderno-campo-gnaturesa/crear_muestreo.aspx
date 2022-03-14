@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="muestreo.aspx.vb" Inherits="cuaderno_campo_gnaturesa.muestreo" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="crear_muestreo.aspx.vb" Inherits="cuaderno_campo_gnaturesa.muestreo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

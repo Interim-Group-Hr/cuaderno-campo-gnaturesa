@@ -1,4 +1,4 @@
-﻿Public Class Muestreo
+﻿Public Class cls_Muestreo
 
     Dim miIdMuestreo As Long = 0
     Dim miEmpresa As Long = 0
@@ -18,12 +18,12 @@
     End Enum
 
 #Region "Metodos Publicos"
-    Public Sub New()
-        CreadtPlagas()
-        CreadtArboles()
-        'Por definicion todos los muestreos han de incluir la fenología. Ya que esta codificada como plaga, añadimos siempre esta 'plaga' al crear un muestreo
-        AddPlaga(0)
-    End Sub
+    'Public Sub New()
+    '    CreadtPlagas()
+    '    CreadtArboles()
+    '    'Por definicion todos los muestreos han de incluir la fenología. Ya que esta codificada como plaga, añadimos siempre esta 'plaga' al crear un muestreo
+    '    AddPlaga(0)
+    'End Sub
 
     Private Sub CreadtPlagas()
         'damos forma al dt de plagas (tendra que tener el mismo diseño que los datos que recuperemos de la BD para que sea compatible cuando recuperemos un muestreo)
