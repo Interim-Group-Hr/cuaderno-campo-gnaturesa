@@ -37,8 +37,8 @@ Public Class Finca
         Recupera()
     End Sub
 
-    Public Function Lista(ByVal IdFinca As Integer) As DataTable
-        Dim sql As String = "select finca,idempresa from FINCAS where idEmpresa = " & IdFinca
+    Public Function Lista(ByVal IdEmpresa As Integer) As DataTable
+        Dim sql As String = "select idFinca, Finca from FINCAS where idEmpresa = " & IdEmpresa
         Dim dt As New DataTable
         BD.RellenaDataTable_GNaturesa(dt, sql, False)
         Lista = dt

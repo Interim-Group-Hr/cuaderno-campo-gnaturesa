@@ -93,48 +93,112 @@ Public Class muestreo
 
         If Not IsPostBack Then  'Si no es PostBack (Recarga al darle a un boton)
 
-            If Session.Item("logingOk") Is Nothing Then
+            'If Session.Item("logingOk") Is Nothing Then
 
-                Response.Redirect("login.aspx", True)
-                Exit Sub
+            '    Response.Redirect("login.aspx", True)
+            '    Exit Sub
 
-            Else
-
-                If Session.Item("loginOK") = False Or Session.Item("ROL") = 1 Then
-
-                    Response.Redirect("login.aspx", True)
-                    Exit Sub
-
-                Else
-                    Dim BD As New GNaturesaDB
-                    Dim Fincas As New Finca
-                    'Dim Sector As New Sector
-                    Dim Empresa As New EmpresaNaturesa
-
-                    Dim dtFincas As New DataTable
-                    Dim dtSector As New DataTable
-                    Dim dtPlaga As New DataTable
-                    Dim dtEmpresa As New DataTable
-
-                    dtEmpresa = Empresa.Lista()
-
-                    If dtEmpresa.Rows.Count > 0 Then
-                        Dim i As Integer
-                        For i = 0 To (dtEmpresa.Rows.Count - 1)
-                            DropDown_empresa.Items.Add(New ListItem(dtEmpresa.Rows(i)("idEmpresa"), dtEmpresa.Rows(i)("NombreEmpresa")))
-                        Next
-
-                    End If
+            'Else
 
 
+            '    If Session.Item("loginOK") = False Or Session.Item("ROL") = 1 Then
 
-                End If
+            '        Response.Redirect("login.aspx", True)
+            '        Exit Sub
+
+            '    Else
+
+            Dim BD As New GNaturesaDB
+            Dim Empresa As New EmpresaNaturesa
+            Dim Plagas As New Plaga
+            Dim dtEmpresa = Empresa.Lista()
+            Dim dtPlagas = Plagas.Lista(False)
+
+            TextBox_fecha.Text = Now.ToShortDateString
 
 
+            'Cargar DropDownList de Empresas
+            If dtEmpresa.Rows.Count > 0 Then
+
+                Dim i As Integer
+                For i = 0 To (dtEmpresa.Rows.Count - 1)
+                    DropDown_empresa.Items.Add(New ListItem(dtEmpresa.Rows(i)("NombreEmpresa"), dtEmpresa.Rows(i)("idEmpresa")))
+                Next
 
             End If
+
+            'Cargar DropDownList Plagas 1
+            If dtPlagas.Rows.Count > 0 Then
+                Dim i As Integer
+                For i = 0 To (dtPlagas.Rows.Count - 1)
+                    DropDown_Plaga.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
+                Next
+            End If
+
+            'Precargar DropDownList Plaga 2
+
+            If dtPlagas.Rows.Count > 0 Then
+                Dim i As Integer
+                For i = 0 To (dtPlagas.Rows.Count - 1)
+                    DropDown_Plaga2.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
+                Next
+            End If
+
+        End If
+
+
+        '    End If
+        'End If
+
+    End Sub
+
+    Private Sub DropDown_empresa_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_empresa.SelectedIndexChanged
+
+        Dim Finc As New Finca
+
+
+        Dim dtFincas = Finc.Lista(DropDown_empresa.SelectedValue)
+
+
+        If dtFincas.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (dtFincas.Rows.Count - 1)
+                DropDown_Finca.Items.Add(New ListItem(dtFincas.Rows(i)("Finca"), dtFincas.Rows(i)("idFinca")))
+            Next
+
         End If
 
     End Sub
 
+    Private Sub DropDown_Finca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_Finca.SelectedIndexChanged
+
+        Dim Sec As New Sector
+        Dim dtSector = Sec.Lista(DropDown_Finca.SelectedValue)
+
+        If dtSector.Rows.Count > 0 Then
+            Dim i As Integer
+            For i = 0 To (dtSector.Rows.Count - 1)
+                DropDown_Sector.Items.Add(New ListItem(dtSector.Rows(i)("Parcela"), dtSector.Rows(i)("IdParcela")))
+            Next
+        End If
+
+    End Sub
+
+    Private Sub btnAddPlaga_Click(sender As Object, e As EventArgs) Handles btnAddPlaga.Click
+        DropDown_Plaga2.Visible = True
+        btnAddPlaga.Visible = False
+        btnDelPlaga.Visible = True
+
+    End Sub
+
+    Private Sub btnDelPlaga_Click(sender As Object, e As EventArgs) Handles btnDelPlaga.Click
+
+        DropDown_Plaga2.Visible = False
+        DropDown_Plaga2.SelectedValue = 0
+        btnAddPlaga.Visible = True
+        btnDelPlaga.Visible = False
+
+
+    End Sub
 End Class

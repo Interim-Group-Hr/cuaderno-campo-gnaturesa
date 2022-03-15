@@ -112,6 +112,8 @@
 
     End Sub
 
+
+
     Function Comprueba_inyeccion(ByVal txtuser As String) As Boolean
 
         'función para detectar caracteres no permitidos

@@ -23,22 +23,22 @@ Partial Public Class muestreo
     Protected WithEvents DropDown_empresa As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropDown_lista.
+    '''Control DropDown_Finca.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDown_lista As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropDown_Finca As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropDownList2.
+    '''Control DropDown_Sector.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDownList2 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropDown_Sector As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control TextBox_fecha.
@@ -50,20 +50,47 @@ Partial Public Class muestreo
     Protected WithEvents TextBox_fecha As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control DropDownList3.
+    '''Control DropDown_Grupos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDownList3 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropDown_Grupos As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropDownList4.
+    '''Control DropDown_Plaga.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDownList4 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropDown_Plaga As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control btnAddPlaga.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnAddPlaga As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control DropDown_Plaga2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropDown_Plaga2 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control btnDelPlaga.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnDelPlaga As Global.System.Web.UI.WebControls.LinkButton
 End Class

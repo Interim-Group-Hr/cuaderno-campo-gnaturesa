@@ -164,6 +164,8 @@
     <Compile Include="_Clases\CdC_Organo.vb" />
     <Compile Include="_Clases\CdC_Orientacion.vb" />
     <Compile Include="_Clases\CdC_Plaga.vb" />
+    <Compile Include="_Clases\CdC_Sector.vb" />
+    <Compile Include="_Clases\CdC_Test.vb" />
     <Compile Include="_Clases\CdC_Valores.vb" />
     <Compile Include="_Clases\GNaturesaDB.vb" />
     <Compile Include="_Clases\Usuario.vb" />

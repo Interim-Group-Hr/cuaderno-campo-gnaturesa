@@ -24,7 +24,7 @@
     End Sub
 
     Public Function Lista() As DataTable
-        Dim sql As String = "select idempresa,nombreempresa from EMPRESAS"
+        Dim sql As String = "select idempresa,nombreempresa from EMPRESA"
         Dim dt As New DataTable
         BD.RellenaDataTable_GNaturesa(dt, sql, False)
         Lista = dt
@@ -36,7 +36,7 @@
 
 
     Private Sub Recupera()
-        Dim sql As String = "select idempresa,nombreempresa from EMPRESAS where idempresa = " & miIdEmpresa
+        Dim sql As String = "select idempresa,nombreempresa from EMPRESA where idempresa = " & miIdEmpresa
         Dim dt As New DataTable
         BD.RellenaDataTable_GNaturesa(dt, sql, False)
 
