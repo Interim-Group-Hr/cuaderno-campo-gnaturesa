@@ -59,36 +59,37 @@
                         <br />
 
                       
-                            <div class="row">
-                                <div class="col-md-11">
-                                    <div class="form-floating">
-                                        <asp:DropDownList ID="DropDown_Plaga" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
-                                            <asp:ListItem Value="0">Selecciona Plaga</asp:ListItem> 
-                                           
+       <div class="row">
+                            <div class="col-10">
+                                <div class="form-floating">
+                                    <asp:DropDownList ID="DropDown_Plaga" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                        <asp:ListItem Value="0">Selecciona Plaga</asp:ListItem>
 
-                                        </asp:DropDownList>
-                                        <label for="floatingInput"><strong>Plaga</strong></label>
-                                    </div>
-                                </div>
-                                <div class="col-md-1">
-                                    <asp:LinkButton ID="btnAddPlaga"  class="btn btn-primary" runat="server"><i aria-hidden="true"></i>+</asp:LinkButton>
-                                </div>
-                           
-                             <br />
-                            <div class="col-md-11" runat="server" id="DropPlaga2" Visible="false" >
-                                  
-                                <div class="form-floating" >
-                                        <asp:DropDownList ID="DropDown_Plaga2" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
-                                            <asp:ListItem Value="0">Selecciona Plaga</asp:ListItem> 
-                                   
-                                        </asp:DropDownList>
-                                        <label for="floatingInput" ><strong>Plaga</strong></label>
-                                    </div>
-                                </div>
 
-                            <div class="col-md-1">
-                                    <asp:LinkButton ID="btnDelPlaga"  class="btn btn-primary" runat="server" Visible ="false"><i aria-hidden="true"></i>-</asp:LinkButton>
+                                    </asp:DropDownList>
+                                    <label for="floatingInput"><strong>Plaga</strong></label>
                                 </div>
+                            </div>
+                            <div class="col-2">
+                                <asp:LinkButton ID="btnAddPlaga" class="btn btn-primary" runat="server"><i class="fas fa-plus"></i></asp:LinkButton>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                        <div class="col-10" runat="server" id="DropPlaga2" visible="false">
+
+                            <div class="form-floating">
+                                <asp:DropDownList ID="DropDown_Plaga2" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                    <asp:ListItem Value="0">Selecciona Plaga</asp:ListItem>
+
+                                </asp:DropDownList>
+                                <label for="floatingInput"><strong>Plaga</strong></label>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <asp:LinkButton ID="btnDelPlaga" class="btn btn-primary" runat="server" Visible="false"><i class="fas fa-minus"></i></asp:LinkButton>
+                        </div>
                         </div>
                         </div>
                         <br />

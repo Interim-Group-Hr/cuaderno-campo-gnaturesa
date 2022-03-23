@@ -14,31 +14,22 @@ Option Explicit On
 Partial Public Class medicion_muestreo
 
     '''<summary>
-    '''Control Finca.
+    '''Control FincaSector.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Finca As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents FincaSector As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control Sectores.
+    '''Control fechaArbol.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Sectores As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''Control fecha.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents fecha As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents fechaArbol As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''Control DropDownNorte.

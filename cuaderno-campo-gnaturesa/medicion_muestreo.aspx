@@ -9,12 +9,11 @@
     <div class="container-fluid">
         <div>
           <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-top">
-              <div id="FincaSector">
-                  <label id="Finca" runat="server"></label>
-                  <label id="Sectores" runat="server"></label>
+              <div>
+                  <label id="FincaSector" runat="server"></label>
               </div>
-              <div id="fcha">
-                  <label id="fecha" runat="server"></label>
+              <div>
+                  <label id="fechaArbol" runat="server"></label>
               </div>
           </nav>
         </div>
