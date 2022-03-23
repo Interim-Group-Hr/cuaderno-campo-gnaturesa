@@ -58,7 +58,7 @@
                              </div>
                         <br />
 
-                        <div class="container-fluid">
+                      
                             <div class="row">
                                 <div class="col-md-11">
                                     <div class="form-floating">
@@ -74,11 +74,11 @@
                                     <asp:LinkButton ID="btnAddPlaga"  class="btn btn-primary" runat="server"><i aria-hidden="true"></i>+</asp:LinkButton>
                                 </div>
                            
-                          
-                            <div class="col-md-11">
-                                     <br />
+                             <br />
+                            <div class="col-md-11" runat="server" id="DropPlaga2" Visible="false" >
+                                  
                                 <div class="form-floating" >
-                                        <asp:DropDownList ID="DropDown_Plaga2" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true" Visible="false">
+                                        <asp:DropDownList ID="DropDown_Plaga2" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                             <asp:ListItem Value="0">Selecciona Plaga</asp:ListItem> 
                                    
                                         </asp:DropDownList>
@@ -93,9 +93,9 @@
                         </div>
                         <br />
                         <div class="d-grid gap-2 col-6 mx-auto">
-                              <a href="medicion_muestreo.aspx" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Generar Muestreo</a>
+                               <asp:LinkButton ID="botonAceptar"  class="btn btn-primary" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Generar Muestreo</asp:LinkButton>
                         </div>        
-                     </div>
+                  
                     </div>
                    </div>
                     </div>

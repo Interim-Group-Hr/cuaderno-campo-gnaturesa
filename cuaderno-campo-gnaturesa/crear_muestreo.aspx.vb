@@ -91,40 +91,6 @@ Public Class muestreo
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        'Número de la habitación
-        Dim habitacion As String = "habitacion102"
-
-        Dim div As New System.Web.UI.HtmlControls.HtmlGenericControl("div")
-        div.ID = "div" & habitacion
-        'Inicio Ejemplos propiedades
-        div.Style.Add(HtmlTextWriterStyle.BackgroundColor, "Yellow")
-        div.Style.Add(HtmlTextWriterStyle.Color, "Red")
-        div.Style.Add(HtmlTextWriterStyle.Height, "100px")
-        div.Style.Add(HtmlTextWriterStyle.Width, "400px")
-        div.Style.Add("Padding", "10px")
-        'Ejemplo con class
-        div.Attributes.Add("class", "col-md-3")
-
-        Dim img As New System.Web.UI.HtmlControls.HtmlGenericControl("img")
-        img.ID = "img" & habitacion
-        img.Attributes.Add("src", "https://y.cdrst.com/foto/hotel-sf/8a4d/galeriaresp/hotel-indigo-rome-st-george-habitacion-3c63c99.jpg")
-
-        Dim label As New System.Web.UI.HtmlControls.HtmlGenericControl("label")
-        label.ID = "label" & habitacion
-        label.InnerText = habitacion
-
-        Dim button As New System.Web.UI.HtmlControls.HtmlGenericControl("button")
-        button.ID = "btn" & habitacion
-        button.Attributes.Add("type", "button")
-        button.Attributes.Add("value", "Reservar")
-        button.InnerText = "Reservar"
-
-        div.Controls.Add(img)
-        div.Controls.Add(label)
-        div.Controls.Add(button)
-
-        htmlcontenedor.Controls.Add(div)
-
         If Not IsPostBack Then  'Si no es PostBack (Recarga al darle a un boton)
 
             'If Session.Item("logingOk") Is Nothing Then
@@ -221,7 +187,7 @@ Public Class muestreo
     End Sub
 
     Private Sub btnAddPlaga_Click(sender As Object, e As EventArgs) Handles btnAddPlaga.Click
-        DropDown_Plaga2.Visible = True
+        DropPlaga2.Visible = True
         btnAddPlaga.Visible = False
         btnDelPlaga.Visible = True
 
@@ -229,11 +195,27 @@ Public Class muestreo
 
     Private Sub btnDelPlaga_Click(sender As Object, e As EventArgs) Handles btnDelPlaga.Click
 
-        DropDown_Plaga2.Visible = False
+        DropPlaga2.Visible = False
         DropDown_Plaga2.SelectedValue = 0
         btnAddPlaga.Visible = True
         btnDelPlaga.Visible = False
 
 
     End Sub
+    Private Sub botonAceptar_Click(sender As Object, e As EventArgs) Handles botonAceptar.Click
+
+        Session("Empresa") = DropDown_empresa.SelectedItem.Text
+        Session("Finca") = DropDown_Finca.SelectedItem.Text
+        Session("Sector") = DropDown_Sector.SelectedItem.Text
+        Session("Grupo") = DropDown_Grupos.SelectedValue
+        Session("Plaga1") = DropDown_Plaga.SelectedValue
+        Session("Plaga2") = DropDown_Plaga2.SelectedValue
+        Session("Fecha") = TextBox_fecha.Text
+
+        Response.Redirect("medicion_muestreo.aspx", True)
+
+    End Sub
+
+
+
 End Class

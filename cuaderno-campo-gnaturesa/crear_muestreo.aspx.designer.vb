@@ -86,6 +86,15 @@ Partial Public Class muestreo
     Protected WithEvents btnAddPlaga As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''Control DropPlaga2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropPlaga2 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''Control DropDown_Plaga2.
     '''</summary>
     '''<remarks>
@@ -102,4 +111,13 @@ Partial Public Class muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnDelPlaga As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control botonAceptar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents botonAceptar As Global.System.Web.UI.WebControls.LinkButton
 End Class
