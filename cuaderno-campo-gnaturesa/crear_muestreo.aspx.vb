@@ -113,9 +113,11 @@ Public Class muestreo
             Dim Plagas As New Plaga
             Dim dtEmpresa = Empresa.Lista()
             Dim dtPlagas = Plagas.Lista(False)
+            Dim FechaString As String
 
-            TextBox_fecha.Text = Now.ToShortDateString
+            FechaString = Now.ToShortDateString
 
+            TextBox_fecha.Text = FechaString
 
             'Cargar DropDownList de Empresas
             If dtEmpresa.Rows.Count > 0 Then
@@ -204,6 +206,7 @@ Public Class muestreo
     End Sub
     Private Sub botonAceptar_Click(sender As Object, e As EventArgs) Handles botonAceptar.Click
 
+        'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
         Session("Empresa") = DropDown_empresa.SelectedItem.Text
         Session("Finca") = DropDown_Finca.SelectedItem.Text
         Session("Sector") = DropDown_Sector.SelectedItem.Text
@@ -212,10 +215,29 @@ Public Class muestreo
         Session("Plaga2") = DropDown_Plaga2.SelectedValue
         Session("Fecha") = TextBox_fecha.Text
 
-        Response.Redirect("medicion_muestreo.aspx", True)
+        Dim miMuestreo As New CdCMuestreo
 
+        'Cargar los valores para su posterior guardado
+        miMuestreo.Empresa = DropDown_empresa.SelectedValue
+        miMuestreo.Finca = DropDown_Finca.SelectedValue
+        miMuestreo.Sector = DropDown_Sector.SelectedValue
+        miMuestreo.Grupo = DropDown_Grupos.SelectedItem.Text
+        miMuestreo.Fecha = Date.Now
+        miMuestreo.AddPlaga(DropDown_Plaga.SelectedValue)
+
+        If DropDown_Plaga2.SelectedValue > 0 Then
+            miMuestreo.AddPlaga(DropDown_Plaga2.SelectedValue)
+        End If
+
+
+        'Guardado
+        miMuestreo.Guardar()
+        'Despues de generar el muestreo guardamos la ID del mismo en una variable de sesion
+        Session("idMuestreo") = miMuestreo.Id
+
+        Response.Redirect("medicion_muestreo.aspx", True)
     End Sub
 
 
 
-End Class
+End Class+

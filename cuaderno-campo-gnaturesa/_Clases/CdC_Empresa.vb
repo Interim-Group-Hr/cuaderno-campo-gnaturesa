@@ -1,5 +1,5 @@
 ﻿Public Class EmpresaNaturesa
-
+    Private txtconexion As String = ConfigurationManager.ConnectionStrings("GNaturesa").ConnectionString
     Dim miIdEmpresa As Long
     Dim miNombreEmpresa As String
     Dim BD As New GNaturesaDB

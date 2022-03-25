@@ -824,11 +824,29 @@ Partial Public Class medicion_muestreo
     Protected WithEvents DropDownList38 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control BtnFichar.
+    '''Control comentarioArbolid.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents BtnFichar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents comentarioArbolid As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control exampleModalCenter.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents exampleModalCenter As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control BtnGuardar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents BtnGuardar As Global.System.Web.UI.WebControls.Button
 End Class
