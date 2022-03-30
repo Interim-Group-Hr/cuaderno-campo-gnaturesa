@@ -79,4 +79,19 @@
 
     End Sub
 
+    Public Function ListarValores(idplaga As Long) As DataTable
+        Dim dt As New DataTable
+
+        Dim sql As String
+
+        'recuperamos organos de plaga
+        sql = "select * from CdC_PLAGA_ORGANO_ORIENTACION_VALOR poov inner join CdC_VALORES on CdC_VALORES.idValor = poov.idValor where idPlagaOrganoOrientacion = " & idplaga
+
+        BD.RellenaDataTable_GNaturesa(dt, sql, False)
+
+        ListarValores = dt
+    End Function
+
+
+
 End Class

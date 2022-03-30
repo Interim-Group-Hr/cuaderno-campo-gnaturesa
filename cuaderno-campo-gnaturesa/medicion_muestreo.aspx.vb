@@ -3,7 +3,7 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-
+        CargdarFenologia()
         Dim Fecha As String = Session("Fecha")
 
 
@@ -104,6 +104,266 @@
 
         End If
 
+
+
+
     End Sub
 
+    Private Sub CargdarFenologia()
+
+        Dim Plagas As New Plaga
+        Dim OrganoNorte74 = Plagas.ListarValores(74)
+        Dim OrganoEste71 = Plagas.ListarValores(71)
+        Dim OrganoSur72 = Plagas.ListarValores(72)
+        Dim OrganoOeste73 = Plagas.ListarValores(73)
+        Dim OrganoInterior1 = Plagas.ListarValores(75)
+        Dim OrganoInterior2 = Plagas.ListarValores(76)
+
+
+        If OrganoNorte74.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OrganoNorte74.Rows.Count - 1)
+                DropNorteFenologia_74.Items.Add(New ListItem(OrganoNorte74.Rows(i)("Nombre"), OrganoNorte74.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If OrganoEste71.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OrganoEste71.Rows.Count - 1)
+                DropEsteFenologia_71.Items.Add(New ListItem(OrganoEste71.Rows(i)("Nombre"), OrganoEste71.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If OrganoSur72.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OrganoSur72.Rows.Count - 1)
+                DropSurFenologia_72.Items.Add(New ListItem(OrganoSur72.Rows(i)("Nombre"), OrganoSur72.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If OrganoOeste73.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OrganoOeste73.Rows.Count - 1)
+                DropOesteFenologia_73.Items.Add(New ListItem(OrganoOeste73.Rows(i)("Nombre"), OrganoOeste73.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If OrganoInterior1.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OrganoInterior1.Rows.Count - 1)
+                DropInt1Fenologia_75.Items.Add(New ListItem(OrganoInterior1.Rows(i)("Nombre"), OrganoInterior1.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If OrganoInterior2.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OrganoInterior2.Rows.Count - 1)
+                DropInt2Fenologia_76.Items.Add(New ListItem(OrganoInterior2.Rows(i)("Nombre"), OrganoInterior2.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+    End Sub
+
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+        '  Guardado.GuardaMuestreoArbol(Session("IdArbol"), DropNorteFenologia.SelectedIndex, DropNorteFenologia.SelectedValue)
+
+        For Each c As Control In SeccionFenologia.Controls
+
+            If TypeOf c Is DropDownList Then
+
+                Dim nombre() As String = Split(c.ID, "_")
+                Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+            End If
+
+        Next
+
+        If PulgonSensible.Visible = True Then
+
+            For Each c As Control In seccionPulgonSensible.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+            For Each c As Control In seccionPulgonOcupado.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+
+        End If
+
+
+        If EutetranychusFruto.Visible = True Then
+
+            For Each c As Control In seccionEtetranychusH.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+            For Each c As Control In SeccionEtetranychusF.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+
+        End If
+
+        If Mosca.Visible = True Then
+
+            For Each c As Control In SeccionMoscaB.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+        End If
+
+        If Orquidea.Visible = True Then
+
+            For Each c As Control In SeccionTripOrquedea.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+        End If
+
+        If Planococus.Visible = True Then
+
+            For Each c As Control In SeccionPlanococus.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+        End If
+
+        If polilla.Visible = True Then
+
+            For Each c As Control In SeccionPolilla.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+        End If
+
+        If minador.Visible = True Then
+
+            For Each c As Control In SeccionMinador.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+        End If
+
+        If TetranychusFruto.Visible = True Then
+
+            For Each c As Control In SeccionTetranychusF.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+            For Each c As Control In SeccionTetranychusH.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+
+        End If
+
+        If Aonidella.Visible = True Then
+
+            For Each c As Control In SeccionAonidella.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                End If
+            Next
+        End If
+
+
+    End Sub
 End Class

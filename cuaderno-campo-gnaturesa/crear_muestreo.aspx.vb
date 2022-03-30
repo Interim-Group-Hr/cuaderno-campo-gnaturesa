@@ -119,6 +119,19 @@ Public Class muestreo
 
             TextBox_fecha.Text = FechaString
 
+            Dim Arboles As New Arbol
+            Dim dtArbol = Arboles.Lista()
+
+            If dtArbol.Rows.Count > 0 Then
+
+                Dim i As Integer
+                For i = 0 To (dtArbol.Rows.Count - 1)
+                    DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
+                Next
+
+            End If
+
+
             'Cargar DropDownList de Empresas
             If dtEmpresa.Rows.Count > 0 Then
 
@@ -204,6 +217,7 @@ Public Class muestreo
 
 
     End Sub
+
     Private Sub botonAceptar_Click(sender As Object, e As EventArgs) Handles botonAceptar.Click
 
         'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
@@ -214,6 +228,8 @@ Public Class muestreo
         Session("Plaga1") = DropDown_Plaga.SelectedValue
         Session("Plaga2") = DropDown_Plaga2.SelectedValue
         Session("Fecha") = TextBox_fecha.Text
+        Session("NomArbol") = DropDown_NArbol.SelectedItem.Text
+        Session("IdArbol") = DropDown_NArbol.SelectedValue
 
         Dim miMuestreo As New CdCMuestreo
 
@@ -232,6 +248,8 @@ Public Class muestreo
 
         'Guardado
         miMuestreo.Guardar()
+        Session("Muestreo") = miMuestreo
+
         'Despues de generar el muestreo guardamos la ID del mismo en una variable de sesion
         Session("idMuestreo") = miMuestreo.Id
 
@@ -239,5 +257,4 @@ Public Class muestreo
     End Sub
 
 
-
-End Class+
+End Class
