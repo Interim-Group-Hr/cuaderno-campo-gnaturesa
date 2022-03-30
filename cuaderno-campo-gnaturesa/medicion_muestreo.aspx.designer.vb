@@ -167,40 +167,40 @@ Partial Public Class medicion_muestreo
     Protected WithEvents seccionPulgonOcupado As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control DropEstePulgono_.
+    '''Control DropEstePulgonO_5.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropEstePulgono_ As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropEstePulgonO_5 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropSurPulgonO_.
+    '''Control DropSurPulgonO_6.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropSurPulgonO_ As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropSurPulgonO_6 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropOestePulgonO_.
+    '''Control DropOestePulgonO_7.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropOestePulgonO_ As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropOestePulgonO_7 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropNortePulgonO_.
+    '''Control DropNortePulgonO_8.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropNortePulgonO_ As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropNortePulgonO_8 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control EutetranychusHoja.

@@ -154,6 +154,7 @@
             Dim i As Integer
             For i = 0 To (anilloSur2.Rows.Count - 1)
                 DropNortePulgonS_4.Items.Add(New ListItem(Norte4.Rows(i)("Nombre"), Norte4.Rows(i)("idPlagaOrganoOrientacionValor")))
+                DropOestePulgonO_7.Items.Add(New ListItem(Norte4.Rows(i)("Nombre"), Norte4.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
