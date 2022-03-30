@@ -89,6 +89,7 @@
         cmd.Parameters.AddWithValue("@idsector", miSector)
         cmd.Parameters.AddWithValue("@fecha", miFecha)
         cmd.Parameters.AddWithValue("@grupo", miGrupo)
+        cmd.Parameters.AddWithValue("@grabadopor", "Desarrollo")
 
 
         If miIdMuestreo = 0 Then
