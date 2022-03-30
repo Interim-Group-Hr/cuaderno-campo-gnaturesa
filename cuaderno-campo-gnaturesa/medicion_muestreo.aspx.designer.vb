@@ -113,40 +113,40 @@ Partial Public Class medicion_muestreo
     Protected WithEvents seccionPulgonSensible As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control DropEstePulgonS_.
+    '''Control DropEstePulgonS_1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropEstePulgonS_ As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropEstePulgonS_1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropSurPulgonS_.
+    '''Control DropSurPulgonS_2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropSurPulgonS_ As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropSurPulgonS_2 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropOestePulgonS_.
+    '''Control DropOestePulgonS_3.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropOestePulgonS_ As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropOestePulgonS_3 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control DropNortePulgonS_.
+    '''Control DropNortePulgonS_4.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropNortePulgonS_ As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropNortePulgonS_4 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control pulgonOcupado.
