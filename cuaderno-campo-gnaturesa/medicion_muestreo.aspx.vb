@@ -229,55 +229,7 @@
 
     End Sub
 
-    Private Sub CargarPulgon()
 
-        Dim plagas As New Plaga
-        Dim AnilloEste1 = plagas.ListarValores(1)
-        Dim anilloSur2 = plagas.ListarValores(2)
-        Dim AnilloOeste3 = plagas.ListarValores(3)
-        Dim Norte4 = plagas.ListarValores(4)
-        Dim AnilloEste5 = plagas.ListarValores(5)
-        Dim AnilloSur6 = plagas.ListarValores(6)
-        Dim Norte7 = plagas.ListarValores(7)
-
-
-        If AnilloEste1.Rows.Count > 0 Then
-
-            Dim i As Integer
-            For i = 0 To (AnilloEste1.Rows.Count - 1)
-                DropEstePulgonS_1.Items.Add(New ListItem(AnilloEste1.Rows(i)("Nombre"), AnilloEste1.Rows(i)("idPlagaOrganoOrientacionValor")))
-            Next
-
-        End If
-
-        If anilloSur2.Rows.Count > 0 Then
-
-            Dim i As Integer
-            For i = 0 To (anilloSur2.Rows.Count - 1)
-                DropSurPulgonS_2.Items.Add(New ListItem(anilloSur2.Rows(i)("Nombre"), anilloSur2.Rows(i)("idPlagaOrganoOrientacionValor")))
-            Next
-
-        End If
-
-        If AnilloOeste3.Rows.Count > 0 Then
-
-            Dim i As Integer
-            For i = 0 To (anilloSur2.Rows.Count - 1)
-                DropOestePolillaS_3.Items.Add(New ListItem(AnilloOeste3.Rows(i)("Nombre"), AnilloOeste3.Rows(i)("idPlagaOrganoOrientacionValor")))
-            Next
-
-        End If
-
-        If Norte4.Rows.Count > 0 Then
-
-            Dim i As Integer
-            For i = 0 To (anilloSur2.Rows.Count - 1)
-                DropEstePolillaS_4.Items.Add(New ListItem(Norte4.Rows(i)("Nombre"), Norte4.Rows(i)("idPlagaOrganoOrientacionValor")))
-            Next
-
-        End If
-
-    End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
 
