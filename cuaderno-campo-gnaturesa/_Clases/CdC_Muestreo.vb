@@ -141,7 +141,7 @@
             cmd.Parameters.AddWithValue("@idplagaOrganoOrientacion", idCombo)
             cmd.Parameters.AddWithValue("@idArbol", idarbol)
             cmd.Parameters.AddWithValue("@idMuestreo", miIdMuestreo)
-            cmd.Parameters.AddWithValue("@Observaciones", "")
+            cmd.Parameters.AddWithValue("@Observaciones", miObservaciones)
 
             cmd.ExecuteNonQuery()
 
@@ -204,6 +204,15 @@
         End Get
         Set(value As String)
             miGrupo = value
+        End Set
+    End Property
+
+    Public Property observaciones As String
+        Get
+            observaciones = miObservaciones
+        End Get
+        Set(value As String)
+            miObservaciones = value
         End Set
     End Property
 

@@ -9,8 +9,7 @@
         <div>
             <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-top">
                 <div>
-                    <label id="FincaSector" runat="server"></label>
-                </div>
+                    <label id="FincaSector" runat="server">i</label></div>
                 <div>
                     <label id="fechaArbol" runat="server"></label>
                 </div>
@@ -29,7 +28,7 @@
                             <div class="col-6">
                                 <div class="form-floating">
                                     <asp:DropDownList ID="DropNorteFenologia_74" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
-                                        <asp:ListItem Value="37">No muestreado P</asp:ListItem>
+                                        <asp:ListItem Value=""></asp:ListItem>
                                     </asp:DropDownList>
                                     <label for="floatingInput"><strong>Norte</strong></label>
                                 </div>
@@ -85,7 +84,7 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEstePulgonS_1" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEstePulgonS_12" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Anillo Este</strong></label>
@@ -160,42 +159,42 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEsteAzarEtetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEsteAzarEtetranychusH_9" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurAzarEtetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurAzarEtetranychusH_10" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteAzarEtetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteAzarEtetranychusH_11" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropNorteAzarEtetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropNorteAzarEtetranychusH_12" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Norte Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropInteriorAzar1EtetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropInteriorAzar1EtetranychusH_13" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior Azar 1</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropInteriorAzar2EtetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropInteriorAzar2EtetranychusH_14" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior Azar 2</strong></label>
@@ -212,42 +211,42 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropesteEtetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropesteEtetranychusF_15" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurEtetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurEtetranychusF_16" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteEtetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteEtetranychusF_17" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropNorteEtetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropNorteEtetranychusF_18" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Norte</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="Dropinterior1EtetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="Dropinterior1EtetranychusF_19" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior 1</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropInterior2EtetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropInterior2EtetranychusF_20" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior 2</strong></label>
@@ -265,42 +264,42 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEsteAzarMoscaB_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEsteAzarMoscaB_21" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurAzarMoscaB_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurAzarMoscaB_22" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteAzarMoscaB_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteAzarMoscaB_23" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropNorteAzarMoscaB_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropNorteAzarMoscaB_24" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Norte Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropInteriorAzar1MoscaB_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropInteriorAzar1MoscaB_25" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior Azar 1</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropInteriorAzar2MoscaB_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropInteriorAzar2MoscaB_26" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior Azar 2</strong></label>
@@ -319,28 +318,28 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEsteTripOrquedea_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEsteTripOrquedea_27" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurTripOrquedea_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurTripOrquedea_28" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteTripOrquedea_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteTripOrquedea_29" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropNorteTripOrquedea_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropNorteTripOrquedea_30" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Norte</strong></label>
@@ -357,28 +356,28 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEstePlanococus_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEstePlanococus_31" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurPlanococus_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurPlanococus_32" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOestePlanococus_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOestePlanococus_33" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropNortePlanococus_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropNortePlanococus_34" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Norte</strong></label>
@@ -395,28 +394,28 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEstePolilla_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEstePolilla_35" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurPolilla_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurPolilla_36" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOestePolilla_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOestePolilla_37" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropNortePolilla_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropNortePolilla_38" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Norte</strong></label>
@@ -433,28 +432,28 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEsteMinador_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEsteMinador_39" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurMinador_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurMinador_40" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteMinador_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteMinador_41" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropNorteMinador_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropNorteMinador_42" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Norte</strong></label>
@@ -471,111 +470,111 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEsteTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEsteTetranychusH_43" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEsteSTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEsteSTetranychusH_44" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este Sintomatico</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEsteAzarTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEsteAzarTetranychusH_45" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurTetranychusH_46" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurSTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurSTetranychusH_47" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur Sintomatico</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurAzarTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurAzarTetranychusH_48" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur Azar</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteTetranychusH_49" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteSTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteSTetranychusH_50" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste Sintomatico</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteAzarTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteAzarTetranychusH_51" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste Azar</strong></label>
                             <br />
                             <div class="form-floating">
-                                <asp:DropDownList ID="DropNorteTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:DropDownList ID="DropNorteTetranychusH_52" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                     <asp:ListItem Value=""></asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="floatingInput"><strong>Norte</strong></label>
                             </div>
                             <br />
                             <div class="form-floating">
-                                <asp:DropDownList ID="DropNorteSTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:DropDownList ID="DropNorteSTetranychusH_53" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                     <asp:ListItem Value=""></asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="floatingInput"><strong>Norte Sintomatico</strong></label>
                             </div>
                             <br />
                             <div class="form-floating">
-                                <asp:DropDownList ID="DropnorteAzarTetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:DropDownList ID="DropnorteAzarTetranychusH_54" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                     <asp:ListItem Value=""></asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="floatingInput"><strong>Norte Azar</strong></label>
                             </div>
                             <br />
                             <div class="form-floating">
-                                <asp:DropDownList ID="DropSintomatica1TetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:DropDownList ID="DropSintomatica1TetranychusH_55" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                     <asp:ListItem Value=""></asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="floatingInput"><strong>Sintomatica 1</strong></label>
                             </div>
                             <br />
                             <div class="form-floating">
-                                <asp:DropDownList ID="DropAzar1TetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:DropDownList ID="DropAzar1TetranychusH_56" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                     <asp:ListItem Value=""></asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="floatingInput"><strong>Azar 1</strong></label>
                             </div>
                             <br />
                             <div class="form-floating">
-                                <asp:DropDownList ID="DropSintomatica2TetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:DropDownList ID="DropSintomatica2TetranychusH_57" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                     <asp:ListItem Value=""></asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="floatingInput"><strong>Sintomatica 2</strong></label>
                             </div>
                             <br />
                             <div class="form-floating">
-                                <asp:DropDownList ID="DropAzar2TetranychusH_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:DropDownList ID="DropAzar2TetranychusH_58" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                     <asp:ListItem Value=""></asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="floatingInput"><strong>Azar 2</strong></label>
@@ -591,42 +590,42 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropesteTetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropesteTetranychusF_59" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurTetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurTetranychusF_60" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteTetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteTetranychusF_61" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropNorteTetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropNorteTetranychusF_62" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Norte</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropInterior1TetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropInterior1TetranychusF_63" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior 1</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropInterior2TetranychusF_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropInterior2TetranychusF_64" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior 2</strong></label>
@@ -645,42 +644,42 @@
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEsteAonidella_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEsteAonidella_65" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Este</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurAonidella_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurAonidella_66" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sur</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOesteAonidella_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOesteAonidella_67" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Oeste</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropNorteAonidella_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropNorteAonidella_68" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Norte</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropInterior1Aonidella_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropInterior1Aonidella_69" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior 1</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropInterior2Aonidella_" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropInterior2Aonidella_70" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Interior 2</strong></label>
@@ -709,7 +708,7 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                       <%-- <div class="modal-body">
+                        <%-- <div class="modal-body">
                             <div class="form-floating">
                                 <asp:DropDownList ID="DropDownList61" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                     <asp:ListItem Value="">0</asp:ListItem>

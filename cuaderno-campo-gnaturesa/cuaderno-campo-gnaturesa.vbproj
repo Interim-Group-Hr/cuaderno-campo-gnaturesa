@@ -97,6 +97,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
+    <Content Include="GuardadoFinal.aspx" />
     <Content Include="images\bg1.jpg" />
     <Content Include="images\grupo_naturesa.png" />
     <Content Include="images\logo_group.png" />
@@ -110,6 +111,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GuardadoFinal.aspx.designer.vb">
+      <DependentUpon>GuardadoFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuardadoFinal.aspx.vb">
+      <DependentUpon>GuardadoFinal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="login.aspx.designer.vb">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
