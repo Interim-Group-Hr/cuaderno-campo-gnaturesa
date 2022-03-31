@@ -60,6 +60,7 @@
 
             TetranychusFruto.Visible = True
             TetranychusHoja.Visible = True
+            CargarTetranychus()
 
         ElseIf plaga1 = 9 Then
 
@@ -110,7 +111,7 @@
 
             TetranychusFruto.Visible = True
             TetranychusHoja.Visible = True
-
+            CargarTetranychus()
 
         ElseIf plaga2 = 9 Then
 
