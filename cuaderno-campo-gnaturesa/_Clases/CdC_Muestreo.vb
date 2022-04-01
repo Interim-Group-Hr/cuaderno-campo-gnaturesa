@@ -80,6 +80,14 @@
 
         Dim cmd As New SqlClient.SqlCommand()
 
+        cmd.Parameters.Add("@idMuestreo", SqlDbType.Int)
+
+        If miIdMuestreo = 0 Then
+            cmd.Parameters("@idMuestreo").Direction = ParameterDirection.Output 'si ejecutamos un alta el parametro idMuestreo es de salida para recuperar el id generado por la BD
+        Else
+            sql = "CdC_Muestreos_Update"
+        End If
+
         conexion.Open()
         cmd.Connection = conexion
         cmd.CommandType = CommandType.StoredProcedure
@@ -89,14 +97,12 @@
         cmd.Parameters.AddWithValue("@idsector", miSector)
         cmd.Parameters.AddWithValue("@fecha", miFecha)
         cmd.Parameters.AddWithValue("@grupo", miGrupo)
+        cmd.Parameters.AddWithValue("@Observaciones", miObservaciones)
         cmd.Parameters.AddWithValue("@grabadopor", "Desarrollo")
 
+        cmd.ExecuteNonQuery()
 
         If miIdMuestreo = 0 Then
-            cmd.Parameters.Add("@idMuestreo", SqlDbType.Int)
-            cmd.Parameters("@idMuestreo").Direction = ParameterDirection.Output
-            cmd.ExecuteNonQuery()
-
             miIdMuestreo = cmd.Parameters("@idMuestreo").Value
         End If
 
@@ -132,6 +138,8 @@
 
         Dim cmd As New SqlClient.SqlCommand()
 
+        If miIdMuestreo <> 0 Then sql = ""
+
         Try
             conexion.Open()
             cmd.Connection = conexion
@@ -141,7 +149,30 @@
             cmd.Parameters.AddWithValue("@idplagaOrganoOrientacion", idCombo)
             cmd.Parameters.AddWithValue("@idArbol", idarbol)
             cmd.Parameters.AddWithValue("@idMuestreo", miIdMuestreo)
-            cmd.Parameters.AddWithValue("@Observaciones", miObservaciones)
+
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+        Finally
+            conexion.Close()
+        End Try
+    End Sub
+
+    Public Sub GuardaComentarioMuestreoArbol(idarbol As Long, comentario As String)
+        Dim conexion As New SqlClient.SqlConnection(txtconexion)
+
+        Dim sql As String = "cdc_muestreo_arbol_comentario_alta"
+
+        Dim cmd As New SqlClient.SqlCommand()
+
+        Try
+            conexion.Open()
+            cmd.Connection = conexion
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.CommandText = sql
+            cmd.Parameters.AddWithValue("@idArbol", idarbol)
+            cmd.Parameters.AddWithValue("@idMuestreo", miIdMuestreo)
+            cmd.Parameters.AddWithValue("@comentario", comentario)
 
             cmd.ExecuteNonQuery()
 
