@@ -84,6 +84,7 @@
 
         If miIdMuestreo = 0 Then
             cmd.Parameters("@idMuestreo").Direction = ParameterDirection.Output 'si ejecutamos un alta el parametro idMuestreo es de salida para recuperar el id generado por la BD
+            cmd.Parameters.AddWithValue("@grabadopor", "Desarrollo") 'guardamos el creador del muestreo solo al crearlo
         Else
             sql = "CdC_Muestreos_Update"
         End If
@@ -98,7 +99,6 @@
         cmd.Parameters.AddWithValue("@fecha", miFecha)
         cmd.Parameters.AddWithValue("@grupo", miGrupo)
         cmd.Parameters.AddWithValue("@Observaciones", miObservaciones)
-        cmd.Parameters.AddWithValue("@grabadopor", "Desarrollo")
 
         cmd.ExecuteNonQuery()
 
@@ -138,7 +138,7 @@
 
         Dim cmd As New SqlClient.SqlCommand()
 
-        If miIdMuestreo <> 0 Then sql = ""
+        'If miIdMuestreo <> 0 Then sql = ""
 
         Try
             conexion.Open()
