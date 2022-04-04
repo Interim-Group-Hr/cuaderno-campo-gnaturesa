@@ -956,14 +956,14 @@ Partial Public Class medicion_muestreo
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents BtnGuardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BtnGuardar As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''Control btnSelect.
+    '''Control btnNuevoArbol.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnSelect As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnNuevoArbol As Global.System.Web.UI.WebControls.LinkButton
 End Class

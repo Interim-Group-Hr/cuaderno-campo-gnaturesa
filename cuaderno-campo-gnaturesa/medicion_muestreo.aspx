@@ -706,14 +706,15 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                          <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
                         </div>
                       
                         <div class="modal-footer">
-                            <asp:button runat="server" id="BtnGuardar" type="button" class="btn btn-secondary" data-dismiss="modal" Text="Guardar"></asp:Button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <asp:LinkButton ID="BtnGuardar" class="btn btn-secondary" runat="server">Terminar</asp:LinkButton>
+                            <asp:LinkButton ID="btnNuevoArbol" class="btn btn-primary" runat="server">Nuevo Arbol</asp:LinkButton>
+                           
                         </div>
                     </div>
                 </div>
@@ -731,7 +732,7 @@
         <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light text-light">
             <div class="container-fluid text-center">
                 <div class="text-center" style="width: 100%">
-                    <asp:Button ID="btnSelect" data-bs-toggle="modal" data-bs-target="#ModalSelect" class="btn btn-primary btn-fichar" Text="Guardar" runat="server"/>
+                   <asp:LinkButton class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalSelect" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Aceptar</asp:LinkButton>
                 </div>
             </div>
         </nav>
