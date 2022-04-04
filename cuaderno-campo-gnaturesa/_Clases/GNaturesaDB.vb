@@ -176,7 +176,7 @@ Public Class GNaturesaDB
             ConexionCerrarBD()
 
             'Se monta la instrucción SQL de consulta
-            strSQL = "SELECT ROL"
+            strSQL = "SELECT MUESTREO"
             strSQL = strSQL & " FROM USUARIOS"
             strSQL = strSQL & " WHERE ID = " & IdUser
 

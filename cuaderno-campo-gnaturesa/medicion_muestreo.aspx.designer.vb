@@ -950,15 +950,6 @@ Partial Public Class medicion_muestreo
     Protected WithEvents comentarioArbolid As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control exampleModalCenter.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents exampleModalCenter As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
     '''Control BtnGuardar.
     '''</summary>
     '''<remarks>
@@ -966,4 +957,13 @@ Partial Public Class medicion_muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents BtnGuardar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control btnSelect.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnSelect As Global.System.Web.UI.WebControls.Button
 End Class

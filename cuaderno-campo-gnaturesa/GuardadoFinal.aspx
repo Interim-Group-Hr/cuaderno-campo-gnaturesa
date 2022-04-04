@@ -15,8 +15,15 @@
 
          <div class="col-12">
 
+
          </div>
 
+          <div class="card border-secondary mb-3">
+                    <div class="card-header">Comentarios</div>
+                    <div class="card-body text-secondary">
+                        <textarea class="form-control" id="comentarioArbol" rows="3"></textarea>
+                    </div>
+                </div>
 
          </div>
 

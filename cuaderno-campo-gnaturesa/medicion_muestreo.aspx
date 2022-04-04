@@ -699,8 +699,10 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" runat="server">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- MODAL -->
+
+            <div class="modal fade" id="ModalSelect" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+                <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
@@ -708,20 +710,9 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <%-- <div class="modal-body">
-                            <div class="form-floating">
-                                <asp:DropDownList ID="DropDownList61" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
-                                    <asp:ListItem Value="">0</asp:ListItem>
-                                    <asp:ListItem Value="">2</asp:ListItem>
-                                    <asp:ListItem Value="">3</asp:ListItem>
-                                    <asp:ListItem Value="">4</asp:ListItem>
-                                    <asp:ListItem Value="">5</asp:ListItem>
-                                </asp:DropDownList>
-                                <label for="floatingInput"><strong>Selecciona Arbol</strong></label>
-                            </div>
-                        </div>--%>
+                      
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <asp:button runat="server" id="BtnGuardar" type="button" class="btn btn-secondary" data-dismiss="modal" Text="Guardar"></asp:Button>
                             <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
@@ -740,7 +731,7 @@
         <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light text-light">
             <div class="container-fluid text-center">
                 <div class="text-center" style="width: 100%">
-                    <asp:Button ID="BtnGuardar" class="btn btn-primary btn-fichar" Text="Guardar" runat="server" data-toggle="modal" data-target="exampleModalCenter" />
+                    <asp:Button ID="btnSelect" data-bs-toggle="modal" data-bs-target="#ModalSelect" class="btn btn-primary btn-fichar" Text="Guardar" runat="server"/>
                 </div>
             </div>
         </nav>

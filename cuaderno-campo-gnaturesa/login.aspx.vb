@@ -9,9 +9,7 @@
     Private Sub btnEntrar_Click(sender As Object, e As EventArgs) Handles btnEntrar.Click
 
         Dim inyeccion As Boolean = False
-        Dim IP As String
-        Dim UserAgent As String
-        Dim DeviceInfo As String
+
 
         If Me.txtUsuario.Text <> String.Empty AndAlso Me.txtPassword.Text <> String.Empty Then
 
@@ -50,31 +48,16 @@
                         'Dependiendo del rol del usuario
                         Select Case objGNaturesa.Rol(intIdUsuario)
 
-                            Case 0 'ROL: CALIBRAR 
-
-                                IP = Request.ServerVariables("REMOTE_ADDR")
-                                UserAgent = Request.ServerVariables("HTTP_USER_AGENT")
-                                DeviceInfo = Device.Value
-
+                            Case 0 'ROL: Solo Sevilla
 
                                 Response.Redirect("crear_muestreo.aspx", True)
 
-                            Case 1 'ROL: GESTION                                        
-                                IP = Request.ServerVariables("REMOTE_ADDR")
-                                UserAgent = Request.ServerVariables("HTTP_USER_AGENT")
-                                DeviceInfo = Device.Value
-
+                            Case 1 'ROL: Sevilla y Valencia                                      
 
                                 Response.Redirect("crear_muestreo.aspx", True)
 
                         End Select
 
-                        'IP = Request.ServerVariables("REMOTE_ADDR")
-                        'UserAgent = Request.ServerVariables("HTTP_USER_AGENT")
-                        'DeviceInfo = Device.Value
-
-                        'objGNaturesa.Log(Session("IdUser"), IP, UserAgent, DeviceInfo)
-                        'Response.Redirect("medicion.aspx", True)
                     Else
 
                         Me.Label_errores.Text = "Usuario o contraseña incorrecta"
