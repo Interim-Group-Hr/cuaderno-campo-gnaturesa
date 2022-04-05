@@ -6,6 +6,13 @@
     Dim miidMuestreo As Long = 0
     Dim miidArbol As Long = 0
 
+    Public Enum TipoArbol
+        Pares = 1
+        Impares = 2
+        Todos = 3
+        Personalizado = 4
+    End Enum
+
     Public Sub New()
 
     End Sub
@@ -15,8 +22,15 @@
         miidArbol = idArbol
     End Sub
 
-    Public Function Lista() As DataTable
+    Public Function Lista(tipo As TipoArbol) As DataTable
         Dim sql As String = "select idArbol,nombreArbol from CdC_Arbol "
+        If tipo = 1 Then
+            sql = sql & " where (idArbol%2) = 0"
+        End If
+        If tipo = 2 Then
+            sql = sql & " where (idArbol%2) <> 0"
+        End If
+
         Dim dt As New DataTable
         BD.RellenaDataTable_GNaturesa(dt, sql, False)
         Lista = dt
