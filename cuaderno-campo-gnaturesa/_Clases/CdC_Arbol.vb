@@ -22,13 +22,13 @@
         miidArbol = idArbol
     End Sub
 
-    Public Function Lista(tipo As TipoArbol) As DataTable
-        Dim sql As String = "select idArbol,nombreArbol from CdC_Arbol "
+    Public Function Lista(tipo As TipoArbol, idmuestreo As Long) As DataTable
+        Dim sql As String = "select idArbol,nombreArbol from CdC_Arbol where idArbol not in (select idArbol from CdC_MUESTREO_ARBOL where idMuestreo = " & idmuestreo & ") "
         If tipo = 1 Then
-            sql = sql & " where (idArbol%2) = 0"
+            sql = sql & " and (idArbol%2) = 0"
         End If
         If tipo = 2 Then
-            sql = sql & " where (idArbol%2) <> 0"
+            sql = sql & " and (idArbol%2) <> 0"
         End If
 
         Dim dt As New DataTable
