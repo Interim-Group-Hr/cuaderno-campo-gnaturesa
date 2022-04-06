@@ -59,13 +59,13 @@ Partial Public Class muestreo
     Protected WithEvents TextBox_fecha As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control DropDown_Grupos.
+    '''Control Drop_GruposArbol.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDown_Grupos As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents Drop_GruposArbol As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control DropDown_Plaga.
@@ -120,13 +120,4 @@ Partial Public Class muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DropDown_NArbol As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''Control botonAceptar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents botonAceptar As Global.System.Web.UI.WebControls.LinkButton
 End Class

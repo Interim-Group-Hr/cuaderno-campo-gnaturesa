@@ -47,12 +47,12 @@
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropDown_Grupos" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="Drop_GruposArbol" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
                                 <asp:ListItem Value="0">Selecciona Grupo</asp:ListItem>
                                 <asp:ListItem Value="1">Pares</asp:ListItem>
                                 <asp:ListItem Value="2">Impares</asp:ListItem>
                                 <asp:ListItem Value="3">Todos</asp:ListItem>
-                                <asp:ListItem Value="4">Aleatorios</asp:ListItem>
+                                <asp:ListItem Value="4">Aleatorio</asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Grupo</strong></label>
                         </div>
@@ -118,8 +118,7 @@
                                 </div>
 
                                 <div class="modal-footer">
-                                    <asp:LinkButton runat="server" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</asp:LinkButton>
-                                    <asp:LinkButton ID="botonAceptar" runat="server" type="button" class="btn btn-primary">Generar Muestreo</asp:LinkButton>
+                                    <asp:LinkButton runat="server" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</asp:LinkButton>                               
                                 </div>
                             </div>
                         </div>

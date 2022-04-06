@@ -191,7 +191,7 @@ Public Class GNaturesaDB
 
                 dtrResultado.Read()
 
-                RolStatus = dtrResultado("Rol")
+                RolStatus = dtrResultado("Muestreo")
                 mlngRespOf = RolStatus
 
             Else

@@ -8,7 +8,7 @@
 
 
         Dim FincaySector As String = Session("Finca") + " - " + Session("Sector")
-        Dim FechayArbol As String = Session("Fecha") + " | " + Session("Arbol")
+        Dim FechayArbol As String = Session("Fecha") + " | " + Session("NomArbol")
         FincaSector.InnerText = FincaySector
         fechaArbol.InnerText = FechayArbol
 
@@ -16,7 +16,17 @@
         Dim plaga1 As String = Session("Plaga1")
         Dim plaga2 As String = Session("Plaga2")
 
+        Dim Arboles As New Arbol
+        Dim dtArbol = Arboles.Lista(Session("GrupoArbol"), Session("idMuestreo"))
 
+        If dtArbol.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (dtArbol.Rows.Count - 1)
+                DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
+            Next
+
+        End If
 
 
         If plaga1 = 1 Then
@@ -956,6 +966,9 @@
 
 
 
+
+
+
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
 
         Dim Guardado As New CdCMuestreo
@@ -1144,7 +1157,23 @@
             Next
         End If
 
+        Dim Arboles As New Arbol
+        Dim dtArbol = Arboles.Lista(Session("GrupoArbol"), Session("idMuestreo"))
+
+        If dtArbol.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (dtArbol.Rows.Count - 1)
+                DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
+            Next
+
+        End If
+
+        Session("GrupoArbol") = DropDown_NArbol.SelectedValue
+        Response.Redirect("medicion_muestreo.aspx")
+
 
     End Sub
+
 
 End Class

@@ -10,7 +10,7 @@
         Pares = 1
         Impares = 2
         Todos = 3
-        Personalizado = 4
+        Aleatorio = 4
     End Enum
 
     Public Sub New()

@@ -101,65 +101,55 @@ Public Class muestreo
             'Else
 
 
-            '    If Session.Item("loginOK") = False Or Session.Item("ROL") = 1 Then
+            '    If Session.Item("loginOK") = False Or Session.Item("Muestreo") = 1 Then
 
             '        Response.Redirect("login.aspx", True)
             '        Exit Sub
 
-            '    Else
+            'Else
 
             Dim BD As New GNaturesaDB
-            Dim Empresa As New EmpresaNaturesa
-            Dim Plagas As New Plaga
-            Dim dtEmpresa = Empresa.Lista()
-            Dim dtPlagas = Plagas.Lista(False)
-            Dim FechaString As String
+                    Dim Empresa As New EmpresaNaturesa
+                    Dim Plagas As New Plaga
+                    Dim dtEmpresa = Empresa.Lista()
+                    Dim dtPlagas = Plagas.Lista(False)
+                    Dim FechaString As String
 
-            FechaString = Now.ToShortDateString
+                    FechaString = Now.ToShortDateString
 
-            TextBox_fecha.Text = FechaString
-
-            Dim Arboles As New Arbol
-            Dim dtArbol = Arboles.Lista()
-
-            If dtArbol.Rows.Count > 0 Then
-
-                Dim i As Integer
-                For i = 0 To (dtArbol.Rows.Count - 1)
-                    DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
-                Next
-
-            End If
+                    TextBox_fecha.Text = FechaString
 
 
-            'Cargar DropDownList de Empresas
-            If dtEmpresa.Rows.Count > 0 Then
 
-                Dim i As Integer
-                For i = 0 To (dtEmpresa.Rows.Count - 1)
-                    DropDown_empresa.Items.Add(New ListItem(dtEmpresa.Rows(i)("NombreEmpresa"), dtEmpresa.Rows(i)("idEmpresa")))
-                Next
 
-            End If
+                    'Cargar DropDownList de Empresas
+                    If dtEmpresa.Rows.Count > 0 Then
 
-            'Cargar DropDownList Plagas 1
-            If dtPlagas.Rows.Count > 0 Then
-                Dim i As Integer
-                For i = 0 To (dtPlagas.Rows.Count - 1)
-                    DropDown_Plaga.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
-                Next
-            End If
+                        Dim i As Integer
+                        For i = 0 To (dtEmpresa.Rows.Count - 1)
+                            DropDown_empresa.Items.Add(New ListItem(dtEmpresa.Rows(i)("NombreEmpresa"), dtEmpresa.Rows(i)("idEmpresa")))
+                        Next
 
-            'Precargar DropDownList Plaga 2
+                    End If
 
-            If dtPlagas.Rows.Count > 0 Then
-                Dim i As Integer
-                For i = 0 To (dtPlagas.Rows.Count - 1)
-                    DropDown_Plaga2.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
-                Next
-            End If
+                    'Cargar DropDownList Plagas 1
+                    If dtPlagas.Rows.Count > 0 Then
+                        Dim i As Integer
+                        For i = 0 To (dtPlagas.Rows.Count - 1)
+                            DropDown_Plaga.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
+                        Next
+                    End If
 
-        End If
+                    'Precargar DropDownList Plaga 2
+
+                    If dtPlagas.Rows.Count > 0 Then
+                        Dim i As Integer
+                        For i = 0 To (dtPlagas.Rows.Count - 1)
+                            DropDown_Plaga2.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
+                        Next
+                    End If
+
+                End If
 
 
         '    End If
@@ -185,6 +175,7 @@ Public Class muestreo
         End If
 
     End Sub
+
 
 
     Private Sub DropDown_Finca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_Finca.SelectedIndexChanged
@@ -216,15 +207,57 @@ Public Class muestreo
         btnDelPlaga.Visible = False
 
 
+
     End Sub
 
-    Private Sub botonAceptar_Click(sender As Object, e As EventArgs) Handles botonAceptar.Click
+
+
+    'Private Sub botonAceptar_Click(sender As Object, e As EventArgs) Handles botonAceptar.Click
+
+    '    'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
+    '    Session("Empresa") = DropDown_empresa.SelectedItem.Text
+    '    Session("Finca") = DropDown_Finca.SelectedItem.Text
+    '    Session("Sector") = DropDown_Sector.SelectedItem.Text
+    '    Session("Grupo") = DropDown_Grupos.SelectedValue
+    '    Session("Plaga1") = DropDown_Plaga.SelectedValue
+    '    Session("Plaga2") = DropDown_Plaga2.SelectedValue
+    '    Session("Fecha") = TextBox_fecha.Text
+    '    Session("NomArbol") = DropDown_NArbol.SelectedItem.Text
+    '    Session("IdArbol") = DropDown_NArbol.SelectedValue
+
+    '    Dim miMuestreo As New CdCMuestreo
+
+    '    'Cargar los valores para su posterior guardado
+    '    miMuestreo.Empresa = DropDown_empresa.SelectedValue
+    '    miMuestreo.Finca = DropDown_Finca.SelectedValue
+    '    miMuestreo.Sector = DropDown_Sector.SelectedValue
+    '    miMuestreo.Grupo = DropDown_Grupos.SelectedItem.Text
+    '    miMuestreo.Fecha = Date.Now
+    '    miMuestreo.AddPlaga(DropDown_Plaga.SelectedValue)
+
+    '    If DropDown_Plaga2.SelectedValue > 0 Then
+    '        miMuestreo.AddPlaga(DropDown_Plaga2.SelectedValue)
+    '    End If
+
+
+    '    'Guardado
+    '    miMuestreo.Guardar()
+    '    Session("Muestreo") = miMuestreo
+
+    '    'Despues de generar el muestreo guardamos la ID del mismo en una variable de sesion
+    '    Session("idMuestreo") = miMuestreo.Id
+
+    '    Response.Redirect("medicion_muestreo.aspx", True)
+    'End Sub
+
+    Private Sub DropDown_NArbol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_NArbol.SelectedIndexChanged
 
         'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
         Session("Empresa") = DropDown_empresa.SelectedItem.Text
         Session("Finca") = DropDown_Finca.SelectedItem.Text
         Session("Sector") = DropDown_Sector.SelectedItem.Text
-        Session("Grupo") = DropDown_Grupos.SelectedValue
+        Session("Grupo") = Drop_GruposArbol.SelectedValue
+        Session("GrupoArbol") = Drop_GruposArbol.SelectedIndex
         Session("Plaga1") = DropDown_Plaga.SelectedValue
         Session("Plaga2") = DropDown_Plaga2.SelectedValue
         Session("Fecha") = TextBox_fecha.Text
@@ -237,7 +270,7 @@ Public Class muestreo
         miMuestreo.Empresa = DropDown_empresa.SelectedValue
         miMuestreo.Finca = DropDown_Finca.SelectedValue
         miMuestreo.Sector = DropDown_Sector.SelectedValue
-        miMuestreo.Grupo = DropDown_Grupos.SelectedItem.Text
+        miMuestreo.Grupo = Drop_GruposArbol.SelectedItem.Text
         miMuestreo.Fecha = Date.Now
         miMuestreo.AddPlaga(DropDown_Plaga.SelectedValue)
 
@@ -254,7 +287,22 @@ Public Class muestreo
         Session("idMuestreo") = miMuestreo.Id
 
         Response.Redirect("medicion_muestreo.aspx", True)
+
     End Sub
 
+    Private Sub Drop_GruposArbol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Drop_GruposArbol.SelectedIndexChanged
 
+        Dim Arboles As New Arbol
+        Dim dtArbol = Arboles.Lista(Drop_GruposArbol.SelectedIndex, -1)
+
+        If dtArbol.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (dtArbol.Rows.Count - 1)
+                DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
+            Next
+
+        End If
+
+    End Sub
 End Class

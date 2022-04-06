@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="medicion_muestreo.aspx.vb" Inherits="cuaderno_campo_gnaturesa.medicion_muestreo" %>
 
 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
@@ -8,10 +9,17 @@
     <div class="container-fluid">
         <div>
             <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-top">
-                <div>
-                    <label id="FincaSector" runat="server">i</label></div>
-                <div>
-                    <label id="fechaArbol" runat="server"></label>
+                <div class="container">
+                    <div class="col-6 justify-content-start">
+                        <div class="col-6">
+                            <label style="color: white;" id="FincaSector" runat="server"></label>
+                        </div>
+                    </div>
+                    <div class="col-6 justify-content-end">
+                        <div class="col-6">
+                            <label style="color: white;" id="fechaArbol" runat="server"></label>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -701,28 +709,58 @@
 
             <!-- MODAL -->
 
-            <div class="modal fade" id="ModalSelect" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+            <div class="modal fade" id="ModalSelect" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                          <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Elección</h5>
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                         </div>
-                      
-                        <div class="modal-footer">
-                            <asp:LinkButton ID="BtnGuardar" class="btn btn-secondary" runat="server">Terminar</asp:LinkButton>
-                            <asp:LinkButton ID="btnNuevoArbol" class="btn btn-primary" runat="server">Nuevo Arbol</asp:LinkButton>
+                        <div class="modal-body">
+
+                            <asp:DropDownList ID="DropDown_NArbol" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:ListItem Value="0">Selecciona Arbol</asp:ListItem>
+
+                            </asp:DropDownList>
+                            <label for="floatingInput"><strong>Grupo</strong></label>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Confirmacion -->
+
+              <div class="modal fade" id="ModalConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">¿Seguro que quieres terminar?</h5>
+                            <div class="modal-header">
+
+                            </div>
+
+                        </div>
+                        <div class="modal-body">
+
+                            <asp:Label Text="Si terminas el Muestreo no podrás volver a editarlo" runat="server" />
                            
+                        </div>
+                        <div class="modal-footer">
+                              <asp:LinkButton Text="Cerrar" class="btn btn-secondary" runat="server" />
+                             <asp:LinkButton ID="LinkButton1" Text="Aceptar" runat="server" class="btn btn-primary" />
                         </div>
                     </div>
                 </div>
             </div>
 
 
-
             <!-- Fin componentes -->
+
+
 
         </div>
 
@@ -732,7 +770,9 @@
         <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light text-light">
             <div class="container-fluid text-center">
                 <div class="text-center" style="width: 100%">
-                   <asp:LinkButton class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalSelect" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Aceptar</asp:LinkButton>
+                   <asp:LinkButton ID="BtnGuardar" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalSelect" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Añadir Arbol</asp:LinkButton>
+                   <asp:LinkButton Id="BtnConfirmarGuardado" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalConfirmar" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Terminar Muestreo</asp:LinkButton>
+
                 </div>
             </div>
         </nav>
@@ -756,3 +796,16 @@
 
     <iframe src="https://www.slideshare.net/DavidMInterimGroup/slideshelf" width="615" height="470" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>--%>
 </asp:Content>
+
+
+<asp:Content  ID="Content3" ContentPlaceHolderID="footer" runat="server">
+    <script>
+
+        function AbrirModal() {
+            debugger;
+            $("#ModalSelect").modal();
+        }
+
+    </script>
+</asp:Content>
+
