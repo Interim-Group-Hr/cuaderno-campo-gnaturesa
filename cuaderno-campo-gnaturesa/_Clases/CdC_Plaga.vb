@@ -85,7 +85,7 @@
         Dim sql As String
 
         'recuperamos organos de plaga
-        sql = "select * from CdC_PLAGA_ORGANO_ORIENTACION_VALOR poov inner join CdC_VALORES on CdC_VALORES.idValor = poov.idValor where idPlagaOrganoOrientacion = " & idplaga
+        sql = "select * from CdC_PLAGA_ORGANO_ORIENTACION_VALOR poov inner join CdC_VALORES on CdC_VALORES.idValor = poov.idValor where idPlagaOrganoOrientacion = " & idplaga & " order by ordenfenologia desc"
 
         BD.RellenaDataTable_GNaturesa(dt, sql, False)
 

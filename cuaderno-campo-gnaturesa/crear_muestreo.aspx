@@ -96,12 +96,12 @@
 
 
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <asp:LinkButton class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Generar Muestreo</asp:LinkButton>
+                        <asp:LinkButton id="botonAceptar" class="btn btn-primary" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Generar Muestreo</asp:LinkButton>
                     </div>
 
 
-                    <%--Modal--%>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                   <%-- <%--Modal--%>
+                   <%-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -122,7 +122,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                <!-- Fin Modal -->
                 
                 </div>

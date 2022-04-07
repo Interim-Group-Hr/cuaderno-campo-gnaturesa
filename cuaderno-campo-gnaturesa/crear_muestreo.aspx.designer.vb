@@ -113,11 +113,11 @@ Partial Public Class muestreo
     Protected WithEvents btnDelPlaga As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''Control DropDown_NArbol.
+    '''Control botonAceptar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDown_NArbol As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents botonAceptar As Global.System.Web.UI.WebControls.LinkButton
 End Class

@@ -9,16 +9,12 @@
     <div class="container-fluid">
         <div>
             <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-top">
-                <div class="container">
-                    <div class="col-6 justify-content-start">
-                        <div class="col-6">
-                            <label style="color: white;" id="FincaSector" runat="server"></label>
-                        </div>
+                <div class="container-fluid">
+                    <div class="me-auto">
+                            <label style="color: white;" id="FincaSector" runat="server">asdas</label>
                     </div>
-                    <div class="col-6 justify-content-end">
-                        <div class="col-6">
-                            <label style="color: white;" id="fechaArbol" runat="server"></label>
-                        </div>
+                    <div class="">
+                            <label style="color: white;" id="fechaArbol" runat="server">dasdasd</label>
                     </div>
                 </div>
             </nav>
@@ -26,7 +22,7 @@
         <br />
         <br />
         <div class="row col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-6" style="margin: auto;">
-            
+
             <!-- Fenología -->
             <div class="col-12">
                 <div class="card border-secondary mb-3" id="SeccionFenologia" runat="server">
@@ -123,7 +119,7 @@
             </div>
 
             <div class="col-sm-6" id="pulgonOcupado" runat="server" visible="false">
-                <div class="card border-secondary mb-3"  id="seccionPulgonOcupado" runat="server">
+                <div class="card border-secondary mb-3" id="seccionPulgonOcupado" runat="server">
                     <div class="card-header">Pulgon - Brotes Ocupados</div>
                     <div class="card-body text-secondary">
 
@@ -734,24 +730,24 @@
 
             <!-- Modal Confirmacion -->
 
-              <div class="modal fade" id="ModalConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade" id="ModalConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">¿Seguro que quieres terminar?</h5>
                             <div class="modal-header">
-
                             </div>
-
                         </div>
+
                         <div class="modal-body">
 
                             <asp:Label Text="Si terminas el Muestreo no podrás volver a editarlo" runat="server" />
-                           
+
                         </div>
+
                         <div class="modal-footer">
-                              <asp:LinkButton Text="Cerrar" class="btn btn-secondary" runat="server" />
-                             <asp:LinkButton ID="LinkButton1" Text="Aceptar" runat="server" class="btn btn-primary" />
+                           <%-- <asp:LinkButton Text="Cerrar" class="btn btn-secondary" runat="server" />--%>
+                            <asp:LinkButton ID="btnAceptar" Text="Aceptar" runat="server" class="btn btn-primary" />
                         </div>
                     </div>
                 </div>
@@ -770,8 +766,8 @@
         <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light text-light">
             <div class="container-fluid text-center">
                 <div class="text-center" style="width: 100%">
-                   <asp:LinkButton ID="BtnGuardar" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalSelect" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Añadir Arbol</asp:LinkButton>
-                   <asp:LinkButton Id="BtnConfirmarGuardado" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalConfirmar" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Terminar Muestreo</asp:LinkButton>
+                    <asp:LinkButton ID="guardarArbol" class="btn btn-primary" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Añadir Arbol</asp:LinkButton>
+                    <asp:LinkButton ID="BtnGuardar" data-bs-toggle="modal" data-bs-target="#ModalConfirmar" class="btn btn-primary" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Terminar Muestreo</asp:LinkButton>
 
                 </div>
             </div>
@@ -798,14 +794,18 @@
 </asp:Content>
 
 
-<asp:Content  ID="Content3" ContentPlaceHolderID="footer" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
+
     <script>
-
-        function AbrirModal() {
-            debugger;
-            $("#ModalSelect").modal();
-        }
-
+      <%    If Request.Form("ctl00$content$DropDown_NArbol") = "" Then %>
+            $(window).on('load', function () {
+                $('#ModalSelect').modal('show');
+            });
+        <% End If %>
     </script>
+
+    
+
+
 </asp:Content>
 

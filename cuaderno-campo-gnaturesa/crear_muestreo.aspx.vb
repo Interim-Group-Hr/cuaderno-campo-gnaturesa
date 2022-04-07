@@ -212,57 +212,17 @@ Public Class muestreo
 
 
 
-    'Private Sub botonAceptar_Click(sender As Object, e As EventArgs) Handles botonAceptar.Click
-
-    '    'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
-    '    Session("Empresa") = DropDown_empresa.SelectedItem.Text
-    '    Session("Finca") = DropDown_Finca.SelectedItem.Text
-    '    Session("Sector") = DropDown_Sector.SelectedItem.Text
-    '    Session("Grupo") = DropDown_Grupos.SelectedValue
-    '    Session("Plaga1") = DropDown_Plaga.SelectedValue
-    '    Session("Plaga2") = DropDown_Plaga2.SelectedValue
-    '    Session("Fecha") = TextBox_fecha.Text
-    '    Session("NomArbol") = DropDown_NArbol.SelectedItem.Text
-    '    Session("IdArbol") = DropDown_NArbol.SelectedValue
-
-    '    Dim miMuestreo As New CdCMuestreo
-
-    '    'Cargar los valores para su posterior guardado
-    '    miMuestreo.Empresa = DropDown_empresa.SelectedValue
-    '    miMuestreo.Finca = DropDown_Finca.SelectedValue
-    '    miMuestreo.Sector = DropDown_Sector.SelectedValue
-    '    miMuestreo.Grupo = DropDown_Grupos.SelectedItem.Text
-    '    miMuestreo.Fecha = Date.Now
-    '    miMuestreo.AddPlaga(DropDown_Plaga.SelectedValue)
-
-    '    If DropDown_Plaga2.SelectedValue > 0 Then
-    '        miMuestreo.AddPlaga(DropDown_Plaga2.SelectedValue)
-    '    End If
-
-
-    '    'Guardado
-    '    miMuestreo.Guardar()
-    '    Session("Muestreo") = miMuestreo
-
-    '    'Despues de generar el muestreo guardamos la ID del mismo en una variable de sesion
-    '    Session("idMuestreo") = miMuestreo.Id
-
-    '    Response.Redirect("medicion_muestreo.aspx", True)
-    'End Sub
-
-    Private Sub DropDown_NArbol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_NArbol.SelectedIndexChanged
+    Private Sub botonAceptar_Click(sender As Object, e As EventArgs) Handles botonAceptar.Click
 
         'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
         Session("Empresa") = DropDown_empresa.SelectedItem.Text
         Session("Finca") = DropDown_Finca.SelectedItem.Text
         Session("Sector") = DropDown_Sector.SelectedItem.Text
         Session("Grupo") = Drop_GruposArbol.SelectedValue
-        Session("GrupoArbol") = Drop_GruposArbol.SelectedIndex
         Session("Plaga1") = DropDown_Plaga.SelectedValue
         Session("Plaga2") = DropDown_Plaga2.SelectedValue
         Session("Fecha") = TextBox_fecha.Text
-        Session("NomArbol") = DropDown_NArbol.SelectedItem.Text
-        Session("IdArbol") = DropDown_NArbol.SelectedValue
+
 
         Dim miMuestreo As New CdCMuestreo
 
@@ -287,22 +247,61 @@ Public Class muestreo
         Session("idMuestreo") = miMuestreo.Id
 
         Response.Redirect("medicion_muestreo.aspx", True)
-
     End Sub
 
-    Private Sub Drop_GruposArbol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Drop_GruposArbol.SelectedIndexChanged
+    'Private Sub DropDown_NArbol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_NArbol.SelectedIndexChanged
 
-        Dim Arboles As New Arbol
-        Dim dtArbol = Arboles.Lista(Drop_GruposArbol.SelectedIndex, -1)
+    '    'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
+    '    Session("Empresa") = DropDown_empresa.SelectedItem.Text
+    '    Session("Finca") = DropDown_Finca.SelectedItem.Text
+    '    Session("Sector") = DropDown_Sector.SelectedItem.Text
+    '    Session("Grupo") = Drop_GruposArbol.SelectedValue
+    '    Session("GrupoArbol") = Drop_GruposArbol.SelectedIndex
+    '    Session("Plaga1") = DropDown_Plaga.SelectedValue
+    '    Session("Plaga2") = DropDown_Plaga2.SelectedValue
+    '    Session("Fecha") = TextBox_fecha.Text
+    '    Session("NomArbol") = DropDown_NArbol.SelectedItem.Text
+    '    Session("IdArbol") = DropDown_NArbol.SelectedValue
 
-        If dtArbol.Rows.Count > 0 Then
+    '    Dim miMuestreo As New CdCMuestreo
 
-            Dim i As Integer
-            For i = 0 To (dtArbol.Rows.Count - 1)
-                DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
-            Next
+    '    'Cargar los valores para su posterior guardado
+    '    miMuestreo.Empresa = DropDown_empresa.SelectedValue
+    '    miMuestreo.Finca = DropDown_Finca.SelectedValue
+    '    miMuestreo.Sector = DropDown_Sector.SelectedValue
+    '    miMuestreo.Grupo = Drop_GruposArbol.SelectedItem.Text
+    '    miMuestreo.Fecha = Date.Now
+    '    miMuestreo.AddPlaga(DropDown_Plaga.SelectedValue)
 
-        End If
+    '    If DropDown_Plaga2.SelectedValue > 0 Then
+    '        miMuestreo.AddPlaga(DropDown_Plaga2.SelectedValue)
+    '    End If
 
-    End Sub
+
+    '    'Guardado
+    '    miMuestreo.Guardar()
+    '    Session("Muestreo") = miMuestreo
+
+    '    'Despues de generar el muestreo guardamos la ID del mismo en una variable de sesion
+    '    Session("idMuestreo") = miMuestreo.Id
+
+    '    Response.Redirect("medicion_muestreo.aspx", True)
+
+    'End Sub
+
+    'Private Sub Drop_GruposArbol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Drop_GruposArbol.SelectedIndexChanged
+
+    '    Dim Arboles As New Arbol
+    '    Dim dtArbol = Arboles.Lista(Drop_GruposArbol.SelectedIndex, -1)
+
+    '    If dtArbol.Rows.Count > 0 Then
+
+    '        Dim i As Integer
+    '        For i = 0 To (dtArbol.Rows.Count - 1)
+    '            DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
+    '        Next
+
+    '    End If
+
+    'End Sub
 End Class

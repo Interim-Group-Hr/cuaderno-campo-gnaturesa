@@ -959,13 +959,22 @@ Partial Public Class medicion_muestreo
     Protected WithEvents DropDown_NArbol As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control LinkButton1.
+    '''Control btnAceptar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents btnAceptar As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''Control guardarArbol.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents guardarArbol As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''Control BtnGuardar.
@@ -975,13 +984,4 @@ Partial Public Class medicion_muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents BtnGuardar As Global.System.Web.UI.WebControls.LinkButton
-
-    '''<summary>
-    '''Control BtnConfirmarGuardado.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents BtnConfirmarGuardado As Global.System.Web.UI.WebControls.LinkButton
 End Class

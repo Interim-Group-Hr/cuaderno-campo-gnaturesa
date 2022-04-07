@@ -3,135 +3,141 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        CargdarFenologia()
-        Dim Fecha As String = Session("Fecha")
 
 
-        Dim FincaySector As String = Session("Finca") + " - " + Session("Sector")
-        Dim FechayArbol As String = Session("Fecha") + " | " + Session("NomArbol")
-        FincaSector.InnerText = FincaySector
-        fechaArbol.InnerText = FechayArbol
+
+        If Not IsPostBack Then
+
+            CargdarFenologia()
+            Dim Fecha As String = Session("Fecha")
+
+            Dim Arboles As New Arbol
+            Dim dtArbol = Arboles.Lista(Session("Grupo"), Session("idMuestreo"))
+
+            If dtArbol.Rows.Count > 0 Then
+
+                Dim i As Integer
+                For i = 0 To (dtArbol.Rows.Count - 1)
+                    DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
+                Next
+
+            End If
+
+            Dim FincaySector As String = Session("Finca") + " - " + Session("Sector")
+            Dim FechayArbol As String = Session("Fecha") + " | " + Session("idArbol")
+            FincaSector.InnerText = FincaySector
+            fechaArbol.InnerText = FechayArbol
 
 
-        Dim plaga1 As String = Session("Plaga1")
-        Dim plaga2 As String = Session("Plaga2")
+            Dim plaga1 As String = Session("Plaga1")
+            Dim plaga2 As String = Session("Plaga2")
 
-        Dim Arboles As New Arbol
-        Dim dtArbol = Arboles.Lista(Session("GrupoArbol"), Session("idMuestreo"))
 
-        If dtArbol.Rows.Count > 0 Then
 
-            Dim i As Integer
-            For i = 0 To (dtArbol.Rows.Count - 1)
-                DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
-            Next
+
+            If plaga1 = 1 Then
+
+                PulgonSensible.Visible = True
+                pulgonOcupado.Visible = True
+                CargarPulgon()
+
+            ElseIf plaga1 = 2 Then
+
+                EutetranychusFruto.Visible = True
+                EutetranychusHoja.Visible = True
+                CargarEutetranychus()
+
+            ElseIf plaga1 = 3 Then
+
+                Mosca.Visible = True
+                CargarMosca()
+
+            ElseIf plaga1 = 4 Then
+
+                Orquidea.Visible = True
+                CargarTripOrquidea()
+
+            ElseIf plaga1 = 5 Then
+
+                Planococus.Visible = True
+                CargarPlanococcus()
+
+            ElseIf plaga1 = 6 Then
+
+                polilla.Visible = True
+                CargarPolilla()
+
+            ElseIf plaga1 = 7 Then
+
+                minador.Visible = True
+                CargarMinador()
+
+            ElseIf plaga1 = 8 Then
+
+                TetranychusFruto.Visible = True
+                TetranychusHoja.Visible = True
+                CargarTetranychus()
+
+            ElseIf plaga1 = 9 Then
+
+                Aonidella.Visible = True
+                CargarAonidella()
+
+            End If
+
+
+            If plaga2 = 1 Then
+
+                PulgonSensible.Visible = True
+                pulgonOcupado.Visible = True
+                CargarPulgon()
+
+            ElseIf plaga2 = 2 Then
+
+                EutetranychusFruto.Visible = True
+                EutetranychusHoja.Visible = True
+                CargarEutetranychus()
+
+            ElseIf plaga2 = 3 Then
+
+                Mosca.Visible = True
+                CargarMosca()
+
+            ElseIf plaga2 = 4 Then
+
+                Orquidea.Visible = True
+                CargarTripOrquidea()
+
+            ElseIf plaga2 = 5 Then
+
+                Planococus.Visible = True
+                CargarPlanococcus()
+
+            ElseIf plaga2 = 6 Then
+
+                polilla.Visible = True
+                CargarPolilla()
+
+            ElseIf plaga2 = 7 Then
+
+                minador.Visible = True
+                CargarMinador()
+
+            ElseIf plaga2 = 8 Then
+
+                TetranychusFruto.Visible = True
+                TetranychusHoja.Visible = True
+                CargarTetranychus()
+
+            ElseIf plaga2 = 9 Then
+
+                Aonidella.Visible = True
+                CargarAonidella()
+
+            End If
+
 
         End If
-
-
-        If plaga1 = 1 Then
-
-            PulgonSensible.Visible = True
-            pulgonOcupado.Visible = True
-            CargarPulgon()
-
-        ElseIf plaga1 = 2 Then
-
-            EutetranychusFruto.Visible = True
-            EutetranychusHoja.Visible = True
-            CargarEutetranychus()
-
-        ElseIf plaga1 = 3 Then
-
-            Mosca.Visible = True
-            CargarMosca()
-
-        ElseIf plaga1 = 4 Then
-
-            Orquidea.Visible = True
-            CargarTripOrquidea()
-
-        ElseIf plaga1 = 5 Then
-
-            Planococus.Visible = True
-            CargarPlanococcus()
-
-        ElseIf plaga1 = 6 Then
-
-            polilla.Visible = True
-            CargarPolilla()
-
-        ElseIf plaga1 = 7 Then
-
-            minador.Visible = True
-            CargarMinador()
-
-        ElseIf plaga1 = 8 Then
-
-            TetranychusFruto.Visible = True
-            TetranychusHoja.Visible = True
-            CargarTetranychus()
-
-        ElseIf plaga1 = 9 Then
-
-            Aonidella.Visible = True
-            CargarAonidella()
-
-        End If
-
-
-        If plaga2 = 1 Then
-
-            PulgonSensible.Visible = True
-            pulgonOcupado.Visible = True
-            CargarPulgon()
-
-        ElseIf plaga2 = 2 Then
-
-            EutetranychusFruto.Visible = True
-            EutetranychusHoja.Visible = True
-            CargarEutetranychus()
-
-        ElseIf plaga2 = 3 Then
-
-            Mosca.Visible = True
-            CargarMosca()
-
-        ElseIf plaga2 = 4 Then
-
-            Orquidea.Visible = True
-            CargarTripOrquidea()
-
-        ElseIf plaga2 = 5 Then
-
-            Planococus.Visible = True
-            CargarPlanococcus()
-
-        ElseIf plaga2 = 6 Then
-
-            polilla.Visible = True
-            CargarPolilla()
-
-        ElseIf plaga2 = 7 Then
-
-            minador.Visible = True
-            CargarMinador()
-
-        ElseIf plaga2 = 8 Then
-
-            TetranychusFruto.Visible = True
-            TetranychusHoja.Visible = True
-            CargarTetranychus()
-
-        ElseIf plaga2 = 9 Then
-
-            Aonidella.Visible = True
-            CargarAonidella()
-
-        End If
-
-
-
 
     End Sub
 
@@ -969,7 +975,7 @@
 
 
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+    Private Sub guardarArbol_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
 
         Dim Guardado As New CdCMuestreo
         Guardado = Session("Muestreo")
@@ -1157,23 +1163,33 @@
             Next
         End If
 
-        Dim Arboles As New Arbol
-        Dim dtArbol = Arboles.Lista(Session("GrupoArbol"), Session("idMuestreo"))
+        'Cargar Arboles dicriminando los que ya se han elegido
+        'Dim Arboles As New Arbol
+        'Dim dtArbol = Arboles.Lista(Session("GrupoArbol"), Session("idMuestreo"))
 
-        If dtArbol.Rows.Count > 0 Then
+        'If dtArbol.Rows.Count > 0 Then
 
-            Dim i As Integer
-            For i = 0 To (dtArbol.Rows.Count - 1)
-                DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
-            Next
+        '    Dim i As Integer
+        '    For i = 0 To (dtArbol.Rows.Count - 1)
+        '        DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
+        '    Next
 
-        End If
+        'End If
 
-        Session("GrupoArbol") = DropDown_NArbol.SelectedValue
         Response.Redirect("medicion_muestreo.aspx")
 
 
     End Sub
 
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
+        Response.Redirect("GuardadoFinal.aspx")
+
+    End Sub
+
+    Private Sub DropDown_NArbol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_NArbol.SelectedIndexChanged
+
+        Session("IdArbol") = DropDown_NArbol.SelectedValue
+
+    End Sub
 End Class
