@@ -3,8 +3,11 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-
-
+        Session("IdArbol") = DropDown_NArbol.SelectedValue
+        Dim FincaySector As String = Session("Finca") + " - " + Session("Sector")
+        Dim FechayArbol As String = Session("Fecha") + " | " + Session("idArbol")
+        FincaSector.InnerText = FincaySector
+        fechaArbol.InnerText = FechayArbol
 
         If Not IsPostBack Then
 
@@ -23,10 +26,7 @@
 
             End If
 
-            Dim FincaySector As String = Session("Finca") + " - " + Session("Sector")
-            Dim FechayArbol As String = Session("Fecha") + " | " + Session("idArbol")
-            FincaSector.InnerText = FincaySector
-            fechaArbol.InnerText = FechayArbol
+
 
 
             Dim plaga1 As String = Session("Plaga1")
@@ -971,15 +971,13 @@
     End Sub
 
 
+    Private Sub guardarArbol_Click(sender As Object, e As EventArgs) Handles guardarArbol.Click
 
-
-
-
-    Private Sub guardarArbol_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
 
         Dim Guardado As New CdCMuestreo
         Guardado = Session("Muestreo")
         '  Guardado.GuardaMuestreoArbol(Session("IdArbol"), DropNorteFenologia.SelectedIndex, DropNorteFenologia.SelectedValue)
+        Guardado.GuardaComentarioMuestreoArbol(Session("idMuestreo"), comentarioArbol.Value)
 
         For Each c As Control In SeccionFenologia.Controls
 
@@ -988,6 +986,7 @@
                 Dim nombre() As String = Split(c.ID, "_")
                 Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                 Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
 
             End If
 

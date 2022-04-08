@@ -109,47 +109,47 @@ Public Class muestreo
             'Else
 
             Dim BD As New GNaturesaDB
-                    Dim Empresa As New EmpresaNaturesa
-                    Dim Plagas As New Plaga
-                    Dim dtEmpresa = Empresa.Lista()
-                    Dim dtPlagas = Plagas.Lista(False)
-                    Dim FechaString As String
+            Dim Empresa As New EmpresaNaturesa
+            Dim Plagas As New Plaga
+            Dim dtEmpresa = Empresa.Lista()
+            Dim dtPlagas = Plagas.Lista(False)
+            Dim FechaString As String
 
-                    FechaString = Now.ToShortDateString
+            FechaString = Now.ToShortDateString
 
-                    TextBox_fecha.Text = FechaString
-
-
+            TextBox_fecha.Text = FechaString
 
 
-                    'Cargar DropDownList de Empresas
-                    If dtEmpresa.Rows.Count > 0 Then
 
-                        Dim i As Integer
-                        For i = 0 To (dtEmpresa.Rows.Count - 1)
-                            DropDown_empresa.Items.Add(New ListItem(dtEmpresa.Rows(i)("NombreEmpresa"), dtEmpresa.Rows(i)("idEmpresa")))
-                        Next
 
-                    End If
+            'Cargar DropDownList de Empresas
+            If dtEmpresa.Rows.Count > 0 Then
 
-                    'Cargar DropDownList Plagas 1
-                    If dtPlagas.Rows.Count > 0 Then
-                        Dim i As Integer
-                        For i = 0 To (dtPlagas.Rows.Count - 1)
-                            DropDown_Plaga.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
-                        Next
-                    End If
+                Dim i As Integer
+                For i = 0 To (dtEmpresa.Rows.Count - 1)
+                    DropDown_empresa.Items.Add(New ListItem(dtEmpresa.Rows(i)("NombreEmpresa"), dtEmpresa.Rows(i)("idEmpresa")))
+                Next
 
-                    'Precargar DropDownList Plaga 2
+            End If
 
-                    If dtPlagas.Rows.Count > 0 Then
-                        Dim i As Integer
-                        For i = 0 To (dtPlagas.Rows.Count - 1)
-                            DropDown_Plaga2.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
-                        Next
-                    End If
+            'Cargar DropDownList Plagas 1
+            If dtPlagas.Rows.Count > 0 Then
+                Dim i As Integer
+                For i = 0 To (dtPlagas.Rows.Count - 1)
+                    DropDown_Plaga.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
+                Next
+            End If
 
-                End If
+            'Precargar DropDownList Plaga 2
+
+            If dtPlagas.Rows.Count > 0 Then
+                Dim i As Integer
+                For i = 0 To (dtPlagas.Rows.Count - 1)
+                    DropDown_Plaga2.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
+                Next
+            End If
+
+        End If
 
 
         '    End If

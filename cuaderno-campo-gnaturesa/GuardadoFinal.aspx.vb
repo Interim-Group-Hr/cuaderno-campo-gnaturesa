@@ -3,6 +3,18 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        'Cargar DataTable de los comentarios y el numero del arbol
+
+
     End Sub
 
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+
+        Dim muestreo As New CdCMuestreo(Session("Muestreo"))
+
+
+        muestreo.observaciones = comentarioMuestreoFinal.ToString
+        muestreo.Guardar()
+
+    End Sub
 End Class

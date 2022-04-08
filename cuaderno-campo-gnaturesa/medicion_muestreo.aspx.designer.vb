@@ -950,6 +950,15 @@ Partial Public Class medicion_muestreo
     Protected WithEvents comentarioArbolid As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''Control comentarioArbol.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents comentarioArbol As Global.System.Web.UI.HtmlControls.HtmlTextArea
+
+    '''<summary>
     '''Control DropDown_NArbol.
     '''</summary>
     '''<remarks>
