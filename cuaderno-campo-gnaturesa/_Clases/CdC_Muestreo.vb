@@ -8,6 +8,7 @@
     Dim miFecha As String = ""
     Dim miGrupo As String
     Dim miObservaciones As String = ""
+    Dim miGrabadoPor As String = ""
     Dim dtPlagas As New DataTable
     Dim dtArboles As New DataTable
     Dim DB As New GNaturesaDB
@@ -84,7 +85,7 @@
 
         If miIdMuestreo = 0 Then
             cmd.Parameters("@idMuestreo").Direction = ParameterDirection.Output 'si ejecutamos un alta el parametro idMuestreo es de salida para recuperar el id generado por la BD
-            cmd.Parameters.AddWithValue("@grabadopor", "Desarrollo") 'guardamos el creador del muestreo solo al crearlo
+            cmd.Parameters.AddWithValue("@grabadopor", miGrabadoPor) 'guardamos el creador del muestreo solo al crearlo
         Else
             sql = "CdC_Muestreos_Update"
         End If
@@ -114,7 +115,7 @@
 #Region "Metodos Privados"
 
     Private Sub Recupera()
-        Dim sql As String = "select idempresa,idfinca,idsector,fecha,grupo,observaciones from cdc_muestreos where idfila =" & miIdMuestreo
+        Dim sql As String = "select idempresa,idfinca,idsector,fecha,grupo,observaciones,grabadopor from cdc_muestreos where idfila =" & miIdMuestreo
         Dim dt As New DataTable
         DB.RellenaDataTable_GNaturesa(dt, sql, False)
 
@@ -125,6 +126,7 @@
             miFecha = dt.Rows(0)("fecha")
             miGrupo = dt.Rows(0)("grupo")
             miObservaciones = dt.Rows(0)("observaciones")
+            miGrabadoPor = dt.Rows(0)("grabadopor")
         End If
 
         dt.Clear()
