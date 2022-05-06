@@ -74,13 +74,17 @@ body {
     right: 0px;
 }
 
+#Errormsn {
+    color: red;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: #dddddd;
     font-size: 15px;
     font-family: tahoma;
-    font-weight:initial;
+    font-weight: initial;
 }
 
 tr:nth-of-type(odd) {

@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class GuardadoFinal
 
     '''<summary>
+    '''Control GridMuestreo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridMuestreo As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
     '''Control comentarioMuestreoFinal.
     '''</summary>
     '''<remarks>

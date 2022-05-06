@@ -9,12 +9,35 @@
 
          <div class="col-12">
 
-
-
          </div>
 
          <div class="col-12">
 
+            <asp:GridView ID="GridMuestreo" CssClass="table" runat="server" AutoGenerateColumns="false" EnableModelValidation="true" TabIndex="6" GridLines="Both" ShowFooter="true">
+                <RowStyle />
+                <EditRowStyle />
+                <SelectedRowStyle />
+                <HeaderStyle />
+                <AlternatingRowStyle />
+                <Columns>
+                   <asp:BoundField DataField="muestreo" HeaderText="ARBOL" FooterStyle-CssClass="table-footer" />
+                    <asp:TemplateField HeaderText="Arboles">
+                        <ItemTemplate>
+                            <asp:Label runat="server" ID="label_Narbol" Text="Prueba">
+
+
+                            </asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:BoundField DataField="Comentario" HeaderText="COMENTARIO" FooterStyle-CssClass="table-footer" />
+                    <asp:TemplateField HeaderText="Comentarios">
+                        <ItemTemplate>
+                            <asp:Label runat="server" ID="label_Comentario" Text="TestComentario"></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
 
          </div>
 

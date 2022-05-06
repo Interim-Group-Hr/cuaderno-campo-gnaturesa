@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="crear_muestreo.aspx.vb" Inherits="cuaderno_campo_gnaturesa.muestreo" %>
+﻿<%@ Page Language="vb" MaintainScrollPositionOnPostback="true" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="crear_muestreo.aspx.vb" Inherits="cuaderno_campo_gnaturesa.muestreo" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -6,7 +6,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
 
-    <!-- Modal: Kilómetros sargentos -->
+    <!-- Modal -->
+    
+  
     <div runat="server" id="htmlcontenedor" class="col-md-9 scroll"></div>
 
     <div class="container-fluid">
@@ -62,7 +64,8 @@
                         <div class="row">
                             <div class="col-10">
                                 <div class="form-floating">
-                                    <asp:DropDownList ID="DropDown_Plaga" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                   
+                                    <asp:DropDownList ID="DropDown_Plaga" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true" MaintainScrollPositionOnPostback = "true">
                                         <asp:ListItem Value="0">Selecciona Plaga</asp:ListItem>
 
 
@@ -76,10 +79,11 @@
                         </div>
                         <br />
                         <div class="row">
+                            
                             <div class="col-10" runat="server" id="DropPlaga2" visible="false">
 
                                 <div class="form-floating">
-                                    <asp:DropDownList ID="DropDown_Plaga2" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                    <asp:DropDownList ID="DropDown_Plaga2" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true" MaintainScrollPositionOnPostback = "true">
                                         <asp:ListItem Value="0">Selecciona Plaga</asp:ListItem>
 
                                     </asp:DropDownList>
@@ -94,6 +98,8 @@
                     </div>
                     <br />
 
+                    <asp:Label runat="server" ID="Errormsn" CssClass="loslabelserror" Visible="false"></asp:Label>
+             
 
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <asp:LinkButton id="botonAceptar" class="btn btn-primary" runat="server"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Generar Muestreo</asp:LinkButton>
@@ -151,11 +157,7 @@
         const DropTest = document.createElement("DropDownList");
 
 
-
-
-
-
-
+       
     </script>
 
 

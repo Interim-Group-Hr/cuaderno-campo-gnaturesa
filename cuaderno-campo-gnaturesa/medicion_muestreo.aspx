@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="medicion_muestreo.aspx.vb" Inherits="cuaderno_campo_gnaturesa.medicion_muestreo" %>
+﻿<%@ Page Language="vb" MaintainScrollPositionOnPostback="true" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="medicion_muestreo.aspx.vb" Inherits="cuaderno_campo_gnaturesa.medicion_muestreo" %>
 
 
 
@@ -6,15 +6,18 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
+     <asp:TextBox ID="txtGeoLatitud" runat="server" Style="display: none;" />
+   <asp:TextBox ID="txtGeoLongitud" runat="server" Style="display: none;" />
+
     <div class="container-fluid">
         <div>
             <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-top">
                 <div class="container-fluid">
                     <div class="me-auto">
-                            <label style="color: white;" id="FincaSector" runat="server">asdas</label>
+                            <label style="color: white;" id="FincaSector" runat="server"></label>
                     </div>
                     <div class="">
-                            <label style="color: white;" id="fechaArbol" runat="server">dasdasd</label>
+                            <label style="color: white;" id="fechaArbol" runat="server"></label>
                     </div>
                 </div>
             </nav>
@@ -81,28 +84,28 @@
             </div>
 
             <!-- Pulgon -->
-
-            <div class="col-sm-6" id="PulgonSensible" runat="server" visible="false">
+           
+            <div class="col-sm-5" id="PulgonSensible" runat="server" visible="false">
                 <div class="card border-secondary mb-3" id="seccionPulgonSensible" runat="server">
                     <div class="card-header">Pulgon - Brotes Sensibles</div>
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropEstePulgonS_12" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropEstePulgonS_1" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true" >
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Anillo Este</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropSurPulgonS_2" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropSurPulgonS_2" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true" >
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Anillo Sur</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropOestePulgonS_3" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                            <asp:DropDownList ID="DropOestePulgonS_3" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true" >
                                 <asp:ListItem Value=""></asp:ListItem>
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Anillo Oeste</strong></label>
@@ -118,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-6" id="pulgonOcupado" runat="server" visible="false">
+            <div class="col-sm-5" id="pulgonOcupado" runat="server" visible="false">
                 <div class="card border-secondary mb-3" id="seccionPulgonOcupado" runat="server">
                     <div class="card-header">Pulgon - Brotes Ocupados</div>
                     <div class="card-body text-secondary">
@@ -720,7 +723,7 @@
                                 <asp:ListItem Value="0">Selecciona Arbol</asp:ListItem>
 
                             </asp:DropDownList>
-                            <label for="floatingInput"><strong>Grupo</strong></label>
+                          
 
                         </div>
 
@@ -802,6 +805,56 @@
                 $('#ModalSelect').modal('show');
             });
         <% End If %>
+
+        //Función que obtiene la geolocalización
+        function ObtenerGeolocalizacion() {
+
+            //Se pide la activación de ubicación para capturar la geolocalización
+            if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function (pos) {
+
+                //Si es aceptada guardamos lo latitud y longitud
+                $("[id*=txtGeoLatitud]").val(pos.coords.latitude);
+                $("[id*=txtGeoLongitud]").val(pos.coords.longitude);
+
+            }, function (error) {
+
+                //Si es rechazada
+                switch (error.code) {
+
+                    case error.PERMISSION_DENIED:
+                        alert('MEDICION NO GEOLOCALIZADA. PERMISO DENEGADO')
+                        break;
+
+                    case error.POSITION_UNAVAILABLE:
+                        alert('MEDICION GEOLOCALIZADA. UBICACIÓN NO DISPONIBLE')
+                        break;
+
+                    case error.TIMEOUT:
+                        alert('MEDICION NO GEOLOCALIZADA. TIMEOUT')
+                        break;
+
+                    case error.UNKNOWN_ERROR:
+                        alert('MEDICION NO GEOLOCALIZADA. ERROR DESCONOCIDO')
+                        break;
+
+                }
+
+                $("[id*=txtGeoLatitud]").val('0');
+                $("[id*=txtGeoLongitud]").val('0');
+
+            }, { timeout: 60000 });
+
+        }
+
+        $(function () {
+
+            //Se inicializan las variables que guardan la geolocalización
+            $("[id*=txtGeoLatitud]").val('0');
+            $("[id*=txtGeoLongitud]").val('0');
+
+            //Se lanza la llamada a la geolocalización
+            ObtenerGeolocalizacion();
+        });
     </script>
 
     

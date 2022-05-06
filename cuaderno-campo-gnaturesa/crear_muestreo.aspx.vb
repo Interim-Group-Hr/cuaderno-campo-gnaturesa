@@ -206,102 +206,84 @@ Public Class muestreo
         btnAddPlaga.Visible = True
         btnDelPlaga.Visible = False
 
-
-
     End Sub
 
 
 
     Private Sub botonAceptar_Click(sender As Object, e As EventArgs) Handles botonAceptar.Click
 
-        'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
-        Session("Empresa") = DropDown_empresa.SelectedItem.Text
-        Session("Finca") = DropDown_Finca.SelectedItem.Text
-        Session("Sector") = DropDown_Sector.SelectedItem.Text
-        Session("Grupo") = Drop_GruposArbol.SelectedValue
-        Session("Plaga1") = DropDown_Plaga.SelectedValue
-        Session("Plaga2") = DropDown_Plaga2.SelectedValue
-        Session("Fecha") = TextBox_fecha.Text
+        Dim msnError As String
+
+        If DropDown_empresa.SelectedIndex = 0 Then
+            msnError = "Por favor, seleccione una Empresa"
+            Errormsn.Text = msnError
+            Errormsn.Visible = True
+
+        ElseIf DropDown_Finca.SelectedIndex = 0 Then
+            msnError = "Por favor, selecione una Finca"
+            Errormsn.Text = msnError
+            Errormsn.Visible = True
+
+        ElseIf DropDown_Sector.SelectedIndex = 0 Then
+            msnError = "Por favor, seleccione un Sector"
+            Errormsn.Text = msnError
+            Errormsn.Visible = True
+
+        ElseIf TextBox_fecha.Text = "" Then
+            msnError = "Por favor, indique la fecha del muestreo"
+            Errormsn.Text = msnError
+            Errormsn.Visible = True
+
+        ElseIf Drop_GruposArbol.SelectedIndex = 0 Then
+            msnError = "Por favor, selecione grupo de arboles"
+            Errormsn.Text = msnError
+            Errormsn.Visible = True
+
+        ElseIf DropDown_Plaga.SelectedIndex = 0 Then
+            msnError = "Por favor, seleccione una plga"
+            Errormsn.Text = msnError
+            Errormsn.Visible = True
 
 
-        Dim miMuestreo As New CdCMuestreo
+        Else
 
-        'Cargar los valores para su posterior guardado
-        miMuestreo.Empresa = DropDown_empresa.SelectedValue
-        miMuestreo.Finca = DropDown_Finca.SelectedValue
-        miMuestreo.Sector = DropDown_Sector.SelectedValue
-        miMuestreo.Grupo = Drop_GruposArbol.SelectedItem.Text
-        miMuestreo.Fecha = Date.Now
-        miMuestreo.AddPlaga(DropDown_Plaga.SelectedValue)
+            'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
+            Session("Empresa") = DropDown_empresa.SelectedItem.Text
+            Session("Finca") = DropDown_Finca.SelectedItem.Text
+            Session("Sector") = DropDown_Sector.SelectedItem.Text
+            Session("Grupo") = Drop_GruposArbol.SelectedValue
+            Session("Plaga1") = DropDown_Plaga.SelectedValue
+            Session("Plaga2") = DropDown_Plaga2.SelectedValue
+            Session("Fecha") = TextBox_fecha.Text
 
-        If DropDown_Plaga2.SelectedValue > 0 Then
-            miMuestreo.AddPlaga(DropDown_Plaga2.SelectedValue)
+
+            Dim miMuestreo As New CdCMuestreo
+
+            'Cargar los valores para su posterior guardado
+            miMuestreo.Empresa = DropDown_empresa.SelectedValue
+            miMuestreo.Finca = DropDown_Finca.SelectedValue
+            miMuestreo.Sector = DropDown_Sector.SelectedValue
+            miMuestreo.Grupo = Drop_GruposArbol.SelectedItem.Text
+            miMuestreo.Fecha = Date.Now
+            miMuestreo.AddPlaga(DropDown_Plaga.SelectedValue)
+
+            If DropDown_Plaga2.SelectedValue > 0 Then
+                miMuestreo.AddPlaga(DropDown_Plaga2.SelectedValue)
+            End If
+
+
+            'Guardado
+            miMuestreo.Guardar()
+            Session("Muestreo") = miMuestreo
+
+            'Despues de generar el muestreo guardamos la ID del mismo en una variable de sesion
+            Session("idMuestreo") = miMuestreo.Id
+            miMuestreo.GrabadoPor = Session("IdUser")
+
+            Response.Redirect("medicion_muestreo.aspx", True)
+
         End If
 
-
-        'Guardado
-        miMuestreo.Guardar()
-        Session("Muestreo") = miMuestreo
-
-        'Despues de generar el muestreo guardamos la ID del mismo en una variable de sesion
-        Session("idMuestreo") = miMuestreo.Id
-
-        Response.Redirect("medicion_muestreo.aspx", True)
     End Sub
 
-    'Private Sub DropDown_NArbol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_NArbol.SelectedIndexChanged
-
-    '    'Guardar valores definidos por el usuario en variables de sesion para utilizarlos posteriormente 
-    '    Session("Empresa") = DropDown_empresa.SelectedItem.Text
-    '    Session("Finca") = DropDown_Finca.SelectedItem.Text
-    '    Session("Sector") = DropDown_Sector.SelectedItem.Text
-    '    Session("Grupo") = Drop_GruposArbol.SelectedValue
-    '    Session("GrupoArbol") = Drop_GruposArbol.SelectedIndex
-    '    Session("Plaga1") = DropDown_Plaga.SelectedValue
-    '    Session("Plaga2") = DropDown_Plaga2.SelectedValue
-    '    Session("Fecha") = TextBox_fecha.Text
-    '    Session("NomArbol") = DropDown_NArbol.SelectedItem.Text
-    '    Session("IdArbol") = DropDown_NArbol.SelectedValue
-
-    '    Dim miMuestreo As New CdCMuestreo
-
-    '    'Cargar los valores para su posterior guardado
-    '    miMuestreo.Empresa = DropDown_empresa.SelectedValue
-    '    miMuestreo.Finca = DropDown_Finca.SelectedValue
-    '    miMuestreo.Sector = DropDown_Sector.SelectedValue
-    '    miMuestreo.Grupo = Drop_GruposArbol.SelectedItem.Text
-    '    miMuestreo.Fecha = Date.Now
-    '    miMuestreo.AddPlaga(DropDown_Plaga.SelectedValue)
-
-    '    If DropDown_Plaga2.SelectedValue > 0 Then
-    '        miMuestreo.AddPlaga(DropDown_Plaga2.SelectedValue)
-    '    End If
-
-
-    '    'Guardado
-    '    miMuestreo.Guardar()
-    '    Session("Muestreo") = miMuestreo
-
-    '    'Despues de generar el muestreo guardamos la ID del mismo en una variable de sesion
-    '    Session("idMuestreo") = miMuestreo.Id
-
-    '    Response.Redirect("medicion_muestreo.aspx", True)
-
-    'End Sub
-
-    'Private Sub Drop_GruposArbol_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Drop_GruposArbol.SelectedIndexChanged
-
-    '    Dim Arboles As New Arbol
-    '    Dim dtArbol = Arboles.Lista(Drop_GruposArbol.SelectedIndex, -1)
-
-    '    If dtArbol.Rows.Count > 0 Then
-
-    '        Dim i As Integer
-    '        For i = 0 To (dtArbol.Rows.Count - 1)
-    '            DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
-    '        Next
-
-    '    End If
-
-    'End Sub
 End Class

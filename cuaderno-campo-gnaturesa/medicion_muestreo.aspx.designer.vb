@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class medicion_muestreo
 
     '''<summary>
+    '''Control txtGeoLatitud.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtGeoLatitud As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtGeoLongitud.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtGeoLongitud As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control FincaSector.
     '''</summary>
     '''<remarks>
@@ -113,13 +131,13 @@ Partial Public Class medicion_muestreo
     Protected WithEvents seccionPulgonSensible As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control DropEstePulgonS_12.
+    '''Control DropEstePulgonS_1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropEstePulgonS_12 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents DropEstePulgonS_1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control DropSurPulgonS_2.

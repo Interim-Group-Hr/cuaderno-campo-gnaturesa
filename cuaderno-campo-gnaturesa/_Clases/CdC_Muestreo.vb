@@ -9,6 +9,8 @@
     Dim miGrupo As String
     Dim miObservaciones As String = ""
     Dim miGrabadoPor As String = ""
+    Dim miLatitud As Long
+    Dim miLongitud As Long
     Dim dtPlagas As New DataTable
     Dim dtArboles As New DataTable
     Dim DB As New GNaturesaDB
@@ -99,6 +101,8 @@
         cmd.Parameters.AddWithValue("@idsector", miSector)
         cmd.Parameters.AddWithValue("@fecha", miFecha)
         cmd.Parameters.AddWithValue("@grupo", miGrupo)
+        cmd.Parameters.AddWithValue("@latitud", miLatitud)
+        cmd.Parameters.AddWithValue("@longitud", miLongitud)
         cmd.Parameters.AddWithValue("@Observaciones", miObservaciones)
 
         cmd.ExecuteNonQuery()
@@ -150,6 +154,8 @@
             cmd.Parameters.AddWithValue("@idplagaOrganoOrientacionValor", valorCombo)
             cmd.Parameters.AddWithValue("@idplagaOrganoOrientacion", idCombo)
             cmd.Parameters.AddWithValue("@idArbol", idarbol)
+            cmd.Parameters.AddWithValue("@latitud", miLatitud)
+            cmd.Parameters.AddWithValue("@longitud", miLongitud)
             cmd.Parameters.AddWithValue("@idMuestreo", miIdMuestreo)
 
             cmd.ExecuteNonQuery()
@@ -174,7 +180,7 @@
             cmd.CommandText = sql
             cmd.Parameters.AddWithValue("@idArbol", idarbol)
             cmd.Parameters.AddWithValue("@idMuestreo", miIdMuestreo)
-            cmd.Parameters.AddWithValue("@comentario", comentario)
+            cmd.Parameters.AddWithValue("@Comentario", comentario)
 
             cmd.ExecuteNonQuery()
 
@@ -231,6 +237,15 @@
         End Set
     End Property
 
+    Public Property GrabadoPor As String
+        Get
+            GrabadoPor = miGrabadoPor
+        End Get
+        Set(value As String)
+            miGrabadoPor = value
+        End Set
+    End Property
+
     Public Property Grupo As String
         Get
             Grupo = miGrupo
@@ -246,6 +261,24 @@
         End Get
         Set(value As String)
             miObservaciones = value
+        End Set
+    End Property
+
+    Public Property Longitud As String
+        Get
+            Longitud = miLongitud
+        End Get
+        Set(value As String)
+            miLongitud = value
+        End Set
+    End Property
+
+    Public Property Latitud As String
+        Get
+            Latitud = miLatitud
+        End Get
+        Set(value As String)
+            miLatitud = value
         End Set
     End Property
 

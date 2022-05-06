@@ -10,10 +10,9 @@
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
 
-        Dim muestreo As New CdCMuestreo(Session("Muestreo"))
+        Dim muestreo As New CdCMuestreo(Session("idMuestreo"))
 
-
-        muestreo.observaciones = comentarioMuestreoFinal.ToString
+        muestreo.observaciones = comentarioMuestreoFinal.Value
         muestreo.Guardar()
 
     End Sub
