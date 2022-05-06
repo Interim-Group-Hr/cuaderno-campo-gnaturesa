@@ -101,8 +101,6 @@
         cmd.Parameters.AddWithValue("@idsector", miSector)
         cmd.Parameters.AddWithValue("@fecha", miFecha)
         cmd.Parameters.AddWithValue("@grupo", miGrupo)
-        cmd.Parameters.AddWithValue("@latitud", miLatitud)
-        cmd.Parameters.AddWithValue("@longitud", miLongitud)
         cmd.Parameters.AddWithValue("@Observaciones", miObservaciones)
 
         cmd.ExecuteNonQuery()

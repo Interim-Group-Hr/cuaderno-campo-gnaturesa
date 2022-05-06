@@ -85,7 +85,7 @@
 
             <!-- Pulgon -->
            
-            <div class="col-sm-5" id="PulgonSensible" runat="server" visible="false">
+            <div class="col-sm-6" id="PulgonSensible" runat="server" visible="false">
                 <div class="card border-secondary mb-3" id="seccionPulgonSensible" runat="server">
                     <div class="card-header">Pulgon - Brotes Sensibles</div>
                     <div class="card-body text-secondary">
@@ -121,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-5" id="pulgonOcupado" runat="server" visible="false">
+            <div class="col-sm-6" id="pulgonOcupado" runat="server" visible="false">
                 <div class="card border-secondary mb-3" id="seccionPulgonOcupado" runat="server">
                     <div class="card-header">Pulgon - Brotes Ocupados</div>
                     <div class="card-body text-secondary">

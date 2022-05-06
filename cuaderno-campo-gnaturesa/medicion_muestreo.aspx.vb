@@ -159,7 +159,7 @@
 
             Dim i As Integer
             For i = 0 To (AnilloEste1.Rows.Count - 1)
-                DropEstePulgonS_12.Items.Add(New ListItem(AnilloEste1.Rows(i)("Nombre"), AnilloEste1.Rows(i)("idPlagaOrganoOrientacionValor")))
+                DropEstePulgonS_1.Items.Add(New ListItem(AnilloEste1.Rows(i)("Nombre"), AnilloEste1.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
