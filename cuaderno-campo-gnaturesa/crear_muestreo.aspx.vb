@@ -93,67 +93,67 @@ Public Class muestreo
 
         If Not IsPostBack Then  'Si no es PostBack (Recarga al darle a un boton)
 
-            'If Session.Item("logingOk") Is Nothing Then
+            If Session.Item("loginOk") Is Nothing Then
 
-            '    Response.Redirect("login.aspx", True)
-            '    Exit Sub
+                Response.Redirect("login.aspx", True)
+                Exit Sub
 
-            'Else
-
-
-            '    If Session.Item("loginOK") = False Or Session.Item("Muestreo") = 1 Then
-
-            '        Response.Redirect("login.aspx", True)
-            '        Exit Sub
-
-            'Else
-
-            Dim BD As New GNaturesaDB
-            Dim Empresa As New EmpresaNaturesa
-            Dim Plagas As New Plaga
-            Dim dtEmpresa = Empresa.Lista()
-            Dim dtPlagas = Plagas.Lista(False)
-            Dim FechaString As String
-
-            FechaString = Now.ToShortDateString
-
-            TextBox_fecha.Text = FechaString
+            Else
 
 
+                If Session.Item("loginOK") = False Then
+
+                    Response.Redirect("login.aspx", True)
+                    Exit Sub
+
+                Else
+
+                    Dim BD As New GNaturesaDB
+                    Dim Empresa As New EmpresaNaturesa
+                    Dim Plagas As New Plaga
+                    Dim dtEmpresa = Empresa.Lista()
+                    Dim dtPlagas = Plagas.Lista(False)
+                    Dim FechaString As String
+
+                    FechaString = Now.ToShortDateString
+
+                    TextBox_fecha.Text = FechaString
 
 
-            'Cargar DropDownList de Empresas
-            If dtEmpresa.Rows.Count > 0 Then
 
-                Dim i As Integer
-                For i = 0 To (dtEmpresa.Rows.Count - 1)
-                    DropDown_empresa.Items.Add(New ListItem(dtEmpresa.Rows(i)("NombreEmpresa"), dtEmpresa.Rows(i)("idEmpresa")))
-                Next
+
+                    'Cargar DropDownList de Empresas
+                    If dtEmpresa.Rows.Count > 0 Then
+
+                        Dim i As Integer
+                        For i = 0 To (dtEmpresa.Rows.Count - 1)
+                            DropDown_empresa.Items.Add(New ListItem(dtEmpresa.Rows(i)("NombreEmpresa"), dtEmpresa.Rows(i)("idEmpresa")))
+                        Next
+
+                    End If
+
+                    'Cargar DropDownList Plagas 1
+                    If dtPlagas.Rows.Count > 0 Then
+                        Dim i As Integer
+                        For i = 0 To (dtPlagas.Rows.Count - 1)
+                            DropDown_Plaga.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
+                        Next
+                    End If
+
+                    'Precargar DropDownList Plaga 2
+
+                    If dtPlagas.Rows.Count > 0 Then
+                        Dim i As Integer
+                        For i = 0 To (dtPlagas.Rows.Count - 1)
+                            DropDown_Plaga2.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
+                        Next
+                    End If
+
+                End If
+
 
             End If
-
-            'Cargar DropDownList Plagas 1
-            If dtPlagas.Rows.Count > 0 Then
-                Dim i As Integer
-                For i = 0 To (dtPlagas.Rows.Count - 1)
-                    DropDown_Plaga.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
-                Next
-            End If
-
-            'Precargar DropDownList Plaga 2
-
-            If dtPlagas.Rows.Count > 0 Then
-                Dim i As Integer
-                For i = 0 To (dtPlagas.Rows.Count - 1)
-                    DropDown_Plaga2.Items.Add(New ListItem(dtPlagas.Rows(i)("Nombre"), dtPlagas.Rows(i)("idPlaga")))
-                Next
-            End If
-
         End If
-
-
-        '    End If
-        'End If
 
     End Sub
 

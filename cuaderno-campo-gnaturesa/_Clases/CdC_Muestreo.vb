@@ -88,6 +88,11 @@
         If miIdMuestreo = 0 Then
             cmd.Parameters("@idMuestreo").Direction = ParameterDirection.Output 'si ejecutamos un alta el parametro idMuestreo es de salida para recuperar el id generado por la BD
             cmd.Parameters.AddWithValue("@grabadopor", miGrabadoPor) 'guardamos el creador del muestreo solo al crearlo
+            cmd.Parameters.AddWithValue("@idempresa", miEmpresa)
+            cmd.Parameters.AddWithValue("@idfinca", miFinca)
+            cmd.Parameters.AddWithValue("@idsector", miSector)
+            cmd.Parameters.AddWithValue("@fecha", miFecha)
+            cmd.Parameters.AddWithValue("@grupo", miGrupo)
         Else
             sql = "CdC_Muestreos_Update"
         End If
@@ -96,11 +101,7 @@
         cmd.Connection = conexion
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = sql
-        cmd.Parameters.AddWithValue("@idempresa", miEmpresa)
-        cmd.Parameters.AddWithValue("@idfinca", miFinca)
-        cmd.Parameters.AddWithValue("@idsector", miSector)
-        cmd.Parameters.AddWithValue("@fecha", miFecha)
-        cmd.Parameters.AddWithValue("@grupo", miGrupo)
+        cmd.Parameters("@idMuestreo").Value = miIdMuestreo
         cmd.Parameters.AddWithValue("@Observaciones", miObservaciones)
 
         cmd.ExecuteNonQuery()
@@ -152,8 +153,6 @@
             cmd.Parameters.AddWithValue("@idplagaOrganoOrientacionValor", valorCombo)
             cmd.Parameters.AddWithValue("@idplagaOrganoOrientacion", idCombo)
             cmd.Parameters.AddWithValue("@idArbol", idarbol)
-            cmd.Parameters.AddWithValue("@latitud", miLatitud)
-            cmd.Parameters.AddWithValue("@longitud", miLongitud)
             cmd.Parameters.AddWithValue("@idMuestreo", miIdMuestreo)
 
             cmd.ExecuteNonQuery()

@@ -14,6 +14,7 @@
 
         muestreo.observaciones = comentarioMuestreoFinal.Value
         muestreo.Guardar()
+        Response.Redirect("crear_muestreo.aspx")
 
     End Sub
 End Class

@@ -11,131 +11,151 @@
 
         If Not IsPostBack Then
 
-            CargdarFenologia()
-            Dim Fecha As String = Session("Fecha")
 
-            Dim Arboles As New Arbol
-            Dim dtArbol = Arboles.Lista(Session("Grupo"), Session("idMuestreo"))
+            If Session.Item("loginOk") Is Nothing Then
 
-            If dtArbol.Rows.Count > 0 Then
+                Response.Redirect("login.aspx", True)
+                Exit Sub
 
-                Dim i As Integer
-                For i = 0 To (dtArbol.Rows.Count - 1)
-                    DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
-                Next
+            Else
+
+
+                If Session.Item("loginOK") = False Then
+
+                    Response.Redirect("login.aspx", True)
+                    Exit Sub
+
+                Else
+
+                    CargdarFenologia()
+                    Dim Fecha As String = Session("Fecha")
+
+                    Dim Arboles As New Arbol
+                    Dim dtArbol = Arboles.Lista(Session("Grupo"), Session("idMuestreo"))
+
+                    If dtArbol.Rows.Count > 0 Then
+
+                        Dim i As Integer
+                        For i = 0 To (dtArbol.Rows.Count - 1)
+                            DropDown_NArbol.Items.Add(New ListItem(dtArbol.Rows(i)("NombreArbol"), dtArbol.Rows(i)("idArbol")))
+                        Next
+
+                    End If
+
+
+
+
+                    Dim plaga1 As String = Session("Plaga1")
+                    Dim plaga2 As String = Session("Plaga2")
+
+
+
+
+                    If plaga1 = 1 Then
+
+                        PulgonSensible.Visible = True
+                        pulgonOcupado.Visible = True
+                        CargarPulgon()
+
+                    ElseIf plaga1 = 2 Then
+
+                        EutetranychusFruto.Visible = True
+                        EutetranychusHoja.Visible = True
+                        CargarEutetranychus()
+
+                    ElseIf plaga1 = 3 Then
+
+                        Mosca.Visible = True
+                        CargarMosca()
+
+                    ElseIf plaga1 = 4 Then
+
+                        Orquidea.Visible = True
+                        CargarTripOrquidea()
+
+                    ElseIf plaga1 = 5 Then
+
+                        Planococus.Visible = True
+                        CargarPlanococcus()
+
+                    ElseIf plaga1 = 6 Then
+
+                        polilla.Visible = True
+                        CargarPolilla()
+
+                    ElseIf plaga1 = 7 Then
+
+                        minador.Visible = True
+                        CargarMinador()
+
+                    ElseIf plaga1 = 8 Then
+
+                        TetranychusFruto.Visible = True
+                        TetranychusHoja.Visible = True
+                        CargarTetranychus()
+
+                    ElseIf plaga1 = 9 Then
+
+                        Aonidella.Visible = True
+                        CargarAonidella()
+
+                    End If
+
+
+                    If plaga2 = 1 Then
+
+                        PulgonSensible.Visible = True
+                        pulgonOcupado.Visible = True
+                        CargarPulgon()
+
+                    ElseIf plaga2 = 2 Then
+
+                        EutetranychusFruto.Visible = True
+                        EutetranychusHoja.Visible = True
+                        CargarEutetranychus()
+
+                    ElseIf plaga2 = 3 Then
+
+                        Mosca.Visible = True
+                        CargarMosca()
+
+                    ElseIf plaga2 = 4 Then
+
+                        Orquidea.Visible = True
+                        CargarTripOrquidea()
+
+                    ElseIf plaga2 = 5 Then
+
+                        Planococus.Visible = True
+                        CargarPlanococcus()
+
+                    ElseIf plaga2 = 6 Then
+
+                        polilla.Visible = True
+                        CargarPolilla()
+
+                    ElseIf plaga2 = 7 Then
+
+                        minador.Visible = True
+                        CargarMinador()
+
+                    ElseIf plaga2 = 8 Then
+
+                        TetranychusFruto.Visible = True
+                        TetranychusHoja.Visible = True
+                        CargarTetranychus()
+
+                    ElseIf plaga2 = 9 Then
+
+                        Aonidella.Visible = True
+                        CargarAonidella()
+
+                    End If
+
+
+                End If
 
             End If
-
-
-
-
-            Dim plaga1 As String = Session("Plaga1")
-            Dim plaga2 As String = Session("Plaga2")
-
-
-
-
-            If plaga1 = 1 Then
-
-                PulgonSensible.Visible = True
-                pulgonOcupado.Visible = True
-                CargarPulgon()
-
-            ElseIf plaga1 = 2 Then
-
-                EutetranychusFruto.Visible = True
-                EutetranychusHoja.Visible = True
-                CargarEutetranychus()
-
-            ElseIf plaga1 = 3 Then
-
-                Mosca.Visible = True
-                CargarMosca()
-
-            ElseIf plaga1 = 4 Then
-
-                Orquidea.Visible = True
-                CargarTripOrquidea()
-
-            ElseIf plaga1 = 5 Then
-
-                Planococus.Visible = True
-                CargarPlanococcus()
-
-            ElseIf plaga1 = 6 Then
-
-                polilla.Visible = True
-                CargarPolilla()
-
-            ElseIf plaga1 = 7 Then
-
-                minador.Visible = True
-                CargarMinador()
-
-            ElseIf plaga1 = 8 Then
-
-                TetranychusFruto.Visible = True
-                TetranychusHoja.Visible = True
-                CargarTetranychus()
-
-            ElseIf plaga1 = 9 Then
-
-                Aonidella.Visible = True
-                CargarAonidella()
-
-            End If
-
-
-            If plaga2 = 1 Then
-
-                PulgonSensible.Visible = True
-                pulgonOcupado.Visible = True
-                CargarPulgon()
-
-            ElseIf plaga2 = 2 Then
-
-                EutetranychusFruto.Visible = True
-                EutetranychusHoja.Visible = True
-                CargarEutetranychus()
-
-            ElseIf plaga2 = 3 Then
-
-                Mosca.Visible = True
-                CargarMosca()
-
-            ElseIf plaga2 = 4 Then
-
-                Orquidea.Visible = True
-                CargarTripOrquidea()
-
-            ElseIf plaga2 = 5 Then
-
-                Planococus.Visible = True
-                CargarPlanococcus()
-
-            ElseIf plaga2 = 6 Then
-
-                polilla.Visible = True
-                CargarPolilla()
-
-            ElseIf plaga2 = 7 Then
-
-                minador.Visible = True
-                CargarMinador()
-
-            ElseIf plaga2 = 8 Then
-
-                TetranychusFruto.Visible = True
-                TetranychusHoja.Visible = True
-                CargarTetranychus()
-
-            ElseIf plaga2 = 9 Then
-
-                Aonidella.Visible = True
-                CargarAonidella()
-
-            End If
-
 
         End If
 
