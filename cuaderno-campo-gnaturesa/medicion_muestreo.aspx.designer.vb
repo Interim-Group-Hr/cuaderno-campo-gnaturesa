@@ -977,6 +977,15 @@ Partial Public Class medicion_muestreo
     Protected WithEvents comentarioArbol As Global.System.Web.UI.HtmlControls.HtmlTextArea
 
     '''<summary>
+    '''Control Errormsn.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Errormsn As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control DropDown_NArbol.
     '''</summary>
     '''<remarks>
@@ -984,6 +993,15 @@ Partial Public Class medicion_muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DropDown_NArbol As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control btnTerminar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnTerminar As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''Control btnAceptar.

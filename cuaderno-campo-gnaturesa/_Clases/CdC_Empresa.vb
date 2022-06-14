@@ -23,11 +23,22 @@
         End If
     End Sub
 
-    Public Function Lista() As DataTable
-        Dim sql As String = "select idempresa,nombreempresa from EMPRESA"
-        Dim dt As New DataTable
-        BD.RellenaDataTable_GNaturesa(dt, sql, False)
-        Lista = dt
+    Public Function Lista(ByVal rol As Integer) As DataTable
+
+        If rol < 1 Then
+
+            Dim sql As String = "select idempresa,nombreempresa from EMPRESA where idempresa < 3"
+            Dim dt As New DataTable
+            BD.RellenaDataTable_GNaturesa(dt, sql, False)
+            Lista = dt
+        Else
+
+            Dim sql As String = "select idempresa,nombreempresa from EMPRESA"
+            Dim dt As New DataTable
+            BD.RellenaDataTable_GNaturesa(dt, sql, False)
+            Lista = dt
+
+        End If
     End Function
 
 #End Region

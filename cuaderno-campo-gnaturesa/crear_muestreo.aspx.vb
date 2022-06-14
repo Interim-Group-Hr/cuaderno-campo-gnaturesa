@@ -108,10 +108,12 @@ Public Class muestreo
 
                 Else
 
+
+
                     Dim BD As New GNaturesaDB
                     Dim Empresa As New EmpresaNaturesa
                     Dim Plagas As New Plaga
-                    Dim dtEmpresa = Empresa.Lista()
+                    Dim dtEmpresa = Empresa.Lista(Session("TipoRol"))
                     Dim dtPlagas = Plagas.Lista(False)
                     Dim FechaString As String
 

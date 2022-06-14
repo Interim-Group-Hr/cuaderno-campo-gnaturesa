@@ -3,11 +3,13 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
      <asp:TextBox ID="txtGeoLatitud" runat="server" Style="display: none;" />
    <asp:TextBox ID="txtGeoLongitud" runat="server" Style="display: none;" />
+
 
     <div class="container-fluid">
         <div>
@@ -705,6 +707,7 @@
                     </div>
                 </div>
             </div>
+            <asp:Label runat="server" ID="Errormsn" CssClass="loslabelserror" Visible="false"></asp:Label>
 
             <!-- MODAL -->
 
@@ -725,6 +728,10 @@
                             </asp:DropDownList>
                           
 
+                        </div>
+                        <div class="modal-footer">
+                           <%-- <asp:LinkButton Text="Cerrar" class="btn btn-secondary" runat="server" />--%>
+                            <asp:LinkButton ID="btnTerminar" data-bs-toggle="modal" data-bs-target="#ModalConfirmar" Text="Terminar Muestreo" runat="server" class="btn btn-primary" />
                         </div>
 
                     </div>
@@ -766,6 +773,7 @@
         <br />
         <br />
         <br />
+        
         <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light text-light">
             <div class="container-fluid text-center">
                 <div class="text-center" style="width: 100%">
@@ -806,55 +814,7 @@
             });
         <% End If %>
 
-        //Función que obtiene la geolocalización
-        function ObtenerGeolocalizacion() {
-
-            //Se pide la activación de ubicación para capturar la geolocalización
-            if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function (pos) {
-
-                //Si es aceptada guardamos lo latitud y longitud
-                $("[id*=txtGeoLatitud]").val(pos.coords.latitude);
-                $("[id*=txtGeoLongitud]").val(pos.coords.longitude);
-
-            }, function (error) {
-
-                //Si es rechazada
-                switch (error.code) {
-
-                    case error.PERMISSION_DENIED:
-                        alert('MEDICION NO GEOLOCALIZADA. PERMISO DENEGADO')
-                        break;
-
-                    case error.POSITION_UNAVAILABLE:
-                        alert('MEDICION GEOLOCALIZADA. UBICACIÓN NO DISPONIBLE')
-                        break;
-
-                    case error.TIMEOUT:
-                        alert('MEDICION NO GEOLOCALIZADA. TIMEOUT')
-                        break;
-
-                    case error.UNKNOWN_ERROR:
-                        alert('MEDICION NO GEOLOCALIZADA. ERROR DESCONOCIDO')
-                        break;
-
-                }
-
-                $("[id*=txtGeoLatitud]").val('0');
-                $("[id*=txtGeoLongitud]").val('0');
-
-            }, { timeout: 60000 });
-
-        }
-
-        $(function () {
-
-            //Se inicializan las variables que guardan la geolocalización
-            $("[id*=txtGeoLatitud]").val('0');
-            $("[id*=txtGeoLongitud]").val('0');
-
-            //Se lanza la llamada a la geolocalización
-            ObtenerGeolocalizacion();
-        });
+      
     </script>
 
     

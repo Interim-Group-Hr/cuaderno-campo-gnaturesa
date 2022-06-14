@@ -9,6 +9,7 @@
     Private Sub btnEntrar_Click(sender As Object, e As EventArgs) Handles btnEntrar.Click
 
         Dim inyeccion As Boolean = False
+        Dim TipoRol As Integer
 
 
         If Me.txtUsuario.Text <> String.Empty AndAlso Me.txtPassword.Text <> String.Empty Then
@@ -46,13 +47,18 @@
                         End If
 
                         'Dependiendo del rol del usuario
+
                         Select Case objGNaturesa.Rol(intIdUsuario)
 
                             Case 0 'ROL: Solo Sevilla
 
+                                TipoRol = 0
+                                Session("TipoRol") = TipoRol
                                 Response.Redirect("crear_muestreo.aspx", True)
 
-                            Case 1 'ROL: Sevilla y Valencia                                      
+                            Case 1 'ROL: Sevilla y Valencia
+                                TipoRol = 1
+                                Session("TipoRol") = TipoRol
 
                                 Response.Redirect("crear_muestreo.aspx", True)
 
