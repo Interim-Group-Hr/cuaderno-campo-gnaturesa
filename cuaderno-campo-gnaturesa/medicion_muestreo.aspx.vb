@@ -1048,7 +1048,6 @@
 
         End If
 
-
         If EutetranychusFruto.Visible = True Then
 
             For Each c As Control In seccionEtetranychusH.Controls

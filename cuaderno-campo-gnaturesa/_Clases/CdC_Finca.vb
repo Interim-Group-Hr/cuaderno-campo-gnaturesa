@@ -38,6 +38,9 @@ Public Class Finca
     End Sub
 
     Public Function Lista(ByVal IdEmpresa As Integer) As DataTable
+        'Dim sql As String = "select -1 as idFinca,'Elige finca...' as Finca union "
+        'sql = sql & "select idFinca, Finca from FINCAS where idEmpresa = " & IdEmpresa
+
         Dim sql As String = "select idFinca, Finca from FINCAS where idEmpresa = " & IdEmpresa
         Dim dt As New DataTable
         BD.RellenaDataTable_GNaturesa(dt, sql, False)

@@ -30,15 +30,15 @@
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropDown_Finca" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
-                                <asp:ListItem Value="0">Selecciona Finca</asp:ListItem>
+                            <asp:DropDownList ID="DropDown_Finca" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true" AppendDataBoundItems="true"> 
+                                                               
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Finca</strong></label>
                         </div>
                         <br />
                         <div class="form-floating">
-                            <asp:DropDownList ID="DropDown_Sector" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
-                                <asp:ListItem Value="0">Selecciona Sector</asp:ListItem>
+                            <asp:DropDownList ID="DropDown_Sector" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true" AppendDataBoundItems="true">
+                              
                             </asp:DropDownList>
                             <label for="floatingInput"><strong>Sector</strong></label>
                         </div>

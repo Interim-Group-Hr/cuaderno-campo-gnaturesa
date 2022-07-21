@@ -163,9 +163,9 @@ Public Class muestreo
 
         Dim Finc As New Finca
 
-
+        DropDown_Finca.Items.Clear()
         Dim dtFincas = Finc.Lista(DropDown_empresa.SelectedValue)
-
+        DropDown_Finca.Items.Insert(0, "--- Selecciona la Finca ---")
 
         If dtFincas.Rows.Count > 0 Then
 
@@ -183,7 +183,9 @@ Public Class muestreo
     Private Sub DropDown_Finca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_Finca.SelectedIndexChanged
 
         Dim Sec As New Sector
+        DropDown_Sector.Items.Clear()
         Dim dtSector = Sec.Lista(DropDown_Finca.SelectedValue)
+        DropDown_Finca.Items.Insert(0, "--- Selecciona la Sector ---")
 
         If dtSector.Rows.Count > 0 Then
             Dim i As Integer
