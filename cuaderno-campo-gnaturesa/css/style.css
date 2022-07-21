@@ -1,0 +1,147 @@
+﻿:root {
+    --ocre: #c9b13b;
+    --ocre2: #E1C968;
+    --ocre3: #D2B22A;
+    --azul: #323e48;
+    /*Naturesa*/
+    --logo_naranja: #FEB400;
+    --logo_naranja_claro: #FEDD59;
+    --logo_azul: #0C3A44;
+    --logo_verde: #90C338;
+    --sombra_inputs: 0 0 0 0.25rem rgba(150, 150, 150, 0.5);
+}
+
+@font-face {
+    font-family: "Affogato";
+    src: url("../fonts/Affogato-Regular.otf");
+}
+body {
+    font-family: Affogato;
+    background-color: #f5f5f5;
+    /*padding:10px;*/
+    color:#444;
+}
+.btn-primary {
+    background-color: var(--logo_naranja);
+    border-color: #fff;
+}
+.btn-primary:hover {
+    background-color: var(--logo_naranja_claro);
+    border-color: #fff;
+}
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+    color: #fff;
+    background-color: var(--logo_naranja_claro);
+    border-color: #fff;
+    box-shadow: var(--sombra_inputs);
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: var(--sombra_inputs);
+}
+.btn-check:active + .btn-primary, .btn-check:checked + .btn-primary, .btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--logo_naranja_claro);
+    border-color: #fff;
+}
+.form-select:hover, .form-select:focus {
+    box-shadow: var(--sombra_inputs);
+    border-color: #fff;
+   
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: var(--logo_naranja_claro);
+    outline: 0;
+    box-shadow: none;
+}
+.loslabelserror {
+    color: #ff0000;
+}
+.form-check-input:checked {
+    background-color: var(--logo_naranja);
+    border-color: #fff;
+}
+.form-check-input:focus {
+    border-color: var(--logo_naranja);
+    outline: 0;
+    box-shadow: var(--sombra_inputs);
+}
+.dropdown-menu[data-bs-popper] {
+    left: unset;
+    right: 0px;
+}
+
+#Errormsn {
+    color: red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #dddddd;
+    font-size: 15px;
+    font-family: tahoma;
+    font-weight: initial;
+}
+
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+.tabla_fincas {
+    background-color: #acacac;
+    font-weight:900;
+}
+
+th {
+    background: #372C9A;
+    background: var(--logo_azul) !important;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+td, th {
+    padding: 3px;
+    border: 1px solid #ffffff;
+    text-align: left;
+}
+
+tr:hover {
+/*    background-color: #999999;
+*/}
+.tr_finca {
+    background-color:#fff !important;
+}
+.columna_oculta {
+    display:none;
+    background-color:#f5f5f5 !important;
+}
+.table-footer {
+    background: var(--logo_azul) !important;
+    color: white;
+}
+/* CALENDARIO */
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background-color: #FEB400 !important;
+}
+.bootstrap-datetimepicker-widget table td.day:hover,
+.bootstrap-datetimepicker-widget table td.hour:hover,
+.bootstrap-datetimepicker-widget table td.minute:hover,
+.bootstrap-datetimepicker-widget table td.second:hover {
+    background: var(--logo_naranja_claro) !important;
+}
+/* /CALENDARIO */
+
+.RBListado {
+    font-size:25px;
+}
+.RBListado label {
+    font-family:Affogato;
+}
+.RBListado tbody tr td {
+    padding-left:8px;
+}
