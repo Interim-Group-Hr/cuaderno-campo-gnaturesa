@@ -17,7 +17,11 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <UseIISExpress>true</UseIISExpress>
+<<<<<<< HEAD
     <Use64BitIISExpress />
+=======
+    <Use64BitIISExpress>false</Use64BitIISExpress>
+>>>>>>> Dev
     <IISExpressSSLPort>44385</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -92,9 +96,59 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+=======
+    <Content Include="css\bootstrap-datetimepicker.css" />
+    <Content Include="css\bootstrap-icons.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="GuardadoFinal.aspx" />
+    <Content Include="images\bg1.jpg" />
+    <Content Include="images\grupo_naturesa.png" />
+    <Content Include="images\logo_group.png" />
+    <Content Include="js\bootstrap-datetimepicker.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\moment-with-locales.js" />
+    <Content Include="login.aspx" />
+    <Content Include="medicion_muestreo.aspx" />
+    <Content Include="crear_muestreo.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GuardadoFinal.aspx.designer.vb">
+      <DependentUpon>GuardadoFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuardadoFinal.aspx.vb">
+      <DependentUpon>GuardadoFinal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="medicion_muestreo.aspx.designer.vb">
+      <DependentUpon>medicion_muestreo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicion_muestreo.aspx.vb">
+      <DependentUpon>medicion_muestreo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="crear_muestreo.aspx.designer.vb">
+      <DependentUpon>crear_muestreo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crear_muestreo.aspx.vb">
+      <DependentUpon>crear_muestreo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+>>>>>>> Dev
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -114,6 +168,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Clases\CdC_Arbol.vb" />
+    <Compile Include="_Clases\CdC_Empresa.vb" />
+    <Compile Include="_Clases\CdC_Finca.vb" />
+    <Compile Include="_Clases\CdC_Muestreo.vb" />
+    <Compile Include="_Clases\CdC_Organo.vb" />
+    <Compile Include="_Clases\CdC_Orientacion.vb" />
+    <Compile Include="_Clases\CdC_Plaga.vb" />
+    <Compile Include="_Clases\CdC_Sector.vb" />
+    <Compile Include="_Clases\CdC_Test.vb" />
+    <Compile Include="_Clases\CdC_Valores.vb" />
+    <Compile Include="_Clases\GNaturesaDB.vb" />
+    <Compile Include="_Clases\Usuario.vb" />
+>>>>>>> Dev
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -124,6 +200,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Content Include="fonts\Affogato-Black.otf" />
+    <Content Include="fonts\Affogato-Bold.otf" />
+    <Content Include="fonts\Affogato-Light.otf" />
+    <Content Include="fonts\Affogato-Medium.otf" />
+    <Content Include="fonts\Affogato-Regular.otf" />
+    <Content Include="fonts\bootstrap-icons.woff" />
+    <Content Include="fonts\bootstrap-icons.woff2" />
+>>>>>>> Dev
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -134,6 +220,10 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+<<<<<<< HEAD
+=======
+    <Content Include="Site.Master" />
+>>>>>>> Dev
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -141,6 +231,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup />
+>>>>>>> Dev
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
