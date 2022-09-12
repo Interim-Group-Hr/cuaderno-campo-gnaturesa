@@ -123,7 +123,6 @@ Public Class muestreo
 
 
 
-
                     'Cargar DropDownList de Empresas
                     If dtEmpresa.Rows.Count > 0 Then
 
@@ -159,13 +158,18 @@ Public Class muestreo
 
     End Sub
 
+
+
+
     Private Sub DropDown_empresa_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDown_empresa.SelectedIndexChanged
 
         Dim Finc As New Finca
 
         DropDown_Finca.Items.Clear()
+        DropDown_Sector.Items.Clear()
         Dim dtFincas = Finc.Lista(DropDown_empresa.SelectedValue)
         DropDown_Finca.Items.Insert(0, "--- Selecciona la Finca ---")
+        DropDown_Sector.Items.Insert(0, "--- Selecciona la Sector ---")
 
         If dtFincas.Rows.Count > 0 Then
 
@@ -185,7 +189,7 @@ Public Class muestreo
         Dim Sec As New Sector
         DropDown_Sector.Items.Clear()
         Dim dtSector = Sec.Lista(DropDown_Finca.SelectedValue)
-        DropDown_Finca.Items.Insert(0, "--- Selecciona la Sector ---")
+        DropDown_Sector.Items.Insert(0, "--- Selecciona la Sector ---")
 
         If dtSector.Rows.Count > 0 Then
             Dim i As Integer
@@ -268,7 +272,7 @@ Public Class muestreo
             miMuestreo.Finca = DropDown_Finca.SelectedValue
             miMuestreo.Sector = DropDown_Sector.SelectedValue
             miMuestreo.Grupo = Drop_GruposArbol.SelectedItem.Text
-            miMuestreo.Fecha = Date.Now
+            miMuestreo.Fecha = Convert.ToDateTime(TextBox_fecha.Text)
             miMuestreo.AddPlaga(DropDown_Plaga.SelectedValue)
 
             If DropDown_Plaga2.SelectedValue > 0 Then
@@ -286,8 +290,10 @@ Public Class muestreo
 
             Response.Redirect("medicion_muestreo.aspx", True)
 
+
         End If
 
     End Sub
+
 
 End Class
