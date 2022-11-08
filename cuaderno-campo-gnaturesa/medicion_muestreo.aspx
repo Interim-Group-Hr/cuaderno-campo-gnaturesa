@@ -23,7 +23,11 @@
                 </div>
             </nav>
         </div>
+        <br /> 
         <br />
+        <asp:Panel runat="server" id="PanelError" Visible="false" >
+            <div class="alert alert-danger" role="alert">FALTAN DATOS POR RELLENAR</div>
+        </asp:Panel>
         <br />
         <div class="row col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-6" style="margin: auto;">
 
@@ -706,7 +710,7 @@
                     </div>
                 </div>
             </div>
-            <asp:Label runat="server" ID="Errormsn" CssClass="loslabelserror" Visible="false"></asp:Label>
+          
 
             <!-- MODAL -->
 

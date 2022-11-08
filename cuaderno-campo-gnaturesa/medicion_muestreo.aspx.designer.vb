@@ -50,6 +50,15 @@ Partial Public Class medicion_muestreo
     Protected WithEvents fechaArbol As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''Control PanelError.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents PanelError As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
     '''Control SeccionFenologia.
     '''</summary>
     '''<remarks>
@@ -975,15 +984,6 @@ Partial Public Class medicion_muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents comentarioArbol As Global.System.Web.UI.HtmlControls.HtmlTextArea
-
-    '''<summary>
-    '''Control Errormsn.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Errormsn As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control DropDown_NArbol.
