@@ -747,7 +747,7 @@
         If Sur.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (este.Rows.Count - 1)
+            For i = 0 To (Sur.Rows.Count - 1)
                 DropSurTetranychusH_46.Items.Add(New ListItem(Sur.Rows(i)("Nombre"), Sur.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
@@ -989,7 +989,7 @@
 
     Private Sub guardarArbol_Click(sender As Object, e As EventArgs) Handles guardarArbol.Click
 
-
+        Dim Control As Integer = 0
         Dim Guardado As New CdCMuestreo
         Guardado = Session("Muestreo")
         '  Guardado.GuardaMuestreoArbol(Session("IdArbol"), DropNorteFenologia.SelectedIndex, DropNorteFenologia.SelectedValue)
@@ -1002,8 +1002,8 @@
                 Dim nombre() As String = Split(c.ID, "_")
                 Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                 If miCombo.Text = "" Then
-                    Errormsn.Text = "Datos en la fenología sin rellenar"
-                    Errormsn.Visible = True
+                    Control = 1
+                    Exit For
                 Else
                     Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                 End If
@@ -1021,8 +1021,9 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos en Pulgon Sensible sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
+
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1037,8 +1038,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos en Pulgon Ocupado sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1057,8 +1058,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1073,8 +1074,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1093,8 +1094,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1112,8 +1113,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1131,8 +1132,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1150,8 +1151,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1169,8 +1170,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1188,8 +1189,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1203,8 +1204,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1222,8 +1223,8 @@
                     Dim nombre() As String = Split(c.ID, "_")
                     Dim miCombo As DropDownList = DirectCast(c, DropDownList)
                     If miCombo.Text = "" Then
-                        Errormsn.Text = "Datos sin rellenar"
-                        Errormsn.Visible = True
+                        Control = 1
+                        Exit For
                     Else
                         Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
                     End If
@@ -1243,8 +1244,12 @@
         '    Next
 
         'End If
+        If Control = 0 Then
+            Response.Redirect("medicion_muestreo.aspx")
+        Else
+            PanelError.Visible = True
+        End If
 
-        Response.Redirect("medicion_muestreo.aspx")
 
 
     End Sub

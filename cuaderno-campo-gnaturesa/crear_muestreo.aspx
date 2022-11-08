@@ -60,7 +60,7 @@
                         </div>
                         <br />
 
-
+                        
                         <div class="row">
                             <div class="col-10">
                                 <div class="form-floating">
@@ -147,7 +147,12 @@
 
     <script type="text/javascript">
 
-        //DOM Generar codigo HTML.
+        //Comprbar DropDownList
+
+
+
+
+        //DOM Generar codigo HTML.   
 
         const div = document.createElement("div");
         div.id = "IdCreado";
