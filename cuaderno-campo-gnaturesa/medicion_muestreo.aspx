@@ -9,8 +9,7 @@
     <asp:TextBox ID="txtGeoLatitud" runat="server" Style="display: none;" />
     <asp:TextBox ID="txtGeoLongitud" runat="server" Style="display: none;" />
 
-    
-    <div class="container-fluid">
+        <div class="container-fluid">
         <div>
             <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-top">
                 <div class="container-fluid">
