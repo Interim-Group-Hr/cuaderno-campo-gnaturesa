@@ -257,4 +257,43 @@ Public Class GNaturesaDB
         End Try
 
     End Sub
+
+    Public Sub EliminarCabecera(ByVal user As String)
+
+
+        Dim strSQL As String
+        Dim comando As New SqlCommand
+
+        'Se inicializa la variable de error
+        mlngResp = 0
+        mlngRespOf = 0
+        mstrMsgError = String.Empty
+
+        Try
+
+            ConexionCerrarBD()
+
+            'Se monta la instrucción SQL de consulta
+            strSQL = "delete from CdC_MUESTREOS where idfila in (select idFila from CdC_MUESTREOS where GrabadoPor= '" & user & "' and not exists (select * from CdC_MUESTREO_ARBOL where idMuestreo = CdC_MUESTREOS.idFila))"
+
+            ConexionAbrirBD(txtconexion)
+
+            Dim cmd As SqlCommand = New SqlCommand(strSQL, cnBD)
+
+            'Se ejecuta la consulta
+            cmd.ExecuteReader()
+
+        Catch ex As Exception
+
+            mlngResp = -1
+            mstrMsgError = ex.Message
+
+        Finally
+
+            ConexionCerrarBD()
+
+        End Try
+
+
+    End Sub
 End Class

@@ -8,7 +8,7 @@
     Dim miFecha As String = ""
     Dim miGrupo As String
     Dim miObservaciones As String = ""
-    Dim miGrabadoPor As String = ""
+    Dim miGrabadoPor As String = Session("user")
     Dim miLatitud As Long
     Dim miLongitud As Long
     Dim dtPlagas As New DataTable
@@ -87,7 +87,7 @@
 
         If miIdMuestreo = 0 Then
             cmd.Parameters("@idMuestreo").Direction = ParameterDirection.Output 'si ejecutamos un alta el parametro idMuestreo es de salida para recuperar el id generado por la BD
-            cmd.Parameters.AddWithValue("@grabadopor", miGrabadoPor) 'guardamos el creador del muestreo solo al crearlo
+            cmd.Parameters.AddWithValue("@grabadopor", Session("user")) 'guardamos el creador del muestreo solo al crearlo
             cmd.Parameters.AddWithValue("@idempresa", miEmpresa)
             cmd.Parameters.AddWithValue("@idfinca", miFinca)
             cmd.Parameters.AddWithValue("@idsector", miSector)

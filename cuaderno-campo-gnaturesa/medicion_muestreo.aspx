@@ -9,7 +9,7 @@
     <asp:TextBox ID="txtGeoLatitud" runat="server" Style="display: none;" />
     <asp:TextBox ID="txtGeoLongitud" runat="server" Style="display: none;" />
 
-        <div class="container-fluid">
+    <div class="container-fluid">
         <div>
             <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-top">
                 <div class="container-fluid">
@@ -22,11 +22,42 @@
                 </div>
             </nav>
         </div>
-        <br /> 
         <br />
-        <asp:Panel runat="server" id="PanelError" Visible="false" >
+        <br />
+
+        <%--Cartel de advertencia--%>
+        <asp:Panel runat="server" ID="PanelError" Visible="false">
             <div class="alert alert-danger" role="alert">FALTAN DATOS POR RELLENAR</div>
         </asp:Panel>
+
+        <%--CheckBox Fruto--%>
+        <asp:Panel runat="server" ID="checkNoMuestreo" Visible="false">
+            <asp:checkbox Text="No muestrear hoja" runat="server" id="CheckHoja" AutoPostBack="true" />
+            <asp:checkbox Text="No muestrear fruto" runat="server" id="CheckFruto" AutoPostBack="true" />
+            <%--<div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <div class="form-check">
+                            <asp:input class="form-check-input" type="radio" name="flexRadioDefault" id="CheckHoja">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                No muestrear hoja
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="form-check">
+                            <asp:input class="form-check-input" type="radio" name="flexRadioDefault" id="CheckFruto">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                No muestrear fruto
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>--%>
+        </asp:Panel>
+
         <br />
         <div class="row col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-6" style="margin: auto;">
 
@@ -709,7 +740,7 @@
                     </div>
                 </div>
             </div>
-          
+
 
             <!-- MODAL -->
 
@@ -787,7 +818,7 @@
 
 
     <!-- Cuadro de dialogo/elección de arbol -->
-     
+
 </asp:Content>
 
 

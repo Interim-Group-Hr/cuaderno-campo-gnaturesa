@@ -52,9 +52,12 @@
                         PulgonSensible.Visible = True
                         pulgonOcupado.Visible = True
                         CargarPulgon()
+                       
+
+
 
                     ElseIf plaga1 = 2 Then
-
+                        checkNoMuestreo.Visible = True
                         EutetranychusFruto.Visible = True
                         EutetranychusHoja.Visible = True
                         CargarEutetranychus()
@@ -85,7 +88,7 @@
                         CargarMinador()
 
                     ElseIf plaga1 = 8 Then
-
+                        checkNoMuestreo.Visible = True
                         TetranychusFruto.Visible = True
                         TetranychusHoja.Visible = True
                         CargarTetranychus()
@@ -105,7 +108,7 @@
                         CargarPulgon()
 
                     ElseIf plaga2 = 2 Then
-
+                        checkNoMuestreo.Visible = True
                         EutetranychusFruto.Visible = True
                         EutetranychusHoja.Visible = True
                         CargarEutetranychus()
@@ -136,7 +139,7 @@
                         CargarMinador()
 
                     ElseIf plaga2 = 8 Then
-
+                        checkNoMuestreo.Visible = True
                         TetranychusFruto.Visible = True
                         TetranychusHoja.Visible = True
                         CargarTetranychus()
@@ -176,6 +179,7 @@
             Dim i As Integer
             For i = 0 To (AnilloEste1.Rows.Count - 1)
                 DropEstePulgonS_1.Items.Add(New ListItem(AnilloEste1.Rows(i)("Nombre"), AnilloEste1.Rows(i)("idPlagaOrganoOrientacionValor")))
+
             Next
 
         End If
@@ -1014,6 +1018,7 @@
 
         If PulgonSensible.Visible = True Then
 
+
             For Each c As Control In seccionPulgonSensible.Controls
 
                 If TypeOf c Is DropDownList Then
@@ -1053,19 +1058,20 @@
 
             For Each c As Control In seccionEtetranychusH.Controls
 
-                If TypeOf c Is DropDownList Then
+                    If TypeOf c Is DropDownList Then
 
-                    Dim nombre() As String = Split(c.ID, "_")
-                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
-                    If miCombo.Text = "" Then
-                        Control = 1
-                        Exit For
-                    Else
-                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                        If miCombo.Text = "" Then
+                            Control = 1
+                            Exit For
+                        Else
+                            Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                        End If
+
                     End If
+                Next
 
-                End If
-            Next
 
             For Each c As Control In SeccionEtetranychusF.Controls
 
@@ -1081,6 +1087,7 @@
                     End If
                 End If
             Next
+
 
 
         End If
@@ -1182,6 +1189,8 @@
 
         If TetranychusFruto.Visible = True Then
 
+
+
             For Each c As Control In SeccionTetranychusF.Controls
 
                 If TypeOf c Is DropDownList Then
@@ -1207,7 +1216,7 @@
                         Control = 1
                         Exit For
                     Else
-                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue())
                     End If
                 End If
             Next
@@ -1265,4 +1274,224 @@
         Session("IdArbol") = DropDown_NArbol.SelectedValue
 
     End Sub
+
+    Private Sub CheckFruto_CheckedChanged(sender As Object, e As EventArgs) Handles CheckFruto.CheckedChanged
+
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+
+        If EutetranychusFruto.Visible = True Then
+
+            If CheckFruto.Checked = True And EutetranychusFruto.Visible = True Then
+
+                For Each c As Control In SeccionEtetranychusF.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                        If miCombo.Text = "" Then
+                            miCombo.SelectedIndex = 1
+                            miCombo.Enabled = False
+                        Else
+                            miCombo.SelectedIndex = 1
+                            miCombo.Enabled = False
+
+
+                        End If
+
+                    End If
+                Next
+
+
+            Else
+
+                For Each c As Control In SeccionEtetranychusF.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                        If miCombo.Text = "" Then
+                            miCombo.SelectedIndex = 0
+                            miCombo.Enabled = True
+                        Else
+                            miCombo.SelectedIndex = 0
+                            miCombo.Enabled = True
+
+                        End If
+
+                    End If
+                Next
+
+
+
+            End If
+
+
+        End If
+
+
+        If SeccionTetranychusF.Visible = True Then
+
+            If CheckFruto.Checked = True And SeccionTetranychusF.Visible = True Then
+
+                For Each c As Control In SeccionTetranychusF.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                        If miCombo.Text = "" Then
+                            miCombo.SelectedIndex = 1
+                            miCombo.Enabled = False
+                        Else
+                            miCombo.SelectedIndex = 1
+                            miCombo.Enabled = False
+
+
+                        End If
+
+                    End If
+                Next
+
+            Else
+
+                For Each c As Control In SeccionTetranychusF.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                        If miCombo.Text = "" Then
+                            miCombo.SelectedIndex = 0
+                            miCombo.Enabled = True
+                        Else
+                            miCombo.SelectedIndex = 0
+                            miCombo.Enabled = True
+
+                        End If
+
+                    End If
+                Next
+
+            End If
+
+        End If
+
+
+    End Sub
+
+    Private Sub CheckHoja_CheckedChanged(sender As Object, e As EventArgs) Handles CheckHoja.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+
+
+        If EutetranychusFruto.Visible = True Then
+
+            If CheckHoja.Checked = True And EutetranychusFruto.Visible = True Then
+
+                For Each c As Control In seccionEtetranychusH.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                        If miCombo.Text = "" Then
+                            miCombo.SelectedIndex = 1
+                            miCombo.Enabled = False
+                        Else
+                            miCombo.SelectedIndex = 1
+                            miCombo.Enabled = False
+
+
+                        End If
+
+                    End If
+                Next
+
+
+            Else
+
+                For Each c As Control In seccionEtetranychusH.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                        If miCombo.Text = "" Then
+                            miCombo.SelectedIndex = 0
+                            miCombo.Enabled = True
+                        Else
+                            miCombo.SelectedIndex = 0
+                            miCombo.Enabled = True
+
+                        End If
+
+                    End If
+                Next
+
+
+
+            End If
+
+
+        End If
+
+
+        If TetranychusFruto.Visible = True Then
+
+            If CheckHoja.Checked = True And TetranychusFruto.Visible = True Then
+
+                For Each c As Control In SeccionTetranychusH.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                        If miCombo.Text = "" Then
+                            miCombo.SelectedIndex = 1
+                            miCombo.Enabled = False
+                        Else
+                            miCombo.SelectedIndex = 1
+                            miCombo.Enabled = False
+
+
+                        End If
+
+                    End If
+                Next
+
+            Else
+
+                For Each c As Control In SeccionTetranychusH.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                        If miCombo.Text = "" Then
+                            miCombo.SelectedIndex = 0
+                            miCombo.Enabled = True
+                        Else
+                            miCombo.SelectedIndex = 0
+                            miCombo.Enabled = True
+
+                        End If
+
+                    End If
+                Next
+
+            End If
+
+        End If
+
+
+
+    End Sub
+
 End Class

@@ -59,6 +59,33 @@ Partial Public Class medicion_muestreo
     Protected WithEvents PanelError As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
+    '''Control checkNoMuestreo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents checkNoMuestreo As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''Control CheckHoja.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CheckHoja As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''Control CheckFruto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CheckFruto As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Control SeccionFenologia.
     '''</summary>
     '''<remarks>
