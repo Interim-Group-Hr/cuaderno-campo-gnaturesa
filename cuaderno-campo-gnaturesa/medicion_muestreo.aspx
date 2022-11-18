@@ -32,31 +32,10 @@
 
         <%--CheckBox Fruto--%>
         <asp:Panel runat="server" ID="checkNoMuestreo" Visible="false">
-            <asp:checkbox Text="No muestrear hoja" runat="server" id="CheckHoja" AutoPostBack="true" />
-            <asp:checkbox Text="No muestrear fruto" runat="server" id="CheckFruto" AutoPostBack="true" />
-            <%--<div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col">
-                        <div class="form-check">
-                            <asp:input class="form-check-input" type="radio" name="flexRadioDefault" id="CheckHoja">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                No muestrear hoja
-                            </label>
-                        </div>
-
-                    </div>
-                    <div class="col">
-                        <div class="form-check">
-                            <asp:input class="form-check-input" type="radio" name="flexRadioDefault" id="CheckFruto">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                No muestrear fruto
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-            </div>--%>
+            <asp:checkbox Text="Hoja" runat="server" id="CheckHoja" AutoPostBack="true" />
+            <asp:checkbox Text="Fruto" runat="server" id="CheckFruto" AutoPostBack="true" />          
         </asp:Panel>
+         <asp:checkbox Text="Fenología" runat="server" id="CheckFeno" AutoPostBack="true" />       
 
         <br />
         <div class="row col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-6" style="margin: auto;">

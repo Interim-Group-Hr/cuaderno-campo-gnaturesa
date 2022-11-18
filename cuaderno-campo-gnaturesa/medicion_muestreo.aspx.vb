@@ -923,6 +923,7 @@
 
     Private Sub CargdarFenologia()
 
+
         Dim Plagas As New Plaga
         Dim OrganoNorte74 = Plagas.ListarValores(74)
         Dim OrganoEste71 = Plagas.ListarValores(71)
@@ -1494,4 +1495,54 @@
 
     End Sub
 
+    Private Sub CheckFeno_CheckedChanged(sender As Object, e As EventArgs) Handles CheckFeno.CheckedChanged
+
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If CheckFeno.Checked = True Then
+
+            For Each c As Control In SeccionFenologia.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionFenologia.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+
+
+    End Sub
 End Class

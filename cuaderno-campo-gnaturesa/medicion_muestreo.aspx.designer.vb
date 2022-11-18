@@ -86,6 +86,15 @@ Partial Public Class medicion_muestreo
     Protected WithEvents CheckFruto As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
+    '''Control CheckFeno.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CheckFeno As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Control SeccionFenologia.
     '''</summary>
     '''<remarks>
