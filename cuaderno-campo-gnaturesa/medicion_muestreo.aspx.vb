@@ -52,8 +52,6 @@
                         PulgonSensible.Visible = True
                         pulgonOcupado.Visible = True
                         CargarPulgon()
-                       
-
 
 
                     ElseIf plaga1 = 2 Then
@@ -97,6 +95,11 @@
 
                         Aonidella.Visible = True
                         CargarAonidella()
+
+                    ElseIf plaga1 = 10 Then
+
+                        Moscablanca2.Visible = True
+                        CargarMosca2()
 
                     End If
 
@@ -148,6 +151,11 @@
 
                         Aonidella.Visible = True
                         CargarAonidella()
+
+                    ElseIf plaga2 = 10 Then
+
+                        Moscablanca2.Visible = True
+                        CargarMosca2()
 
                     End If
 
@@ -687,6 +695,135 @@
             Dim i As Integer
             For i = 0 To (Int270.Rows.Count - 1)
                 DropInterior2Aonidella_70.Items.Add(New ListItem(Int270.Rows(i)("Nombre"), Int270.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+
+    End Sub
+
+    Private Sub CargarMosca2()
+
+        Dim p As New Plaga
+        Dim Este77 = p.ListarValores(77)
+        Dim Este78 = p.ListarValores(78)
+        Dim Este79 = p.ListarValores(79)
+        Dim Sur80 = p.ListarValores(80)
+        Dim Sur83 = p.ListarValores(83)
+        Dim Sur84 = p.ListarValores(84)
+        Dim Oeste85 = p.ListarValores(85)
+        Dim Oeste86 = p.ListarValores(86)
+        Dim Oeste87 = p.ListarValores(87)
+        Dim Norte88 = p.ListarValores(88)
+        Dim Norte89 = p.ListarValores(89)
+        Dim Norte90 = p.ListarValores(90)
+
+
+
+        If Este77.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Este77.Rows.Count - 1)
+                DropEsteAdulto_77.Items.Add(New ListItem(Este77.Rows(i)("Nombre"), Este77.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Este78.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Este78.Rows.Count - 1)
+                DropEsteHuevos_78.Items.Add(New ListItem(Este78.Rows(i)("Nombre"), Este78.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Este79.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Este79.Rows.Count - 1)
+                DropEsteLarvas_79.Items.Add(New ListItem(Este79.Rows(i)("Nombre"), Este79.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Sur80.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Sur80.Rows.Count - 1)
+                DropSurAdultos_80.Items.Add(New ListItem(Sur80.Rows(i)("Nombre"), Sur80.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Sur83.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Sur83.Rows.Count - 1)
+                DropSurHuevos_83.Items.Add(New ListItem(Sur83.Rows(i)("Nombre"), Sur83.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Sur84.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Sur84.Rows.Count - 1)
+                DropSurLarvas84.Items.Add(New ListItem(Sur84.Rows(i)("Nombre"), Sur84.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Oeste85.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Oeste85.Rows.Count - 1)
+                DropOesteAdultos_85.Items.Add(New ListItem(Oeste85.Rows(i)("Nombre"), Oeste85.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Oeste86.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Oeste86.Rows.Count - 1)
+                DropOesteHuevos_86.Items.Add(New ListItem(Oeste86.Rows(i)("Nombre"), Oeste86.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Oeste87.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Oeste87.Rows.Count - 1)
+                DropOesteLarvas_87.Items.Add(New ListItem(Oeste87.Rows(i)("Nombre"), Oeste87.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Norte88.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Norte88.Rows.Count - 1)
+                DropNorteAdultos_88.Items.Add(New ListItem(Norte88.Rows(i)("Nombre"), Norte88.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Norte89.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Norte89.Rows.Count - 1)
+                DropNorteHuevo_89.Items.Add(New ListItem(Norte89.Rows(i)("Nombre"), Norte89.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Norte90.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Norte90.Rows.Count - 1)
+                DropNorteLarvas_90.Items.Add(New ListItem(Norte90.Rows(i)("Nombre"), Norte90.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
@@ -1242,6 +1379,24 @@
             Next
         End If
 
+        If Moscablanca2.Visible = True Then
+
+            For Each c As Control In SeccionAonidella.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        Control = 1
+                        Exit For
+                    Else
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+        End If
+
         'Cargar Arboles dicriminando los que ya se han elegido
         'Dim Arboles As New Arbol
         'Dim dtArbol = Arboles.Lista(Session("GrupoArbol"), Session("idMuestreo"))
@@ -1495,13 +1650,13 @@
 
     End Sub
 
-    Private Sub CheckFeno_CheckedChanged(sender As Object, e As EventArgs) Handles CheckFeno.CheckedChanged
+    Private Sub CheckFeno_CheckedChanged(sender As Object, e As EventArgs) Handles CheckfireFeno.CheckedChanged
 
         Dim Control As Integer = 0
         Dim Guardado As New CdCMuestreo
         Guardado = Session("Muestreo")
 
-        If CheckFeno.Checked = True Then
+        If CheckfireFeno.Checked = True Then
 
             For Each c As Control In SeccionFenologia.Controls
 
@@ -1545,4 +1700,5 @@
 
 
     End Sub
+
 End Class
