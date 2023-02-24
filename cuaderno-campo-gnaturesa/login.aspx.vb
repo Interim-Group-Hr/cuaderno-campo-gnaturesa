@@ -21,7 +21,7 @@
             If inyeccion = False Then
 
                 'comprobar si hay caracteres de inyección sql en el password
-                inyeccion = comprueba_inyeccion(Me.txtPassword.Text)
+                inyeccion = Comprueba_inyeccion(Me.txtPassword.Text)
 
                 If inyeccion = False Then
 

@@ -98,7 +98,7 @@
 
                     ElseIf plaga1 = 10 Then
 
-                        Moscablanca2.Visible = True
+                        MoscaBlanca2.Visible = True
                         CargarMosca2()
 
                     End If
@@ -705,128 +705,251 @@
     Private Sub CargarMosca2()
 
         Dim p As New Plaga
-        Dim Este77 = p.ListarValores(77)
-        Dim Este78 = p.ListarValores(78)
-        Dim Este79 = p.ListarValores(79)
-        Dim Sur80 = p.ListarValores(80)
-        Dim Sur83 = p.ListarValores(83)
-        Dim Sur84 = p.ListarValores(84)
-        Dim Oeste85 = p.ListarValores(85)
-        Dim Oeste86 = p.ListarValores(86)
-        Dim Oeste87 = p.ListarValores(87)
-        Dim Norte88 = p.ListarValores(88)
-        Dim Norte89 = p.ListarValores(89)
-        Dim Norte90 = p.ListarValores(90)
+        Dim Este91 = p.ListarValores(91)
+        Dim Sur92 = p.ListarValores(92)
+        Dim Oeste93 = p.ListarValores(93)
+        Dim Norte94 = p.ListarValores(94)
+        Dim Azar95 = p.ListarValores(95)
+        Dim Azar96 = p.ListarValores(96)
 
+        Dim Este97 = p.ListarValores(97)
+        Dim Sur98 = p.ListarValores(98)
+        Dim Oeste99 = p.ListarValores(99)
+        Dim Norte100 = p.ListarValores(100)
+        Dim Azar101 = p.ListarValores(101)
+        Dim Azar102 = p.ListarValores(102)
 
+        Dim Este103 = p.ListarValores(103)
+        Dim Sur104 = p.ListarValores(104)
+        Dim Oeste105 = p.ListarValores(105)
+        Dim Norte106 = p.ListarValores(106)
+        Dim Azar107 = p.ListarValores(107)
+        Dim Azar108 = p.ListarValores(108)
 
-        If Este77.Rows.Count > 0 Then
+        Dim Este109 = p.ListarValores(109)
+        Dim Sur110 = p.ListarValores(110)
+        Dim Oeste111 = p.ListarValores(111)
+        Dim Norte112 = p.ListarValores(112)
+        Dim Azar113 = p.ListarValores(113)
+        Dim Azar114 = p.ListarValores(114)
+
+        If Este91.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Este77.Rows.Count - 1)
-                DropEsteAdulto_77.Items.Add(New ListItem(Este77.Rows(i)("Nombre"), Este77.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Este91.Rows.Count - 1)
+                DropEsteAdulto_91.Items.Add(New ListItem(Este91.Rows(i)("Nombre"), Este91.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Este78.Rows.Count > 0 Then
+        If Sur92.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Este78.Rows.Count - 1)
-                DropEsteHuevos_78.Items.Add(New ListItem(Este78.Rows(i)("Nombre"), Este78.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Sur92.Rows.Count - 1)
+                DropSurAdultos_92.Items.Add(New ListItem(Sur92.Rows(i)("Nombre"), Sur92.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Este79.Rows.Count > 0 Then
+        If Oeste93.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Este79.Rows.Count - 1)
-                DropEsteLarvas_79.Items.Add(New ListItem(Este79.Rows(i)("Nombre"), Este79.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Oeste93.Rows.Count - 1)
+                DropOesteAdultos_93.Items.Add(New ListItem(Oeste93.Rows(i)("Nombre"), Oeste93.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Sur80.Rows.Count > 0 Then
+        If Norte94.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Sur80.Rows.Count - 1)
-                DropSurAdultos_80.Items.Add(New ListItem(Sur80.Rows(i)("Nombre"), Sur80.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Norte94.Rows.Count - 1)
+                DropNorteAdultos_94.Items.Add(New ListItem(Norte94.Rows(i)("Nombre"), Norte94.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Sur83.Rows.Count > 0 Then
+        If Azar95.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Sur83.Rows.Count - 1)
-                DropSurHuevos_83.Items.Add(New ListItem(Sur83.Rows(i)("Nombre"), Sur83.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Azar95.Rows.Count - 1)
+                DropAdultosInteriorAzar1_95.Items.Add(New ListItem(Azar95.Rows(i)("Nombre"), Azar95.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Sur84.Rows.Count > 0 Then
+        If Azar96.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Sur84.Rows.Count - 1)
-                DropSurLarvas84.Items.Add(New ListItem(Sur84.Rows(i)("Nombre"), Sur84.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Azar96.Rows.Count - 1)
+                DropAdultosInteriorAzar2_96.Items.Add(New ListItem(Azar96.Rows(i)("Nombre"), Azar96.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Oeste85.Rows.Count > 0 Then
+        If Este97.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Oeste85.Rows.Count - 1)
-                DropOesteAdultos_85.Items.Add(New ListItem(Oeste85.Rows(i)("Nombre"), Oeste85.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Este97.Rows.Count - 1)
+                DropEsteLarvas_97.Items.Add(New ListItem(Este97.Rows(i)("Nombre"), Este97.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Oeste86.Rows.Count > 0 Then
+        If Sur98.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Oeste86.Rows.Count - 1)
-                DropOesteHuevos_86.Items.Add(New ListItem(Oeste86.Rows(i)("Nombre"), Oeste86.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Sur98.Rows.Count - 1)
+                DropSurLarvas_98.Items.Add(New ListItem(Sur98.Rows(i)("Nombre"), Sur98.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Oeste87.Rows.Count > 0 Then
+        If Oeste99.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Oeste87.Rows.Count - 1)
-                DropOesteLarvas_87.Items.Add(New ListItem(Oeste87.Rows(i)("Nombre"), Oeste87.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Oeste99.Rows.Count - 1)
+                DropOesteLarvas_99.Items.Add(New ListItem(Oeste99.Rows(i)("Nombre"), Oeste99.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Norte88.Rows.Count > 0 Then
+        If Norte100.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Norte88.Rows.Count - 1)
-                DropNorteAdultos_88.Items.Add(New ListItem(Norte88.Rows(i)("Nombre"), Norte88.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Norte100.Rows.Count - 1)
+                DropNorteLarvas_100.Items.Add(New ListItem(Norte100.Rows(i)("Nombre"), Norte100.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Norte89.Rows.Count > 0 Then
+        If Azar101.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Norte89.Rows.Count - 1)
-                DropNorteHuevo_89.Items.Add(New ListItem(Norte89.Rows(i)("Nombre"), Norte89.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Azar101.Rows.Count - 1)
+                DropL1L2InteriorAzar1_101.Items.Add(New ListItem(Azar101.Rows(i)("Nombre"), Azar101.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
 
-        If Norte90.Rows.Count > 0 Then
+        If Azar102.Rows.Count > 0 Then
 
             Dim i As Integer
-            For i = 0 To (Norte90.Rows.Count - 1)
-                DropNorteLarvas_90.Items.Add(New ListItem(Norte90.Rows(i)("Nombre"), Norte90.Rows(i)("idPlagaOrganoOrientacionValor")))
+            For i = 0 To (Azar102.Rows.Count - 1)
+                DropL1L2InteriorAzar2_102.Items.Add(New ListItem(Azar102.Rows(i)("Nombre"), Azar102.Rows(i)("idPlagaOrganoOrientacionValor")))
             Next
 
         End If
+
+        If Este103.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Este103.Rows.Count - 1)
+                DropEsteLarvas2_103.Items.Add(New ListItem(Este103.Rows(i)("Nombre"), Este103.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Sur104.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Sur104.Rows.Count - 1)
+                DropSurLarvas2_104.Items.Add(New ListItem(Sur104.Rows(i)("Nombre"), Sur104.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Oeste105.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Oeste105.Rows.Count - 1)
+                DropOesteLarvas2_105.Items.Add(New ListItem(Oeste105.Rows(i)("Nombre"), Oeste105.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Norte106.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Norte106.Rows.Count - 1)
+                DropNorteLarvas2_106.Items.Add(New ListItem(Norte106.Rows(i)("Nombre"), Norte106.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Azar107.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Azar101.Rows.Count - 1)
+                DropL3L4InteriorAzar1_107.Items.Add(New ListItem(Azar107.Rows(i)("Nombre"), Azar107.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Azar108.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Azar102.Rows.Count - 1)
+                DropL3L4InteriorAzar2_108.Items.Add(New ListItem(Azar108.Rows(i)("Nombre"), Azar108.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Este109.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Este109.Rows.Count - 1)
+                DropEsteHuevos_109.Items.Add(New ListItem(Este109.Rows(i)("Nombre"), Este109.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Sur110.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Sur110.Rows.Count - 1)
+                DropSurHuevos_110.Items.Add(New ListItem(Sur110.Rows(i)("Nombre"), Sur110.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Oeste111.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Oeste111.Rows.Count - 1)
+                DropOesteHuevos_111.Items.Add(New ListItem(Oeste111.Rows(i)("Nombre"), Oeste111.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Norte112.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Norte112.Rows.Count - 1)
+                DropNorteHuevo_112.Items.Add(New ListItem(Norte112.Rows(i)("Nombre"), Norte112.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Azar113.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Azar113.Rows.Count - 1)
+                DropHuevosInteriorAzar1_113.Items.Add(New ListItem(Azar113.Rows(i)("Nombre"), Azar113.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Azar114.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Azar114.Rows.Count - 1)
+                DropHuevosInteriorAzar2_114.Items.Add(New ListItem(Azar114.Rows(i)("Nombre"), Azar114.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+
 
 
     End Sub
@@ -1381,7 +1504,7 @@
 
         If Moscablanca2.Visible = True Then
 
-            For Each c As Control In SeccionAonidella.Controls
+            For Each c As Control In SeccionMoscaBlanca2.Controls
 
                 If TypeOf c Is DropDownList Then
 
@@ -1395,6 +1518,53 @@
                     End If
                 End If
             Next
+
+
+            For Each c As Control In SeccionMoscaBlanca2_1.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        Control = 1
+                        Exit For
+                    Else
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+
+            For Each c As Control In SeccionMoscaBlanca2_2.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        Control = 1
+                        Exit For
+                    Else
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+
+            For Each c As Control In SeccionMoscaBlanca2_3.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        Control = 1
+                        Exit For
+                    Else
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+
         End If
 
         'Cargar Arboles dicriminando los que ya se han elegido
@@ -1700,5 +1870,6 @@
 
 
     End Sub
+
 
 End Class
