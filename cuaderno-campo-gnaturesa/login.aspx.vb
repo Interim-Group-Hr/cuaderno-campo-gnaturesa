@@ -15,12 +15,13 @@
         If Me.txtUsuario.Text <> String.Empty AndAlso Me.txtPassword.Text <> String.Empty Then
 
             'comprobar si hay caracteres de inyección sql en el usuario
-            inyeccion = comprueba_inyeccion(Me.txtUsuario.Text)
+            inyeccion = Comprueba_inyeccion(Me.txtUsuario.Text)
+
 
             If inyeccion = False Then
 
                 'comprobar si hay caracteres de inyección sql en el password
-                inyeccion = comprueba_inyeccion(Me.txtPassword.Text)
+                inyeccion = Comprueba_inyeccion(Me.txtPassword.Text)
 
                 If inyeccion = False Then
 
@@ -28,6 +29,7 @@
 
                     Dim intIdUsuario As Integer = objGNaturesa.Comprobar(Me.txtUsuario.Text.ToUpper, Me.txtPassword.Text)
                     Dim rol As Integer = objGNaturesa.Rol(intIdUsuario)
+
 
                     'Si se ejecuta correctamente
                     If objGNaturesa.Respuesta = 1 Then
@@ -39,13 +41,15 @@
                             Exit Sub
 
                         Else
+
+                            ' Session("Nusuario") = Me.txtUsuario.Text.ToString
                             Session("loginOk") = True
                             Session("Passok") = Me.txtPassword
                             Session("IdUser") = intIdUsuario
                             Session("Rol") = rol
 
                         End If
-
+                        ' objGNaturesa.EliminarCabecera(Session("user"))
                         'Dependiendo del rol del usuario
 
                         Select Case objGNaturesa.Rol(intIdUsuario)
