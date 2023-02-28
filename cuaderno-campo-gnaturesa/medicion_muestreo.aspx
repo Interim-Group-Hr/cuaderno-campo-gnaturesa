@@ -715,7 +715,7 @@
             <!-- Mosca blanca 2 -->
 
 
-            <div class="row" runat="server" id="MoscaBlanca2" visible="true">
+            <div class="row" runat="server" id="MoscaBlanca2" visible="false">
                 <div class="col-sm-6" runat="server" id="Div4">
                     <div class="card border-secondary mb-3" id="SeccionMoscaBlanca2" runat="server">
                         <div class="card-header">Mosca Blanca 2 - Azar Adulto</div>
