@@ -945,13 +945,13 @@
 
             <!-- MODAL -->
 
-            <div class="modal fade" id="ModalSelect" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade" id="ModalSelect" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-target="#staticBackdrop" data-bs-backdrop="static">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLongTitle">Añadir árbol</h5>
                             <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              <!--  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>  -->
                             </div>
                         </div>
                         <div class="modal-body">
