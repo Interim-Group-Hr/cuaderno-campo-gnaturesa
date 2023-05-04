@@ -876,7 +876,7 @@
 
                 <div class="col-sm-6" runat="server" id="Div7">
                     <div class="card border-secondary mb-3" id="SeccionMoscaBlanca2_3" runat="server">
-                        <div class="card-header">Mosca Blanca 2 - Huevos</div>
+                        <div class="card-header"><div style="float:left">Mosca Blanca 2 - Huevos</div></div>
                         <div class="card-body text-secondary">
 
                             <div class="form-floating">
