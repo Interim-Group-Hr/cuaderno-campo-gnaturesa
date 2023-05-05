@@ -86,15 +86,6 @@ Partial Public Class medicion_muestreo
     Protected WithEvents CheckFruto As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''Control CheckfireFeno.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents CheckfireFeno As Global.System.Web.UI.WebControls.CheckBox
-
-    '''<summary>
     '''Control SeccionFenologia.
     '''</summary>
     '''<remarks>
@@ -102,6 +93,15 @@ Partial Public Class medicion_muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents SeccionFenologia As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control CheckfireFeno.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CheckfireFeno As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
     '''Control DropNorteFenologia_74.
@@ -1031,6 +1031,15 @@ Partial Public Class medicion_muestreo
     Protected WithEvents SeccionMoscaBlanca2 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''Control chkMosca2Adulto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMosca2Adulto As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Control DropEsteAdulto_91.
     '''</summary>
     '''<remarks>
@@ -1101,6 +1110,15 @@ Partial Public Class medicion_muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents SeccionMoscaBlanca2_1 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkMosca2AzarLarvasL1L2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMosca2AzarLarvasL1L2 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
     '''Control DropEsteLarvas_97.
@@ -1175,6 +1193,15 @@ Partial Public Class medicion_muestreo
     Protected WithEvents SeccionMoscaBlanca2_2 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''Control chkMosca2AzarLarvasL3L4.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMosca2AzarLarvasL3L4 As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Control DropEsteLarvas2_103.
     '''</summary>
     '''<remarks>
@@ -1245,6 +1272,15 @@ Partial Public Class medicion_muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents SeccionMoscaBlanca2_3 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkMosca2Huevos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMosca2Huevos As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
     '''Control DropEsteHuevos_109.

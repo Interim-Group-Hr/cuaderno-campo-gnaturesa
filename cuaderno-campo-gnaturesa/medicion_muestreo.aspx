@@ -36,7 +36,6 @@
                 <asp:CheckBox Text="Hoja" runat="server" ID="CheckHoja" AutoPostBack="true" />
                 <asp:CheckBox Text="Fruto" runat="server" ID="CheckFruto" AutoPostBack="true" />
             </asp:Panel>
-            <asp:CheckBox Text="Fenología" runat="server" ID="CheckfireFeno" AutoPostBack="true" />
         </div>
 
 
@@ -46,7 +45,9 @@
             <!-- Fenología -->
             <div class="col-12">
                 <div class="card border-secondary mb-3" id="SeccionFenologia" runat="server">
-                    <div class="card-header">Fenología</div>
+                    <div class="card-header"><div style="float:left">Fenología</div>
+            <div style="float:right"><asp:CheckBox Text="No muestreado" runat="server" ID="CheckfireFeno" AutoPostBack="true" /></div>
+                    </div>
                     <div class="card-body text-secondary">
                         <div class="row">
                             <div class="col-6">
@@ -718,7 +719,7 @@
             <div class="row" runat="server" id="MoscaBlanca2" visible="false">
                 <div class="col-sm-6" runat="server" id="Div4">
                     <div class="card border-secondary mb-3" id="SeccionMoscaBlanca2" runat="server">
-                        <div class="card-header">Mosca Blanca 2 - Azar Adulto</div>
+                        <div class="card-header"><div style="float:left">Mosca Blanca 2 - Azar Adulto</div><div style="float:right"><asp:CheckBox Text="No muestreado" runat="server" ID="chkMosca2Adulto" AutoPostBack="true" /></div></div>
                         <div class="card-body text-secondary">
 
                             <div class="form-floating">
@@ -773,7 +774,7 @@
 
                 <div class="col-sm-6" runat="server" id="Div5">
                     <div class="card border-secondary mb-3" id="SeccionMoscaBlanca2_1" runat="server">
-                        <div class="card-header">Mosca Blanca 2 - Azar Larvas L1-L2</div>
+                        <div class="card-header"><div style="float:left">Mosca Blanca 2 - Azar Larvas L1-L2</div><div style="float:right"><asp:CheckBox Text="No muestreado" runat="server" ID="chkMosca2AzarLarvasL1L2" AutoPostBack="true" /></div></div>
                         <div class="card-body text-secondary">
 
                             <div class="form-floating">
@@ -824,7 +825,7 @@
 
                 <div class="col-sm-6" runat="server" id="Div6">
                     <div class="card border-secondary mb-3" id="SeccionMoscaBlanca2_2" runat="server">
-                        <div class="card-header">Mosca Blanca 2 - Azar Larvas L3-L4</div>
+                        <div class="card-header"><div style="float:left">Mosca Blanca 2 - Azar Larvas L3-L4</div><div style="float:right"><asp:CheckBox Text="No muestreado" runat="server" ID="chkMosca2AzarLarvasL3L4" AutoPostBack="true" /></div></div>
                         <div class="card-body text-secondary">
 
                             <div class="form-floating">
@@ -876,7 +877,7 @@
 
                 <div class="col-sm-6" runat="server" id="Div7">
                     <div class="card border-secondary mb-3" id="SeccionMoscaBlanca2_3" runat="server">
-                        <div class="card-header"><div style="float:left">Mosca Blanca 2 - Huevos</div></div>
+                        <div class="card-header"><div style="float:left">Mosca Blanca 2 - Huevos</div><div style="float:right"><asp:CheckBox Text="No muestreado" runat="server" ID="chkMosca2Huevos" AutoPostBack="true" /></div></div>
                         <div class="card-body text-secondary">
 
                             <div class="form-floating">
