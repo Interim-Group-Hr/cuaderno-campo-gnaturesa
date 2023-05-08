@@ -1337,6 +1337,447 @@ Partial Public Class medicion_muestreo
     Protected WithEvents DropHuevosInteriorAzar2_114 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''Control MoscaBlanca3.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents MoscaBlanca3 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control Div2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Div2 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control SeccionMoscaBlanca3Azar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SeccionMoscaBlanca3Azar As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkMosca3Azar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMosca3Azar As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''Control DropM3Azar_139.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropM3Azar_139 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropM3Azar_140.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropM3Azar_140 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropM3Azar_141.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropM3Azar_141 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropM3Azar_142.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropM3Azar_142 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control Div8.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Div8 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control SeccionMoscaBlanca3BO.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SeccionMoscaBlanca3BO As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkMosca3BO.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMosca3BO As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''Control DropM3BO_149.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropM3BO_149 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropM3BO_150.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropM3BO_150 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control Div10.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Div10 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control SeccionMoscaBlanca3AzarAdulto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SeccionMoscaBlanca3AzarAdulto As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkMoscaBlanca3Adulto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMoscaBlanca3Adulto As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''Control DropEsteAdulto_115.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropEsteAdulto_115 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropSurAdulto_116.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropSurAdulto_116 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropOesteAdulto_117.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropOesteAdulto_117 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropNorteAdulto_118.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropNorteAdulto_118 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropAzarAdulto_119.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropAzarAdulto_119 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropAzarAdulto_120.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropAzarAdulto_120 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control Div12.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Div12 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control SeccionMoscaBlanca3LarvasL1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SeccionMoscaBlanca3LarvasL1 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkMoscaBlanca3L1L2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMoscaBlanca3L1L2 As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''Control DropEsteL1L2_121.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropEsteL1L2_121 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropSurL1L2_122.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropSurL1L2_122 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropOesteL1L2_123.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropOesteL1L2_123 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropNorteL1L2_124.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropNorteL1L2_124 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropAzarL1L2_125.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropAzarL1L2_125 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropAzarL1L2_126.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropAzarL1L2_126 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control Div1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Div1 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control SeccionMoscaBlanca3LarvasL3.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SeccionMoscaBlanca3LarvasL3 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkMoscaBlanca3L3L4.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMoscaBlanca3L3L4 As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''Control DropEsteL2L3_127.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropEsteL2L3_127 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropSurL2L3_128.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropSurL2L3_128 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropOesteL2L3_129.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropOesteL2L3_129 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropNorteL2L3_130.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropNorteL2L3_130 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropAzarL2L3_131.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropAzarL2L3_131 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropAzarL2L3_132.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropAzarL2L3_132 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control Div15.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Div15 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control SeccionMoscaBlanca3Huevos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SeccionMoscaBlanca3Huevos As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkMoscabBlanca3Huevos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMoscabBlanca3Huevos As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''Control DropEsteHuevos_133.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropEsteHuevos_133 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropSurHuevos_134.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropSurHuevos_134 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropOesteHuevos_135.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropOesteHuevos_135 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropNorteHuevos_136.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropNorteHuevos_136 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropAzarHuevos_137.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropAzarHuevos_137 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropAzarHuevos_138.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropAzarHuevos_138 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''Control comentarioArbolid.
     '''</summary>
     '''<remarks>

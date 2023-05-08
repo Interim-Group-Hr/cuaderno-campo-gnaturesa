@@ -47,6 +47,7 @@
                             Session("Passok") = Me.txtPassword
                             Session("IdUser") = intIdUsuario
                             Session("Rol") = rol
+                            Session("user") = Me.txtUsuario.Text
 
                         End If
                         ' objGNaturesa.EliminarCabecera(Session("user"))

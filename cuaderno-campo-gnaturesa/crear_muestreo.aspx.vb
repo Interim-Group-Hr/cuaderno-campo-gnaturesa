@@ -283,7 +283,7 @@ Public Class muestreo
 
             'Despues de generar el muestreo guardamos la ID del mismo en una variable de sesion
             Session("idMuestreo") = miMuestreo.Id
-            miMuestreo.GrabadoPor = Session("IdUser")
+            miMuestreo.GrabadoPor = Session("user") 'Session("IdUser")
 
             Response.Redirect("medicion_muestreo.aspx", True)
 
