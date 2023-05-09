@@ -101,7 +101,15 @@
                         MoscaBlanca2.Visible = True
                         CargarMosca2()
 
+                    ElseIf plaga1 = 11 Then
+
+                        MoscaBlanca3.Visible = True
+                        CargarMosca3()
+
+
+
                     End If
+
 
 
                     If plaga2 = 1 Then
@@ -154,8 +162,13 @@
 
                     ElseIf plaga2 = 10 Then
 
-                        Moscablanca2.Visible = True
+                        MoscaBlanca2.Visible = True
                         CargarMosca2()
+
+                    ElseIf plaga2 = 11 Then
+
+                        MoscaBlanca3.Visible = True
+                        CargarMosca3()
 
                     End If
 
@@ -954,6 +967,317 @@
 
     End Sub
 
+    Private Sub CargarMosca3()
+
+        Dim p As New Plaga
+        Dim Azar139 = p.ListarValores(139)
+        Dim Azar140 = p.ListarValores(140)
+        Dim Azar141 = p.ListarValores(141)
+        Dim Azar142 = p.ListarValores(142)
+
+        Dim BO149 = p.ListarValores(149)
+        Dim BO150 = p.ListarValores(150)
+
+        Dim EsteAdulto115 = p.ListarValores(115)
+        Dim SurAdulto116 = p.ListarValores(116)
+        Dim OesteAdulto117 = p.ListarValores(117)
+        Dim NorteAdulto118 = p.ListarValores(118)
+        Dim AzarAdulto119 = p.ListarValores(119)
+        Dim AzarAdulto120 = p.ListarValores(120)
+
+        Dim EsteL1L2121 = p.ListarValores(121)
+        Dim SurL1L2122 = p.ListarValores(122)
+        Dim OesteL1L2123 = p.ListarValores(123)
+        Dim NorteL1L2124 = p.ListarValores(124)
+        Dim AzarL1L2125 = p.ListarValores(125)
+        Dim AzarL1L2126 = p.ListarValores(126)
+
+        Dim EsteL2L3127 = p.ListarValores(127)
+        Dim SurL2L3128 = p.ListarValores(128)
+        Dim OesteL2L3129 = p.ListarValores(129)
+        Dim NorteL2L3130 = p.ListarValores(130)
+        Dim AzarL2L3131 = p.ListarValores(131)
+        Dim AzarL2L3132 = p.ListarValores(132)
+
+        Dim EsteHuevos133 = p.ListarValores(133)
+        Dim SurHuevos134 = p.ListarValores(134)
+        Dim OesteHuevos135 = p.ListarValores(135)
+        Dim NorteHuevos136 = p.ListarValores(136)
+        Dim AzarHuevos137 = p.ListarValores(137)
+        Dim AzarHuevos138 = p.ListarValores(138)
+
+        If Azar139.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Azar139.Rows.Count - 1)
+                DropM3Azar_139.Items.Add(New ListItem(Azar139.Rows(i)("Nombre"), Azar139.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Azar140.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Azar140.Rows.Count - 1)
+                DropM3Azar_140.Items.Add(New ListItem(Azar140.Rows(i)("Nombre"), Azar140.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Azar141.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Azar141.Rows.Count - 1)
+                DropM3Azar_141.Items.Add(New ListItem(Azar141.Rows(i)("Nombre"), Azar141.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If Azar142.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (Azar142.Rows.Count - 1)
+                DropM3Azar_142.Items.Add(New ListItem(Azar142.Rows(i)("Nombre"), Azar142.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If BO149.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (BO149.Rows.Count - 1)
+                DropM3BO_149.Items.Add(New ListItem(BO149.Rows(i)("Nombre"), BO149.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If BO150.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (BO150.Rows.Count - 1)
+                DropM3BO_150.Items.Add(New ListItem(BO150.Rows(i)("Nombre"), BO150.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If EsteAdulto115.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (EsteAdulto115.Rows.Count - 1)
+                DropEsteAdulto_115.Items.Add(New ListItem(EsteAdulto115.Rows(i)("Nombre"), EsteAdulto115.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If SurAdulto116.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (SurAdulto116.Rows.Count - 1)
+                DropSurAdulto_116.Items.Add(New ListItem(SurAdulto116.Rows(i)("Nombre"), SurAdulto116.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If OesteAdulto117.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OesteAdulto117.Rows.Count - 1)
+                DropOesteAdulto_117.Items.Add(New ListItem(OesteAdulto117.Rows(i)("Nombre"), OesteAdulto117.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If NorteAdulto118.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (NorteAdulto118.Rows.Count - 1)
+                DropNorteAdulto_118.Items.Add(New ListItem(NorteAdulto118.Rows(i)("Nombre"), NorteAdulto118.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If AzarAdulto119.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (AzarAdulto119.Rows.Count - 1)
+                DropAzarAdulto_119.Items.Add(New ListItem(AzarAdulto119.Rows(i)("Nombre"), AzarAdulto119.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If AzarAdulto120.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (AzarAdulto120.Rows.Count - 1)
+                DropAzarAdulto_120.Items.Add(New ListItem(AzarAdulto120.Rows(i)("Nombre"), AzarAdulto120.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If EsteL1L2121.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (EsteL1L2121.Rows.Count - 1)
+                DropEsteL1L2_121.Items.Add(New ListItem(EsteL1L2121.Rows(i)("Nombre"), EsteL1L2121.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If SurL1L2122.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (SurL1L2122.Rows.Count - 1)
+                DropSurL1L2_122.Items.Add(New ListItem(SurL1L2122.Rows(i)("Nombre"), SurL1L2122.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If OesteL1L2123.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OesteL1L2123.Rows.Count - 1)
+                DropOesteL1L2_123.Items.Add(New ListItem(OesteL1L2123.Rows(i)("Nombre"), OesteL1L2123.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If NorteL1L2124.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (NorteL1L2124.Rows.Count - 1)
+                DropNorteL1L2_124.Items.Add(New ListItem(NorteL1L2124.Rows(i)("Nombre"), NorteL1L2124.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If AzarL1L2125.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (AzarL1L2125.Rows.Count - 1)
+                DropAzarL1L2_125.Items.Add(New ListItem(AzarL1L2125.Rows(i)("Nombre"), AzarL1L2125.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If AzarL1L2126.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (AzarL1L2126.Rows.Count - 1)
+                DropAzarL1L2_126.Items.Add(New ListItem(AzarL1L2126.Rows(i)("Nombre"), AzarL1L2126.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If EsteL2L3127.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (EsteL2L3127.Rows.Count - 1)
+                DropEsteL2L3_127.Items.Add(New ListItem(EsteL2L3127.Rows(i)("Nombre"), EsteL2L3127.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If SurL2L3128.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (SurL2L3128.Rows.Count - 1)
+                DropSurL2L3_128.Items.Add(New ListItem(SurL2L3128.Rows(i)("Nombre"), SurL2L3128.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If OesteL2L3129.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OesteL2L3129.Rows.Count - 1)
+                DropOesteL2L3_129.Items.Add(New ListItem(OesteL2L3129.Rows(i)("Nombre"), OesteL2L3129.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If NorteL2L3130.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (NorteL2L3130.Rows.Count - 1)
+                DropNorteL2L3_130.Items.Add(New ListItem(NorteL2L3130.Rows(i)("Nombre"), NorteL2L3130.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If AzarL2L3131.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (AzarL2L3131.Rows.Count - 1)
+                DropAzarL2L3_131.Items.Add(New ListItem(AzarL2L3131.Rows(i)("Nombre"), AzarL2L3131.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If AzarL2L3132.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (AzarL2L3132.Rows.Count - 1)
+                DropAzarL2L3_132.Items.Add(New ListItem(AzarL2L3132.Rows(i)("Nombre"), AzarL2L3132.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If EsteHuevos133.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (EsteHuevos133.Rows.Count - 1)
+                DropEsteHuevos_133.Items.Add(New ListItem(EsteHuevos133.Rows(i)("Nombre"), EsteHuevos133.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If SurHuevos134.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (SurHuevos134.Rows.Count - 1)
+                DropSurHuevos_134.Items.Add(New ListItem(SurHuevos134.Rows(i)("Nombre"), SurHuevos134.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If OesteHuevos135.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (OesteHuevos135.Rows.Count - 1)
+                DropOesteHuevos_135.Items.Add(New ListItem(OesteHuevos135.Rows(i)("Nombre"), OesteHuevos135.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If NorteHuevos136.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (NorteHuevos136.Rows.Count - 1)
+                DropNorteHuevos_136.Items.Add(New ListItem(NorteHuevos136.Rows(i)("Nombre"), NorteHuevos136.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If AzarHuevos137.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (AzarHuevos137.Rows.Count - 1)
+                DropAzarHuevos_137.Items.Add(New ListItem(AzarHuevos137.Rows(i)("Nombre"), AzarHuevos137.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If AzarHuevos138.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (AzarHuevos138.Rows.Count - 1)
+                DropAzarHuevos_138.Items.Add(New ListItem(AzarHuevos138.Rows(i)("Nombre"), AzarHuevos138.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+    End Sub
+
     Private Sub CargarTetranychus()
 
         Dim p As New Plaga
@@ -1505,7 +1829,7 @@
             Next
         End If
 
-        If Moscablanca2.Visible = True Then
+        If MoscaBlanca2.Visible = True Then
 
             For Each c As Control In SeccionMoscaBlanca2.Controls
 
@@ -1570,6 +1894,99 @@
 
         End If
 
+        If MoscaBlanca3.Visible = True Then
+
+            For Each c As Control In SeccionMoscaBlanca3Azar.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        ControlPlaga = 1
+                        Exit For
+                    Else
+                        'Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+
+            For Each c As Control In SeccionMoscaBlanca3BO.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        ControlPlaga = 1
+                        Exit For
+                    Else
+                        'Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+
+            For Each c As Control In SeccionMoscaBlanca3Huevos.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        ControlPlaga = 1
+                        Exit For
+                    Else
+                        'Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+
+            For Each c As Control In SeccionMoscaBlanca3AzarAdulto.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        ControlPlaga = 1
+                        Exit For
+                    Else
+                        'Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+
+            For Each c As Control In SeccionMoscaBlanca3LarvasL1.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        ControlPlaga = 1
+                        Exit For
+                    Else
+                        'Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+
+            For Each c As Control In SeccionMoscaBlanca3LarvasL3.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        ControlPlaga = 1
+                        Exit For
+                    Else
+                        'Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
+
+        End If
 
         If ControlPlaga = 0 And ControlFenologia = 0 Then
             'guardamos la fenologia y la plaga una vez comprobado que se han rellenado todos los campos
@@ -1805,6 +2222,81 @@
                 Next
 
                 For Each c As Control In SeccionMoscaBlanca2_3.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                    End If
+                Next
+
+            End If
+
+            If MoscaBlanca3.Visible = True Then
+                For Each c As Control In SeccionMoscaBlanca3Azar.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                    End If
+                Next
+
+                For Each c As Control In SeccionMoscaBlanca3BO.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                    End If
+                Next
+
+                For Each c As Control In SeccionMoscaBlanca3AzarAdulto.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                    End If
+                Next
+
+                For Each c As Control In SeccionMoscaBlanca3LarvasL1.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                    End If
+                Next
+
+                For Each c As Control In SeccionMoscaBlanca3LarvasL3.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                    End If
+                Next
+
+                For Each c As Control In SeccionMoscaBlanca3Huevos.Controls
 
                     If TypeOf c Is DropDownList Then
 
@@ -2115,6 +2607,488 @@
         End If
 
 
+    End Sub
+
+    Private Sub chkMosca2Adulto_CheckedChanged(sender As Object, e As EventArgs) Handles chkMosca2Adulto.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMosca2Adulto.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca2.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca2.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkMosca2AzarLarvasL1L2_CheckedChanged(sender As Object, e As EventArgs) Handles chkMosca2AzarLarvasL1L2.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMosca2AzarLarvasL1L2.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca2_1.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca2_1.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkMosca2AzarLarvasL3L4_CheckedChanged(sender As Object, e As EventArgs) Handles chkMosca2AzarLarvasL3L4.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMosca2AzarLarvasL3L4.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca2_2.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca2_2.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkMosca2Huevos_CheckedChanged(sender As Object, e As EventArgs) Handles chkMosca2Huevos.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMosca2Huevos.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca2_3.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca2_3.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkMosca3Azar_CheckedChanged(sender As Object, e As EventArgs) Handles chkMosca3Azar.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMosca3Azar.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca3Azar.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca3Azar.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkMosca3BO_CheckedChanged(sender As Object, e As EventArgs) Handles chkMosca3BO.CheckedChanged
+        '
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMosca3BO.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca3BO.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca3BO.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkMoscaBlanca3Adulto_CheckedChanged(sender As Object, e As EventArgs) Handles chkMoscaBlanca3Adulto.CheckedChanged
+        '
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMoscaBlanca3Adulto.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca3AzarAdulto.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca3AzarAdulto.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkMoscaBlanca3L1L2_CheckedChanged(sender As Object, e As EventArgs) Handles chkMoscaBlanca3L1L2.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMoscaBlanca3L1L2.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca3LarvasL1.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca3LarvasL1.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkMoscaBlanca3L3L4_CheckedChanged(sender As Object, e As EventArgs) Handles chkMoscaBlanca3L3L4.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMoscaBlanca3L3L4.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca3LarvasL3.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca3LarvasL3.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkMoscabBlanca3Huevos_CheckedChanged(sender As Object, e As EventArgs) Handles chkMoscabBlanca3Huevos.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkMoscabBlanca3Huevos.Checked = True Then
+
+            For Each c As Control In SeccionMoscaBlanca3Huevos.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionMoscaBlanca3LarvasL3.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
     End Sub
 
 
