@@ -58,6 +58,7 @@
                         checkNoMuestreo.Visible = True
                         EutetranychusFruto.Visible = True
                         EutetranychusHoja.Visible = True
+                        EutetranychusHuevos.Visible = True
                         CargarEutetranychus()
 
                     ElseIf plaga1 = 3 Then
@@ -284,6 +285,12 @@
         Dim Norte18 = plagas.ListarValores(18)
         Dim Int119 = plagas.ListarValores(19)
         Dim Int220 = plagas.ListarValores(20)
+        Dim HEste221 = plagas.ListarValores(151)
+        Dim HSur222 = plagas.ListarValores(152)
+        Dim HOeste223 = plagas.ListarValores(153)
+        Dim HNorte224 = plagas.ListarValores(154)
+        Dim HIntAzar225 = plagas.ListarValores(155)
+        Dim HIntAzar226 = plagas.ListarValores(156)
 
         If EsteAzar9.Rows.Count > 0 Then
 
@@ -393,6 +400,59 @@
 
         End If
 
+        If HEste221.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (HEste221.Rows.Count - 1)
+                DropesteEtetranychusH_21.Items.Add(New ListItem(HEste221.Rows(i)("Nombre"), HEste221.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If HSur222.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (HSur222.Rows.Count - 1)
+                DropSurEtetranychusH_22.Items.Add(New ListItem(HSur222.Rows(i)("Nombre"), HSur222.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If HOeste223.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (HOeste223.Rows.Count - 1)
+                DropOesteEtetranychusH_23.Items.Add(New ListItem(HOeste223.Rows(i)("Nombre"), HOeste223.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If HNorte224.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (HNorte224.Rows.Count - 1)
+                DropNorteEtetranychusH_24.Items.Add(New ListItem(HNorte224.Rows(i)("Nombre"), HNorte224.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If HIntAzar225.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (HIntAzar225.Rows.Count - 1)
+                Dropinterior1EtetranychusH_25.Items.Add(New ListItem(HIntAzar225.Rows(i)("Nombre"), HIntAzar225.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
+
+        If HIntAzar226.Rows.Count > 0 Then
+
+            Dim i As Integer
+            For i = 0 To (HIntAzar226.Rows.Count - 1)
+                DropInterior2EtetranychusH_26.Items.Add(New ListItem(HIntAzar226.Rows(i)("Nombre"), HIntAzar226.Rows(i)("idPlagaOrganoOrientacionValor")))
+            Next
+
+        End If
 
     End Sub
 
@@ -1676,7 +1736,20 @@
                 End If
             Next
 
+            For Each c As Control In SeccionEtetranychusHH.Controls
 
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        ControlPlaga = 1
+                        Exit For
+                    Else
+                        'Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+                    End If
+                End If
+            Next
 
         End If
 
@@ -2047,6 +2120,18 @@
                 Next
 
                 For Each c As Control In SeccionEtetranychusF.Controls
+
+                    If TypeOf c Is DropDownList Then
+
+                        Dim nombre() As String = Split(c.ID, "_")
+                        Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+
+                        Guardado.GuardaMuestreoArbol(Session("IdArbol"), nombre(1), miCombo.SelectedValue)
+
+                    End If
+                Next
+
+                For Each c As Control In SeccionEtetranychusHH.Controls
 
                     If TypeOf c Is DropDownList Then
 
@@ -3091,5 +3176,52 @@
         End If
     End Sub
 
+    Private Sub chkEutetranychusHuevos_CheckedChanged(sender As Object, e As EventArgs) Handles chkEutetranychusHuevos.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkEutetranychusHuevos.Checked = True Then
+
+            For Each c As Control In SeccionEtetranychusHH.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionEtetranychusHH.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
 
 End Class

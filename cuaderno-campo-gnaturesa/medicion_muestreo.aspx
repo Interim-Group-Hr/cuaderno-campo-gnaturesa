@@ -280,6 +280,56 @@
                 </div>
             </div>
 
+            <div class="col-sm-6" id="EutetranychusHuevos" runat="server" visible="false">
+                 <div class="card border-secondary mb-3" id="SeccionEtetranychusHH" runat="server">
+                    <div class="card-header"><div style="float:left">EUTETRANYCHUS - HUEVOS</div><div style="float:right"><asp:CheckBox Text="No muestreado" runat="server" ID="chkEutetranychusHuevos" AutoPostBack="true" /></div></div>
+                    <div class="card-body text-secondary">
+
+                        <div class="form-floating">
+                            <asp:DropDownList ID="DropesteEtetranychusH_21" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:ListItem Value=""></asp:ListItem>
+                            </asp:DropDownList>
+                            <label for="floatingInput"><strong>Este</strong></label>
+                        </div>
+                        <br />
+                        <div class="form-floating">
+                            <asp:DropDownList ID="DropSurEtetranychusH_22" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:ListItem Value=""></asp:ListItem>
+                            </asp:DropDownList>
+                            <label for="floatingInput"><strong>Sur</strong></label>
+                        </div>
+                        <br />
+                        <div class="form-floating">
+                            <asp:DropDownList ID="DropOesteEtetranychusH_23" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:ListItem Value=""></asp:ListItem>
+                            </asp:DropDownList>
+                            <label for="floatingInput"><strong>Oeste</strong></label>
+                        </div>
+                        <br />
+                        <div class="form-floating">
+                            <asp:DropDownList ID="DropNorteEtetranychusH_24" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:ListItem Value=""></asp:ListItem>
+                            </asp:DropDownList>
+                            <label for="floatingInput"><strong>Norte</strong></label>
+                        </div>
+                        <br />
+                        <div class="form-floating">
+                            <asp:DropDownList ID="Dropinterior1EtetranychusH_25" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:ListItem Value=""></asp:ListItem>
+                            </asp:DropDownList>
+                            <label for="floatingInput"><strong>Interior 1</strong></label>
+                        </div>
+                        <br />
+                        <div class="form-floating">
+                            <asp:DropDownList ID="DropInterior2EtetranychusH_26" runat="server" CssClass="form-select" aria-label="Default select example" AutoPostBack="true">
+                                <asp:ListItem Value=""></asp:ListItem>
+                            </asp:DropDownList>
+                            <label for="floatingInput"><strong>Interior 2</strong></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
 
             <!-- MOSCA BLANCA -->
 
