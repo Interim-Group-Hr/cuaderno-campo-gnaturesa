@@ -55,7 +55,7 @@
 
 
                     ElseIf plaga1 = 2 Then
-                        checkNoMuestreo.Visible = True
+                        checkNoMuestreo.Visible = False
                         EutetranychusFruto.Visible = True
                         EutetranychusHoja.Visible = True
                         EutetranychusHuevos.Visible = True
@@ -120,9 +120,10 @@
                         CargarPulgon()
 
                     ElseIf plaga2 = 2 Then
-                        checkNoMuestreo.Visible = True
+                        checkNoMuestreo.Visible = False
                         EutetranychusFruto.Visible = True
                         EutetranychusHoja.Visible = True
+                        EutetranychusHuevos.Visible = True
                         CargarEutetranychus()
 
                     ElseIf plaga2 = 3 Then
@@ -3204,6 +3205,102 @@
         Else
 
             For Each c As Control In SeccionEtetranychusHH.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkEutetranychusFruto_CheckedChanged(sender As Object, e As EventArgs) Handles chkEutetranychusFruto.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkEutetranychusFruto.Checked = True Then
+
+            For Each c As Control In SeccionEtetranychusF.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In SeccionEtetranychusF.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    Else
+                        miCombo.SelectedIndex = 0
+                        miCombo.Enabled = True
+                    End If
+
+                End If
+            Next
+
+
+        End If
+    End Sub
+
+    Private Sub chkEutetranychusHoja_CheckedChanged(sender As Object, e As EventArgs) Handles chkEutetranychusHoja.CheckedChanged
+        Dim Control As Integer = 0
+        Dim Guardado As New CdCMuestreo
+        Guardado = Session("Muestreo")
+
+        If chkEutetranychusHoja.Checked = True Then
+
+            For Each c As Control In seccionEtetranychusH.Controls
+
+                If TypeOf c Is DropDownList Then
+
+                    Dim nombre() As String = Split(c.ID, "_")
+                    Dim miCombo As DropDownList = DirectCast(c, DropDownList)
+                    If miCombo.Text = "" Then
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    Else
+                        miCombo.SelectedIndex = 1
+                        miCombo.Enabled = False
+                    End If
+
+                End If
+
+            Next
+
+        Else
+
+            For Each c As Control In seccionEtetranychusH.Controls
 
                 If TypeOf c Is DropDownList Then
 

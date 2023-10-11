@@ -180,7 +180,7 @@
 
             <div class="col-sm-6" id="EutetranychusHoja" runat="server" visible="false">
                 <div class="card border-secondary mb-3" id="seccionEtetranychusH" runat="server">
-                    <div class="card-header">EUTETRANYCHUS - HOJA</div>
+                    <div class="card-header"><div style="float:left">EUTETRANYCHUS - HOJA</div><div style="float:right"><asp:CheckBox Text="No muestreado" runat="server" ID="chkEutetranychusHoja" AutoPostBack="true" /></div></div>
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">
@@ -232,7 +232,7 @@
 
             <div class="col-sm-6" id="EutetranychusFruto" runat="server" visible="false">
                 <div class="card border-secondary mb-3" id="SeccionEtetranychusF" runat="server">
-                    <div class="card-header">EUTETRANYCHUS - FRUTO</div>
+                    <div class="card-header"><div style="float:left">EUTETRANYCHUS - FRUTO</div><div style="float:right"><asp:CheckBox Text="No muestreado" runat="server" ID="chkEutetranychusFruto" AutoPostBack="true" /></div></div>
                     <div class="card-body text-secondary">
 
                         <div class="form-floating">

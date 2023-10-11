@@ -284,6 +284,15 @@ Partial Public Class medicion_muestreo
     Protected WithEvents seccionEtetranychusH As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''Control chkEutetranychusHoja.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkEutetranychusHoja As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Control DropEsteAzarEtetranychusH_9.
     '''</summary>
     '''<remarks>
@@ -354,6 +363,15 @@ Partial Public Class medicion_muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents SeccionEtetranychusF As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkEutetranychusFruto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkEutetranychusFruto As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
     '''Control DropesteEtetranychusF_15.
