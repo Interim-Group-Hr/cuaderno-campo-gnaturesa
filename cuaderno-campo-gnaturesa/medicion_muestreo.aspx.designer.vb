@@ -284,6 +284,15 @@ Partial Public Class medicion_muestreo
     Protected WithEvents seccionEtetranychusH As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''Control chkEutetranychusHoja.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkEutetranychusHoja As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Control DropEsteAzarEtetranychusH_9.
     '''</summary>
     '''<remarks>
@@ -356,6 +365,15 @@ Partial Public Class medicion_muestreo
     Protected WithEvents SeccionEtetranychusF As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''Control chkEutetranychusFruto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkEutetranychusFruto As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''Control DropesteEtetranychusF_15.
     '''</summary>
     '''<remarks>
@@ -408,6 +426,87 @@ Partial Public Class medicion_muestreo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents DropInterior2EtetranychusF_20 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control EutetranychusHuevos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents EutetranychusHuevos As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control SeccionEtetranychusHH.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SeccionEtetranychusHH As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control chkEutetranychusHuevos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkEutetranychusHuevos As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''Control DropesteEtetranychusH_21.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropesteEtetranychusH_21 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropSurEtetranychusH_22.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropSurEtetranychusH_22 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropOesteEtetranychusH_23.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropOesteEtetranychusH_23 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropNorteEtetranychusH_24.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropNorteEtetranychusH_24 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control Dropinterior1EtetranychusH_25.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Dropinterior1EtetranychusH_25 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control DropInterior2EtetranychusH_26.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropInterior2EtetranychusH_26 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control Mosca.
